@@ -40,6 +40,7 @@ class GjParser(HtmlParser):
 			each_data['total_price'] = int(round(float(price.get_text()),0))
 			each_data['price'] = round(float(each_data['total_price']*10000/each_data['area']),2)
 			each_data['from'] = "ganji"
+			each_data = self.pipe(each_data)
 
 			if each_data.has_key('total_floor') and each_data.has_key('total_price') and each_data.has_key('area') and each_data.has_key('community_name'):
 				page_datas.append(each_data)
