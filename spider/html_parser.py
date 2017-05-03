@@ -26,10 +26,6 @@ class HtmlParser(object):
     def parse(self,html_cont,fromwhere):
         # 解析网页的主模块
 
-        # if html_cont is None or html_cont == False :
-        #     print('This is nothing in the scraw content')
-        #     return
-        # print(html_cont)
         soup = BeautifulSoup(html_cont,'lxml',from_encoding='urf-8')        #2016.7.28改用lxml模块解析，否则Q房网解析会有问题
         
         #在这里加上辨识是否有验证码的代码

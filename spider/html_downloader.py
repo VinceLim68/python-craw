@@ -127,13 +127,6 @@ class HtmlDownloader(object):
             agent = choice(self.agent_list).strip('\n')
             req.add_header("GET",url)
             req.add_header("User-Agent",agent)
-            
-
-        # retry = 1
-
-        # while retry <= 3:
-
-            # if sleep > 0 :                  
 
         if 'xm.ganji.com' in url:       #2016.12.1增加,赶集网要有延时功能
             time.sleep(random.randint(3,5))

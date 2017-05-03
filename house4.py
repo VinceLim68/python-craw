@@ -84,12 +84,13 @@ class SpiderMain(object):
                     fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
                     fout.write( '\n no new datas have been crawed :%s. \n' %new_url)
                     # fout.write(html_cont)               #把没有数据的页面保存下来看看
-                # print(' There are %s datas and %s urls in %s' %(len(new_datas),len(new_urls),new_url))
+                print(' There are %s datas and %s urls in %s' %(len(new_datas),len(new_urls),new_url))
                 self.nodata += 1                #只有连续5个页面没有数据才会停止
                 
-                if self.nodata >= self.nodata_pages_stop :
-                    raw_input('5 pages have no datas,press any key to continue......')
-                    self.nodata = 0
+                # #连续出现几个页面没有数据的暂停，因为现在404和验证码都会暂停了，不需要在这里控制
+                # if self.nodata >= self.nodata_pages_stop :
+                #     raw_input('5 pages have no datas,press any key to continue......')
+                #     self.nodata = 0
                 
                 # 2017.4.17 如果没有解析出数据，我怀疑是网络问题，再解析一次
                 if retries > 0:
