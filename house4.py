@@ -108,7 +108,7 @@ class SpiderMain(object):
                     self.total = self.total + self.outputer.out_mysql()
                     self.outputer.clear_datas()
                     # print ("---------------- %9.0f records has been stored in MySQL -----------------------"%self.total)
-                    self.print_record()
+                    # self.print_record()
                 self.count += 1
                 self.nodata = 0             #如果有数据，把self.nodata计数器清零
                 self.forbidden = 0          #如果有数据，把self.forbidden计数器清零
