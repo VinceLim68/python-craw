@@ -39,7 +39,7 @@ class AjkParser(HtmlParser):
         houses = soup.select('div.house-details')
         comms = soup.select('span.comm-address')
         prices = soup.select('span.price-det')
-        parse_community = r"(.*)\s*\[(.*)-(.*)\s+(.+)\]"
+        # parse_community = r"(.*)\s*\[(.*)-(.*)\s+(.+)\]"
 
         for title,details,comm,price in zip(titles,houses,comms,prices):
             #2016.6.1安居客抓取时内存溢出，重新用select写解析
@@ -61,7 +61,10 @@ class AjkParser(HtmlParser):
                     print(traceback.format_exc())
             
             try:
-                each_data['community_name'],each_data['region'],each_data['block'],each_data['community_address'] = re.findall(parse_community,comm.get('title'))[0]
+                comminfo = comm.get('title').split()
+                each_data['community_name'] = comminfo[0]
+                each_data['region'],each_data['block'],each_data['community_address'] = comminfo[1].split('-',2)
+                # each_data['community_name'],each_data['region'],each_data['block'],each_data['community_address'] = re.findall(parse_community,comm.get('title'))[0]
             except Exception, e:
                 with open('logtest.txt','a+') as fout:
                     fout.write('*************' + str(datetime.datetime.now()) + '*************\n')
