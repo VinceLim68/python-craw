@@ -104,9 +104,9 @@ class SpiderMain(object):
                 self.quantity_of_datas,self.quantity_of_raw_datas,self.quantity_of_dupli = self.outputer.get_datas_quantity()
                 print("**%6.0f = %6.0f dupli + %6.0f raw_datas + %6.0f stored , %6.0f datas in list **"\
                 %(self.quantity_of_dupli + self.quantity_of_raw_datas + self.total,self.quantity_of_dupli,self.quantity_of_raw_datas,self.total,self.quantity_of_datas ))
-                if self.quantity_of_raw_datas > 3000:
+                if self.quantity_of_raw_datas > 1000:
                     print ("try to store")
-                    self.total = self.total + self.outputer.out_mysql()
+                    self.total = self.total + self.outputer.out_local_mysql()
                     self.outputer.clear_datas()
                     # print ("---------------- %9.0f records has been stored in MySQL -----------------------"%self.total)
                     # self.print_record()

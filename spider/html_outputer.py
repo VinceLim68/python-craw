@@ -7,6 +7,7 @@ import mytools
 import MySQLdb
 import datetime
 import traceback
+import pymysql
 
 class HtmlOutputer():
     def __init__(self):
@@ -158,6 +159,58 @@ class HtmlOutputer():
             print("Duplication: " + str(dupli) )
         return success
 
+    @mytools.mylog
+    def out_local_mysql(self):
+        dupli = 0       #计算重复并不被数据库接受的记录数量
+        success = 0     #插入成功的记录数量 
+        config = {
+          'host':'localhost',
+          'port':3306,
+          'user':'root',
+          'password':'root',
+          'db':'property_info',
+          'charset':'utf8',
+          'cursorclass':pymysql.cursors.DictCursor,
+          }
+        try:
+            connection = pymysql.connect(**config) 
+        except:
+            print("Connect failed")
+            return 
+
+        with connection.cursor() as cursor:
+            setdatas = "INSERT new_for_sale (title,area,spatial_arrangement,price,floor_index,total_floor,builded_year,advantage,total_price,details_url,community_name,first_acquisition_time,from_) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+            for data in self.raw_datas:
+                try:
+                    cursor.execute(setdatas,(data['title'],data['area'],data['spatial_arrangement'],data['price'],
+                            data['floor_index'],data['total_floor'],data['builded_year'],data['advantage'],data['total_price'],
+                            data['details_url'],data['community_name'],datetime.date.today(),data['from']))
+                    success = success + 1
+                    connection.commit()
+                except Exception as e:
+                    if e[0] == 1062 :
+                        dupli = dupli + 1
+                    else:
+                        with open('logtest.txt','a+') as fout:      #2017.3把错误日志改成logtest.txt
+                            fout.write(str(datetime.datetime.now()) + 'record by program \n')
+                            fout.write('%s : %s \n floor_index: %s\n total_floor: %s\n community_name: %s\n details_url: %s\n' %(MySQLdb.Error,e,data['floor_index'],data['total_floor'],data['community_name'],data['details_url']))
+                            traceback.print_exc(file=fout)
+                            print traceback.format_exc()
+                            traceback.print_exc()
+                        for item in e:
+                            print(item)
+                        print('floor_index: %s' %(data['floor_index']))
+                        print('total_floor: %s' %(data['total_floor']))
+                        print('community_name: %s' %(data['community_name']))
+                        print('details_url: %s' %(data['details_url']))
+
+        connection.close();
+        print("Records totally: " + str(len(self.raw_datas)) )
+        print(" Stored in MySQL: " + str(success))
+        if dupli > 0 :
+            print("Duplication: " + str(dupli) )
+        return success
+        
     def get_datas(self):
         return self.datas
 
