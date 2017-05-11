@@ -132,7 +132,8 @@ class HtmlDownloader(object):
             time.sleep(random.randint(3,5))
 
         if 'xm.anjuke.com' in url:      #2017.3.20增加安居客要有延时功能
-            time.sleep(random.randint(6,12))
+            # time.sleep(random.randint(6,12))
+            time.sleep(random.randint(3,6))     
 
         if '.leju.com' in url:      #2017.3.20增加安居客要有延时功能
             time.sleep(random.randint(2,5))

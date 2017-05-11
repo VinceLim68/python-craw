@@ -45,7 +45,7 @@ class SpiderMain(object):
         
         #连续出现几个404的暂停
         self.forbidden = 0
-        self.forbidden_pages_stop = 3
+        self.forbidden_pages_stop = 2
 
 
     def craw(self,root_url,keywords,from_):
@@ -75,6 +75,9 @@ class SpiderMain(object):
             if self.forbidden > self.forbidden_pages_stop:
                 raw_input('It seems you have been forbidden,press any key to continue......')
                 self.forbidden = 0
+            # 2017.5.11增加404情况回调
+            else:
+                return self.craw_oneurl(new_url,keywords,from_)
         elif html_cont is not None:
             new_urls,new_datas = self.parser.parse(html_cont,from_)
 
@@ -93,10 +96,12 @@ class SpiderMain(object):
                 #     self.nodata = 0
                 
                 # 2017.4.17 如果没有解析出数据，我怀疑是网络问题，再解析一次
-                if retries > 0:
-                    print("You are still have " + str(retries) + "times to parse this url") 
+                # if retries > 0:
+                if self.nodata < self.nodata_pages_stop:
+                    print("You are still have " + str(self.nodata_pages_stop-self.nodata) + "times to parse this url") 
                     time.sleep(random.randint(3,7))
-                    return self.craw_oneurl(new_url,keywords,from_, retries - 1)
+                    # return self.craw_oneurl(new_url,keywords,from_, retries - 1)
+                    return self.craw_oneurl(new_url,keywords,from_)
             else:
                 self.urls.add_new_urls(new_urls)
                 self.comms.add_new_urls([name['community_name'] for name in new_datas])     #2016.5.27,直接从datas里取出community_name
