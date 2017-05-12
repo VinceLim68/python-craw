@@ -71,7 +71,7 @@ class SpiderMain(object):
         html_cont = self.downloader.download(new_url,False,True)
         if html_cont == 404:                    #增加对被禁ip的处理
             self.forbidden += 1
-            time.sleep(180*self.forbidden)      #暂停3分钟
+            time.sleep(30*self.forbidden)      #暂停3分钟
             if self.forbidden > self.forbidden_pages_stop:
                 raw_input('It seems you have been forbidden,press any key to continue......')
                 self.forbidden = 0
@@ -81,8 +81,12 @@ class SpiderMain(object):
         elif html_cont is not None:
             new_urls,new_datas = self.parser.parse(html_cont,from_)
 
+            # 如果是验证界面，返回
+            if new_urls == 'checkcode' and new_datas == 'checkcode':
+                if retries > 0:
+                    return self.craw_oneurl(new_url,keywords,from_,retries - 1)
             # 当解析没有得到数据时，会自动重新解析，但超过nodata_pages_stop次数则暂停
-            if len(new_datas) == 0 and len(new_urls) == 0:
+            elif len(new_datas) == 0 and len(new_urls) == 0:
                 with open('logtest.txt','a+') as fout:
                     fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
                     fout.write( '\n no new datas have been crawed :%s. \n' %new_url)

@@ -22,13 +22,12 @@ class AjkParser(HtmlParser):
         return new_urls
            
     def _ischeck(self,soup):
+        # 判断是否是验证界面
         ischeck = soup.select("title")
         if len(ischeck) > 0:            #如果找不到title,就认为不是验证界面
             iscode = ischeck[0].get_text().strip() == "访问验证-安居客"
         else:
             iscode = False
-        # print(ischeck[0].get_text().strip() == "访问验证-安居客")
-
         return iscode
 
     def _get_new_datas(self,soup):

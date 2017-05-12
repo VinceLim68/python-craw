@@ -31,6 +31,8 @@ class HtmlParser(object):
         #在这里加上辨识是否有验证码的代码
         if self._ischeck(soup):
             raw_input('checkcode!!!  checkcode!!!  \ncheckcode!!!  checkcode!!!\n')
+            new_urls = 'checkcode'
+            new_datas = 'checkcode'
         else:
             new_urls = self._get_new_urls(soup)
             # 2016.5.30直接从字典里提取数据，不再另外加一个小区名的list

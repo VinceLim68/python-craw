@@ -1,8 +1,517 @@
 
-*******2017-05-10 22:38:36.296000*************
-      5973 records has been stored in MySQL 
-*******get_content urlopen error record by get_content 2017-05-10 22:38:44.523000*************
-2017-05-10 22:38:44.523000
+*******2017-05-11 22:11:06.584000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:13:02.612000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:13:20.192000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:13:25.230000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E9%87%91%E5%90%8C%E6%88%90%E5%A4%A7%E5%8E%A6%28%E4%B8%AD%E5%B1%B1%E8%B7%AF336-360%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:13:38.698000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E9%87%91%E5%90%8C%E6%88%90%E5%A4%A7%E5%8E%A6%28%E4%B8%AD%E5%B1%B1%E8%B7%AF336-360%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:13:48.751000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E9%87%91%E5%90%8C%E6%88%90%E5%A4%A7%E5%8E%A6%28%E4%B8%AD%E5%B1%B1%E8%B7%AF336-360%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:14:01.687000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E9%87%91%E5%90%8C%E6%88%90%E5%A4%A7%E5%8E%A6%28%E4%B8%AD%E5%B1%B1%E8%B7%AF336-360%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:14:11.819000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E9%87%91%E5%90%8C%E6%88%90%E5%A4%A7%E5%8E%A6%28%E4%B8%AD%E5%B1%B1%E8%B7%AF336-360%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:14:11.822000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:14:22.475000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p3-rd1/?kw=%E5%89%8D%E5%9F%94%E5%8D%97%E5%8C%BA%E6%96%87%E5%85%B4%E4%BA%8C%E9%87%8C&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:14:39.050000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p2-rd1/?kw=%E5%89%8D%E5%9F%94%E5%8D%97%E5%8C%BA%E6%96%87%E5%85%B4%E4%BA%8C%E9%87%8C&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:15:04.527000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p7-rd1/?kw=%E5%89%8D%E5%9F%94%E5%8D%97%E5%8C%BA%E6%96%87%E5%85%B4%E4%BA%8C%E9%87%8C&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:15:22.977000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:15:28.782000*************
+      2448 records has been stored in MySQL 
+*******get_content urlopen error record by get_content 2017-05-11 22:16:23.470000*************
+2017-05-11 22:16:23.470000
+Traceback (most recent call last):
+  File "E:\git\spider\html_downloader.py", line 34, in get_content
+    response = urllib2.urlopen(request,timeout=10)
+  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "G:\Python27\lib\urllib2.py", line 429, in open
+    response = self._open(req, data)
+  File "G:\Python27\lib\urllib2.py", line 447, in _open
+    '_open', req)
+  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
+    result = func(*args)
+  File "G:\Python27\lib\urllib2.py", line 1228, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "G:\Python27\lib\urllib2.py", line 1198, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 11004] getaddrinfo failed>
+
+*******2017-05-11 22:20:50.250000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:21:06.262000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:21:17.058000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p3-rd1/?kw=%E8%A3%95%E5%8F%91%E8%8A%B1%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:21:46.446000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p7-rd1/?kw=%E8%A3%95%E5%8F%91%E8%8A%B1%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:21:53.763000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p7-rd1/?kw=%E8%A3%95%E5%8F%91%E8%8A%B1%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:22:04.844000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p7-rd1/?kw=%E8%A3%95%E5%8F%91%E8%8A%B1%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:23:50.541000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:25:39.482000*************
+      2448 records has been stored in MySQL 
+*******get_content urlopen error record by get_content 2017-05-11 22:26:18.172000*************
+2017-05-11 22:26:18.172000
+Traceback (most recent call last):
+  File "E:\git\spider\html_downloader.py", line 34, in get_content
+    response = urllib2.urlopen(request,timeout=10)
+  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "G:\Python27\lib\urllib2.py", line 429, in open
+    response = self._open(req, data)
+  File "G:\Python27\lib\urllib2.py", line 447, in _open
+    '_open', req)
+  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
+    result = func(*args)
+  File "G:\Python27\lib\urllib2.py", line 1228, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "G:\Python27\lib\urllib2.py", line 1198, in do_open
+    raise URLError(err)
+URLError: <urlopen error timed out>
+
+*******get_content urlopen error record by get_content 2017-05-11 22:26:38.436000*************
+2017-05-11 22:26:38.436000
+Traceback (most recent call last):
+  File "E:\git\spider\html_downloader.py", line 34, in get_content
+    response = urllib2.urlopen(request,timeout=10)
+  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "G:\Python27\lib\urllib2.py", line 429, in open
+    response = self._open(req, data)
+  File "G:\Python27\lib\urllib2.py", line 447, in _open
+    '_open', req)
+  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
+    result = func(*args)
+  File "G:\Python27\lib\urllib2.py", line 1228, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "G:\Python27\lib\urllib2.py", line 1198, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 11004] getaddrinfo failed>
+
+*******2017-05-11 22:27:11.038000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:27:28.987000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:27:50.276000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:28:48.775000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:29:14.865000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p6-rd1/?kw=%E6%B9%96%E4%B8%9C%E8%8A%B1%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:32:56.977000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p37-rd1/?kw=%E6%B9%96%E4%B8%9C%E8%8A%B1%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:33:55.146000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:34:34.369000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:34:47.458000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:34:53.234000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:35:27.221000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:35:31.661000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E5%AE%9D%E5%8D%8E%E8%8A%B1%E5%9B%AD%28%E6%80%9D%E6%98%8E%29&from_url=kw_final#filtersort. 
+
+*******get_content urlopen error record by get_content 2017-05-11 22:36:22.056000*************
+2017-05-11 22:36:22.056000
+Traceback (most recent call last):
+  File "E:\git\spider\html_downloader.py", line 34, in get_content
+    response = urllib2.urlopen(request,timeout=10)
+  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "G:\Python27\lib\urllib2.py", line 429, in open
+    response = self._open(req, data)
+  File "G:\Python27\lib\urllib2.py", line 447, in _open
+    '_open', req)
+  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
+    result = func(*args)
+  File "G:\Python27\lib\urllib2.py", line 1228, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "G:\Python27\lib\urllib2.py", line 1198, in do_open
+    raise URLError(err)
+URLError: <urlopen error timed out>
+
+*******get_content urlopen error record by get_content 2017-05-11 22:36:42.327000*************
+2017-05-11 22:36:42.327000
+Traceback (most recent call last):
+  File "E:\git\spider\html_downloader.py", line 34, in get_content
+    response = urllib2.urlopen(request,timeout=10)
+  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "G:\Python27\lib\urllib2.py", line 429, in open
+    response = self._open(req, data)
+  File "G:\Python27\lib\urllib2.py", line 447, in _open
+    '_open', req)
+  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
+    result = func(*args)
+  File "G:\Python27\lib\urllib2.py", line 1228, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "G:\Python27\lib\urllib2.py", line 1198, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 11004] getaddrinfo failed>
+
+*******2017-05-11 22:37:09.429000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p8-rd1/?kw=%E5%AE%9D%E5%8D%8E%E8%8A%B1%E5%9B%AD%E6%80%9D%E6%98%8E&from_url=kw_final#filtersort. 
+
+*******2017-05-11 22:37:35.297000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:37:59.518000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:38:36.295000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:38:47.901000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:39:18.652000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:39:39.318000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:39:45.713000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:39:49.665000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:40:33.550000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:41:44.389000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:42:03.428000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:42:09.777000*************
+      2448 records has been stored in MySQL 
+*******2017-05-11 22:44:33.564000*************
+      2448 records has been stored in MySQL 
+*******get_content urlopen error record by get_content 2017-05-11 22:46:18.556000*************
+2017-05-11 22:46:18.556000
+Traceback (most recent call last):
+  File "E:\git\spider\html_downloader.py", line 34, in get_content
+    response = urllib2.urlopen(request,timeout=10)
+  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "G:\Python27\lib\urllib2.py", line 429, in open
+    response = self._open(req, data)
+  File "G:\Python27\lib\urllib2.py", line 447, in _open
+    '_open', req)
+  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
+    result = func(*args)
+  File "G:\Python27\lib\urllib2.py", line 1228, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "G:\Python27\lib\urllib2.py", line 1198, in do_open
+    raise URLError(err)
+URLError: <urlopen error timed out>
+
+*******get_content urlopen error record by get_content 2017-05-11 22:46:38.827000*************
+2017-05-11 22:46:38.827000
+Traceback (most recent call last):
+  File "E:\git\spider\html_downloader.py", line 34, in get_content
+    response = urllib2.urlopen(request,timeout=10)
+  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "G:\Python27\lib\urllib2.py", line 429, in open
+    response = self._open(req, data)
+  File "G:\Python27\lib\urllib2.py", line 447, in _open
+    '_open', req)
+  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
+    result = func(*args)
+  File "G:\Python27\lib\urllib2.py", line 1228, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "G:\Python27\lib\urllib2.py", line 1198, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 11004] getaddrinfo failed>
+
+*******2017-05-11 22:46:57.430000*************
+      2448 records has been stored in MySQL 
+               *******craw_oneurl*******,error record by @mylog on 2017-05-11 22:47:04.837000*************
+Traceback (most recent call last):
+  File "E:\git\spider\mytools.py", line 11, in _deco
+    return func(*a,**b)
+  File "E:\git\house4.py", line 82, in craw_oneurl
+    new_urls,new_datas = self.parser.parse(html_cont,from_)
+  File "E:\git\spider\html_parser.py", line 38, in parse
+    return new_urls,new_datas
+UnboundLocalError: local variable 'new_urls' referenced before assignment
+
+*******2017-05-11 22:47:04.862000*************
+      2448 records has been stored in MySQL 
+               *******craw_oneurl*******,error record by @mylog on 2017-05-11 22:47:11.275000*************
+Traceback (most recent call last):
+  File "E:\git\spider\mytools.py", line 11, in _deco
+    return func(*a,**b)
+  File "E:\git\house4.py", line 82, in craw_oneurl
+    new_urls,new_datas = self.parser.parse(html_cont,from_)
+  File "E:\git\spider\html_parser.py", line 38, in parse
+    return new_urls,new_datas
+UnboundLocalError: local variable 'new_urls' referenced before assignment
+
+*******2017-05-11 22:47:11.280000*************
+      2448 records has been stored in MySQL 
+               *******craw_oneurl*******,error record by @mylog on 2017-05-11 22:47:18.542000*************
+Traceback (most recent call last):
+  File "E:\git\spider\mytools.py", line 11, in _deco
+    return func(*a,**b)
+  File "E:\git\house4.py", line 82, in craw_oneurl
+    new_urls,new_datas = self.parser.parse(html_cont,from_)
+  File "E:\git\spider\html_parser.py", line 38, in parse
+    return new_urls,new_datas
+UnboundLocalError: local variable 'new_urls' referenced before assignment
+
+*******2017-05-11 22:47:18.546000*************
+      2448 records has been stored in MySQL 
+               *******craw_oneurl*******,error record by @mylog on 2017-05-11 22:47:24.969000*************
+Traceback (most recent call last):
+  File "E:\git\spider\mytools.py", line 11, in _deco
+    return func(*a,**b)
+  File "E:\git\house4.py", line 82, in craw_oneurl
+    new_urls,new_datas = self.parser.parse(html_cont,from_)
+  File "E:\git\spider\html_parser.py", line 38, in parse
+    return new_urls,new_datas
+UnboundLocalError: local variable 'new_urls' referenced before assignment
+
+*******2017-05-11 22:47:24.974000*************
+      2448 records has been stored in MySQL 
+               *******craw_oneurl*******,error record by @mylog on 2017-05-11 22:47:29.170000*************
+Traceback (most recent call last):
+  File "E:\git\spider\mytools.py", line 11, in _deco
+    return func(*a,**b)
+  File "E:\git\house4.py", line 82, in craw_oneurl
+    new_urls,new_datas = self.parser.parse(html_cont,from_)
+  File "E:\git\spider\html_parser.py", line 38, in parse
+    return new_urls,new_datas
+UnboundLocalError: local variable 'new_urls' referenced before assignment
+
+*******2017-05-11 22:47:29.178000*************
+      2448 records has been stored in MySQL 
+               *******craw_oneurl*******,error record by @mylog on 2017-05-11 22:47:32.583000*************
+Traceback (most recent call last):
+  File "E:\git\spider\mytools.py", line 11, in _deco
+    return func(*a,**b)
+  File "E:\git\house4.py", line 82, in craw_oneurl
+    new_urls,new_datas = self.parser.parse(html_cont,from_)
+  File "E:\git\spider\html_parser.py", line 38, in parse
+    return new_urls,new_datas
+UnboundLocalError: local variable 'new_urls' referenced before assignment
+
+*******2017-05-11 22:47:32.590000*************
+      2448 records has been stored in MySQL 
+               *******craw_oneurl*******,error record by @mylog on 2017-05-12 06:18:12.235000*************
+Traceback (most recent call last):
+  File "E:\git\spider\mytools.py", line 11, in _deco
+    return func(*a,**b)
+  File "E:\git\house4.py", line 82, in craw_oneurl
+    new_urls,new_datas = self.parser.parse(html_cont,from_)
+  File "E:\git\spider\html_parser.py", line 38, in parse
+    return new_urls,new_datas
+UnboundLocalError: local variable 'new_urls' referenced before assignment
+
+*******2017-05-12 06:18:12.243000*************
+      2448 records has been stored in MySQL 
+*******2017-05-12 06:18:16.974000*************
+      2448 records has been stored in MySQL 
+*******2017-05-12 06:18:45.546000*************
+      2448 records has been stored in MySQL 
+*******2017-05-12 06:19:58.959000*************
+      2448 records has been stored in MySQL 
+*******2017-05-12 06:20:04.846000*************
+      2448 records has been stored in MySQL 
+*******2017-05-12 06:20:11.930000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E7%89%B9%E6%88%BF%E9%94%A6%E7%BB%A3%E7%A5%A5%E5%AE%89&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:21:29.599000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p14-rd1/?kw=%E7%89%B9%E6%88%BF%E9%94%A6%E7%BB%A3%E7%A5%A5%E5%AE%89&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:23:38.979000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p34-rd1/?kw=%E7%89%B9%E6%88%BF%E9%94%A6%E7%BB%A3%E7%A5%A5%E5%AE%89&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:23:47.004000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p34-rd1/?kw=%E7%89%B9%E6%88%BF%E9%94%A6%E7%BB%A3%E7%A5%A5%E5%AE%89&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:25:36.981000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:25:41.524000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E6%B5%B7%E5%85%B3%E8%8E%B2%E8%8A%B1%E5%AE%BF%E8%88%8D%28%E9%A6%99%E7%A7%80%E9%87%8C63-74%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:25:53.041000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E6%B5%B7%E5%85%B3%E8%8E%B2%E8%8A%B1%E5%AE%BF%E8%88%8D%28%E9%A6%99%E7%A7%80%E9%87%8C63-74%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:26:05.615000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E6%B5%B7%E5%85%B3%E8%8E%B2%E8%8A%B1%E5%AE%BF%E8%88%8D%28%E9%A6%99%E7%A7%80%E9%87%8C63-74%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:26:17.219000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E6%B5%B7%E5%85%B3%E8%8E%B2%E8%8A%B1%E5%AE%BF%E8%88%8D%28%E9%A6%99%E7%A7%80%E9%87%8C63-74%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:26:29.730000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E6%B5%B7%E5%85%B3%E8%8E%B2%E8%8A%B1%E5%AE%BF%E8%88%8D%28%E9%A6%99%E7%A7%80%E9%87%8C63-74%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:26:29.732000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:27:18.594000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:27:23.365000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:27:38.333000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:28:00.464000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:28:05.084000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:28:11.027000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:28:17.789000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E6%96%87%E5%85%B4%E4%B8%9C%E4%B8%80%E9%87%8C1-26%E5%8F%B7&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:28:29.253000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E6%96%87%E5%85%B4%E4%B8%9C%E4%B8%80%E9%87%8C1-26%E5%8F%B7&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:28:40.711000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E6%96%87%E5%85%B4%E4%B8%9C%E4%B8%80%E9%87%8C1-26%E5%8F%B7&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:28:49.172000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E6%96%87%E5%85%B4%E4%B8%9C%E4%B8%80%E9%87%8C1-26%E5%8F%B7&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:29:02.670000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E6%96%87%E5%85%B4%E4%B8%9C%E4%B8%80%E9%87%8C1-26%E5%8F%B7&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:29:02.670000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:29:09.373000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:29:16.153000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:29:21.848000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:29:47.857000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:30:06.309000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p5-rd1/?kw=%E5%8D%8E%E5%9D%A4%E8%8A%B1%E5%9B%AD%E4%BA%8C%E6%9C%9F&from_url=kw_final#filtersort. 
+
+*******2017-05-12 06:30:32.396000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:30:38.114000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:33:02.977000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:33:06.633000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:33:33.707000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:33:39.733000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:34:02.056000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:34:08.955000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:34:15.962000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:35:53.820000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:35:58.504000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 06:36:38.666000*************
+      2598 records has been stored in MySQL 
+               *******craw_oneurl*******,error record by @mylog on 2017-05-12 07:07:04.485000*************
+Traceback (most recent call last):
+  File "E:\git\spider\mytools.py", line 11, in _deco
+    return func(*a,**b)
+  File "E:\git\house4.py", line 82, in craw_oneurl
+    new_urls,new_datas = self.parser.parse(html_cont,from_)
+  File "E:\git\spider\html_parser.py", line 38, in parse
+    return new_urls,new_datas
+UnboundLocalError: local variable 'new_urls' referenced before assignment
+
+*******2017-05-12 07:07:20.218000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:07:51.319000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:08:07.442000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:09:34.558000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:09:38.409000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:09:45.286000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:09:50.141000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:09:57.304000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:11:10.466000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:11:27.091000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:12:48.319000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p18-rd1/?kw=%E9%A2%86%E7%A7%80%E5%9F%8E&from_url=kw_final#filtersort. 
+
+*******2017-05-12 07:14:22.573000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:14:29.224000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E4%B8%9C%E6%B5%A6%E8%B7%AF15-19%E5%8F%B7%E6%A5%BC&from_url=kw_final#filtersort. 
+
+*******2017-05-12 07:14:37.793000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E4%B8%9C%E6%B5%A6%E8%B7%AF15-19%E5%8F%B7%E6%A5%BC&from_url=kw_final#filtersort. 
+
+*******2017-05-12 07:14:50.413000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E4%B8%9C%E6%B5%A6%E8%B7%AF15-19%E5%8F%B7%E6%A5%BC&from_url=kw_final#filtersort. 
+
+*******2017-05-12 07:14:57.989000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E4%B8%9C%E6%B5%A6%E8%B7%AF15-19%E5%8F%B7%E6%A5%BC&from_url=kw_final#filtersort. 
+
+*******2017-05-12 07:15:08.625000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E4%B8%9C%E6%B5%A6%E8%B7%AF15-19%E5%8F%B7%E6%A5%BC&from_url=kw_final#filtersort. 
+
+*******2017-05-12 07:15:08.626000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:15:14.727000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:17:01.345000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:17:25.626000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:17:51.058000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p4-rd1/?kw=%E6%9C%AA%E6%9D%A5%E6%B5%B7%E5%B2%B8%E7%B3%BB%E5%A4%A9%E6%B9%96&from_url=kw_final#filtersort. 
+
+*******2017-05-12 07:19:18.213000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 07:21:27.526000*************
+      2598 records has been stored in MySQL 
+               *******craw_oneurl*******,error record by @mylog on 2017-05-12 08:15:18.426000*************
+Traceback (most recent call last):
+  File "E:\git\spider\mytools.py", line 11, in _deco
+    return func(*a,**b)
+  File "E:\git\house4.py", line 82, in craw_oneurl
+    new_urls,new_datas = self.parser.parse(html_cont,from_)
+  File "E:\git\spider\html_parser.py", line 38, in parse
+    return new_urls,new_datas
+UnboundLocalError: local variable 'new_urls' referenced before assignment
+
+*******2017-05-12 08:15:18.438000*************
+      2598 records has been stored in MySQL 
+*******get_content urlopen error record by get_content 2017-05-12 08:15:21.768000*************
+2017-05-12 08:15:21.768000
 Traceback (most recent call last):
   File "E:\git\spider\html_downloader.py", line 34, in get_content
     response = urllib2.urlopen(request,timeout=10)
@@ -30,120 +539,68 @@ Traceback (most recent call last):
     raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
 HTTPError: HTTP Error 404: Not Found
 
-*******2017-05-10 22:41:44.527000*************
-      5973 records has been stored in MySQL 
-*******get_content urlopen error record by get_content 2017-05-11 08:17:35.918000*************
-2017-05-11 08:17:35.918000
-Traceback (most recent call last):
-  File "E:\git\spider\html_downloader.py", line 34, in get_content
-    response = urllib2.urlopen(request,timeout=10)
-  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
-    return opener.open(url, data, timeout)
-  File "G:\Python27\lib\urllib2.py", line 435, in open
-    response = meth(req, response)
-  File "G:\Python27\lib\urllib2.py", line 548, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "G:\Python27\lib\urllib2.py", line 467, in error
-    result = self._call_chain(*args)
-  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
-    result = func(*args)
-  File "G:\Python27\lib\urllib2.py", line 654, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "G:\Python27\lib\urllib2.py", line 435, in open
-    response = meth(req, response)
-  File "G:\Python27\lib\urllib2.py", line 548, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "G:\Python27\lib\urllib2.py", line 473, in error
-    return self._call_chain(*args)
-  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
-    result = func(*args)
-  File "G:\Python27\lib\urllib2.py", line 556, in http_error_default
-    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
-HTTPError: HTTP Error 404: Not Found
+*******2017-05-12 08:18:26.690000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E5%8E%A6%E9%97%A8%E5%9B%BD%E9%99%85%E6%96%87%E5%8C%96%E5%A4%A7%E5%8E%A6&from_url=kw_final#filtersort. 
 
-*******get_content urlopen error record by get_content 2017-05-11 08:20:45.209000*************
-2017-05-11 08:20:45.209000
+*******2017-05-12 08:19:28.872000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 08:20:24.727000*************
+      2598 records has been stored in MySQL 
+*******2017-05-12 08:20:54.969000*************
+      2598 records has been stored in MySQL 
+*******get_content urlopen error record by get_content 2017-05-12 08:22:51.482000*************
+2017-05-12 08:22:51.482000
 Traceback (most recent call last):
   File "E:\git\spider\html_downloader.py", line 34, in get_content
     response = urllib2.urlopen(request,timeout=10)
   File "G:\Python27\lib\urllib2.py", line 154, in urlopen
     return opener.open(url, data, timeout)
-  File "G:\Python27\lib\urllib2.py", line 435, in open
-    response = meth(req, response)
-  File "G:\Python27\lib\urllib2.py", line 548, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "G:\Python27\lib\urllib2.py", line 467, in error
-    result = self._call_chain(*args)
+  File "G:\Python27\lib\urllib2.py", line 429, in open
+    response = self._open(req, data)
+  File "G:\Python27\lib\urllib2.py", line 447, in _open
+    '_open', req)
   File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
     result = func(*args)
-  File "G:\Python27\lib\urllib2.py", line 654, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "G:\Python27\lib\urllib2.py", line 435, in open
-    response = meth(req, response)
-  File "G:\Python27\lib\urllib2.py", line 548, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "G:\Python27\lib\urllib2.py", line 473, in error
-    return self._call_chain(*args)
-  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
-    result = func(*args)
-  File "G:\Python27\lib\urllib2.py", line 556, in http_error_default
-    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
-HTTPError: HTTP Error 404: Not Found
+  File "G:\Python27\lib\urllib2.py", line 1228, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "G:\Python27\lib\urllib2.py", line 1198, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 11004] getaddrinfo failed>
 
-*******get_content urlopen error record by get_content 2017-05-11 08:26:57.914000*************
-2017-05-11 08:26:57.914000
-Traceback (most recent call last):
-  File "E:\git\spider\html_downloader.py", line 34, in get_content
-    response = urllib2.urlopen(request,timeout=10)
-  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
-    return opener.open(url, data, timeout)
-  File "G:\Python27\lib\urllib2.py", line 435, in open
-    response = meth(req, response)
-  File "G:\Python27\lib\urllib2.py", line 548, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "G:\Python27\lib\urllib2.py", line 467, in error
-    result = self._call_chain(*args)
-  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
-    result = func(*args)
-  File "G:\Python27\lib\urllib2.py", line 654, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "G:\Python27\lib\urllib2.py", line 435, in open
-    response = meth(req, response)
-  File "G:\Python27\lib\urllib2.py", line 548, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "G:\Python27\lib\urllib2.py", line 473, in error
-    return self._call_chain(*args)
-  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
-    result = func(*args)
-  File "G:\Python27\lib\urllib2.py", line 556, in http_error_default
-    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
-HTTPError: HTTP Error 404: Not Found
+*******2017-05-12 08:25:00.951000*************
+      2694 records has been stored in MySQL 
+*******2017-05-12 08:25:07.839000*************
+      2694 records has been stored in MySQL 
+*******2017-05-12 08:25:14.411000*************
+      2694 records has been stored in MySQL 
+*******2017-05-12 08:25:24.158000*************
+      2694 records has been stored in MySQL 
+*******2017-05-12 08:25:55.705000*************
+      2694 records has been stored in MySQL 
+*******2017-05-12 08:26:37.746000*************
+      2694 records has been stored in MySQL 
+*******2017-05-12 08:26:50.602000*************
+      2694 records has been stored in MySQL 
+*******2017-05-12 08:26:59.001000*************
+      2694 records has been stored in MySQL 
+*******2017-05-12 08:27:08.292000*************
+      2694 records has been stored in MySQL 
+*******2017-05-12 08:27:31.296000*************
+      2694 records has been stored in MySQL 
+*******2017-05-12 08:27:37.758000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E7%BF%A0%E6%B9%96%E5%BA%84%E5%9B%AD%E5%88%AB%E5%A2%85%28%E6%9E%97%E5%90%8E%E5%8C%97%E9%87%8C130-138%E5%8F%B7%29&from_url=kw_final#filtersort. 
 
-*******get_content urlopen error record by get_content 2017-05-11 08:36:06.443000*************
-2017-05-11 08:36:06.443000
-Traceback (most recent call last):
-  File "E:\git\spider\html_downloader.py", line 34, in get_content
-    response = urllib2.urlopen(request,timeout=10)
-  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
-    return opener.open(url, data, timeout)
-  File "G:\Python27\lib\urllib2.py", line 435, in open
-    response = meth(req, response)
-  File "G:\Python27\lib\urllib2.py", line 548, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "G:\Python27\lib\urllib2.py", line 467, in error
-    result = self._call_chain(*args)
-  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
-    result = func(*args)
-  File "G:\Python27\lib\urllib2.py", line 654, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "G:\Python27\lib\urllib2.py", line 435, in open
-    response = meth(req, response)
-  File "G:\Python27\lib\urllib2.py", line 548, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "G:\Python27\lib\urllib2.py", line 473, in error
-    return self._call_chain(*args)
-  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
-    result = func(*args)
-  File "G:\Python27\lib\urllib2.py", line 556, in http_error_default
-    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
-HTTPError: HTTP Error 404: Not Found
+*******2017-05-12 08:27:46.191000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E7%BF%A0%E6%B9%96%E5%BA%84%E5%9B%AD%E5%88%AB%E5%A2%85%28%E6%9E%97%E5%90%8E%E5%8C%97%E9%87%8C130-138%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-12 08:27:56.579000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E7%BF%A0%E6%B9%96%E5%BA%84%E5%9B%AD%E5%88%AB%E5%A2%85%28%E6%9E%97%E5%90%8E%E5%8C%97%E9%87%8C130-138%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-12 08:28:04.977000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E7%BF%A0%E6%B9%96%E5%BA%84%E5%9B%AD%E5%88%AB%E5%A2%85%28%E6%9E%97%E5%90%8E%E5%8C%97%E9%87%8C130-138%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-12 08:28:13.372000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E7%BF%A0%E6%B9%96%E5%BA%84%E5%9B%AD%E5%88%AB%E5%A2%85%28%E6%9E%97%E5%90%8E%E5%8C%97%E9%87%8C130-138%E5%8F%B7%29&from_url=kw_final#filtersort. 
+
+*******2017-05-12 08:28:13.373000*************
+      2694 records has been stored in MySQL 
