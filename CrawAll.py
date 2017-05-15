@@ -18,7 +18,6 @@ class SpiderAll(SpiderMain):
         self.quantity_of_new_comms = 1
         while self.quantity_of_new_comms:
             self.craw_one_comm(from_where)
-        # self.outputer.out_mysql()
         self.total = self.total + self.outputer.out_mysql()
         self.print_record()
         self.outputer.clear_datas()
@@ -59,7 +58,6 @@ if __name__=="__main__":
 
     for i in sys.argv:
         from_where = i
-        # print( from_where)
         if from_where == '1':
             root_url = ["http://xm.anjuke.com/sale/p1/#filtersort"]
             obj_spider = SpiderAll(AJK_parser.AjkParser())

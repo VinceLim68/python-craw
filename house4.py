@@ -46,12 +46,24 @@ class SpiderMain(object):
         #连续出现几个404的暂停
         self.forbidden = 0
         self.forbidden_pages_stop = 2
+        
+        # 设置延时
+        if 'AjkParser' in str(parseClass):
+            self.delay = 3
+        elif 'GjParser' in str(parseClass):
+            self.delay = 3
+        elif 'LejuParser' in str(parseClass):
+            self.delay = 3
+        else:
+            self.delay = 0
 
 
     def craw(self,root_url,keywords,from_):
         for url in root_url:
             self.urls.add_new_url(url)
         while self.urls.has_new_url() :
+            if self.delay > 0 :
+                time.sleep(random.randint(self.delay,self.delay*2))             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
             new_url = self.urls.get_new_url()
             self.craw_oneurl(new_url,keywords,from_)
         self.print_record()
@@ -81,10 +93,12 @@ class SpiderMain(object):
         elif html_cont is not None:
             new_urls,new_datas = self.parser.parse(html_cont,from_)
 
-            # 如果是验证界面，返回
-            if new_urls == 'checkcode' and new_datas == 'checkcode':
+            # 如果是验证界面，得到延时值，回调函数
+            if new_datas == 'checkcode':
+                self.delay = new_urls               # 调整延时值
                 if retries > 0:
                     return self.craw_oneurl(new_url,keywords,from_,retries - 1)
+            
             # 当解析没有得到数据时，会自动重新解析，但超过nodata_pages_stop次数则暂停
             elif len(new_datas) == 0 and len(new_urls) == 0:
                 with open('logtest.txt','a+') as fout:
