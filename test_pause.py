@@ -94,4 +94,7 @@ class SpiderAll(SpiderMain):
 #                 obj_spider.outputer.out_mysql()
 #                 obj_spider.outputer.clear_datas()                           
 
-obj_spider = SpiderAll(LEJU_parser.LejuParser())
+# obj_spider = SpiderAll(LEJU_parser.LejuParser())
+a = raw_input('checkcode!!!  checkcode!!!  \ncheckcode!!!  checkcode!!!\nPlease input how many seconds you want to delay:')
+print(a)
+print(type(a))

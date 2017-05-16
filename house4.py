@@ -63,7 +63,11 @@ class SpiderMain(object):
             self.urls.add_new_url(url)
         while self.urls.has_new_url() :
             if self.delay > 0 :
-                time.sleep(random.randint(self.delay,self.delay*2))             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
+                sleepSeconds = random.randint(self.delay,self.delay*2)
+                time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
+                print ('craw %d after %d seconds:' %(self.count,sleepSeconds))
+            else:
+                print ('craw %d :' %(self.count))
             new_url = self.urls.get_new_url()
             self.craw_oneurl(new_url,keywords,from_)
         self.print_record()
@@ -79,11 +83,11 @@ class SpiderMain(object):
         
         # 把取url移到外面，可以针对同一链接循环解析
         # new_url = self.urls.get_new_url()
-        print ('craw %d :' %(self.count))
+        # print ('craw %d :' %(self.count))
         html_cont = self.downloader.download(new_url,False,True)
         if html_cont == 404:                    #增加对被禁ip的处理
             self.forbidden += 1
-            time.sleep(30*self.forbidden)      #暂停3分钟
+            time.sleep(30*self.forbidden)      #被禁止访问了，消停一会
             if self.forbidden > self.forbidden_pages_stop:
                 raw_input('It seems you have been forbidden,press any key to continue......')
                 self.forbidden = 0
@@ -95,7 +99,7 @@ class SpiderMain(object):
 
             # 如果是验证界面，得到延时值，回调函数
             if new_datas == 'checkcode':
-                self.delay = new_urls               # 调整延时值
+                self.delay = int(new_urls)               # 调整延时值
                 if retries > 0:
                     return self.craw_oneurl(new_url,keywords,from_,retries - 1)
             
