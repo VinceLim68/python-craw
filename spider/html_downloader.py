@@ -74,7 +74,7 @@ class HtmlDownloader(object):
                 #     return get_content(request, retries - 1)
         finally:
             if 'response' in  dir(): response.close()
-        # print(html_cont)
+
         return html_cont
 
 
@@ -128,25 +128,7 @@ class HtmlDownloader(object):
             req.add_header("GET",url)
             req.add_header("User-Agent",agent)
 
-        # if 'xm.ganji.com' in url:       #2016.12.1增加,赶集网要有延时功能
-        #     time.sleep(random.randint(3,5))
-
-        # if 'xm.anjuke.com' in url:      #2017.3.20增加安居客要有延时功能
-        #     # time.sleep(random.randint(6,12))
-        #     time.sleep(random.randint(3,6))     
-
-        # if '.leju.com' in url:      #2017.3.20增加安居客要有延时功能
-        #     time.sleep(random.randint(2,5))
-        # print('begin to urllibopen')
-
         content = self.get_content(req)
-
-            # if content:             #如果获取成功，会返回内容，直接赋值retry跳出循环
-            #     retry = 4
-            # else:
-            #     retry += 1
-            #     print "You are trying the " + str(retry) + "times"
-            #     time.sleep(random.randint(3,7))
 
         return content
 

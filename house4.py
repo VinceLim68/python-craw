@@ -73,6 +73,7 @@ class SpiderMain(object):
             fout.write( '\n %9.0f records has been stored in MySQL ' %self.total)
 
     @mytools.mylog
+    @mytools.exeTime
     def craw_oneurl(self,new_url,keywords,from_,retries = 3):
         
         # 把取url移到外面，可以针对同一链接循环解析
@@ -82,7 +83,7 @@ class SpiderMain(object):
         if self.delay > 0 :
             sleepSeconds = random.randint(self.delay,self.delay*2)
             time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
-            print ('craw %d after %d seconds:' %(self.count,sleepSeconds))
+            print ('craw %d after %d seconds (%d ~ %d):' %(self.count,sleepSeconds,self.delay,self.delay*2))
         else:
             print ('craw %d :' %(self.count))
         
@@ -128,7 +129,7 @@ class SpiderMain(object):
                 self.comms.add_new_urls([name['community_name'] for name in new_datas])     #2016.5.27,直接从datas里取出community_name
                 self.outputer.collect_data(new_datas,keywords)
                 self.quantity_of_datas,self.quantity_of_raw_datas,self.quantity_of_dupli = self.outputer.get_datas_quantity()
-                print("**%6.0f = %6.0f dupli + %6.0f raw_datas + %6.0f stored , %6.0f datas in list **"\
+                print("  %6.0f = %6.0f dupli + %5.0f raw_datas + %6.0f stored , %5.0f in list"\
                 %(self.quantity_of_dupli + self.quantity_of_raw_datas + self.total,self.quantity_of_dupli,self.quantity_of_raw_datas,self.total,self.quantity_of_datas ))
                 if self.quantity_of_raw_datas > 3000:
                     print ("try to store")

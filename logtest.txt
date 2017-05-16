@@ -452,3 +452,207 @@ ValueError: invalid literal for int() with base 10: ''
        472 records has been stored in MySQL 
 *******2017-05-16 09:59:02.462000*************
        472 records has been stored in MySQL 
+*******2017-05-16 10:00:02.175000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:01:04.128000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:01:29.062000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p2-rd1/?kw=%E8%8E%B2%E5%AF%8C%E5%A4%A7%E5%8E%A6&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:02:58.228000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:04:09.580000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:04:37.687000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p3-rd1/?kw=%E5%A4%A7%E5%94%90%E4%B8%96%E5%AE%B6%E4%BA%8C%E6%9C%9F%E6%B9%96%E9%87%8C&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:05:51.379000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:07:10.617000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:08:04.095000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p5-rd1/?kw=%E4%B8%87%E7%BE%8E%E8%8A%B1%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:08:20.557000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p7-rd1/?kw=%E4%B8%87%E7%BE%8E%E8%8A%B1%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:09:38.608000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:09:59.986000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:10:36.572000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p8-rd1/?kw=%E5%8F%A4%E9%BE%99%E5%BE%A1%E6%99%AF%E4%B8%80%E6%9C%9F&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:11:53.953000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:13:54.969000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:14:06.630000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:15:15.545000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p4-rd1/?kw=%E4%B9%9D%E9%BE%99%E5%9F%8E&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:15:32.731000*************
+       472 records has been stored in MySQL 
+*******2017-05-16 10:18:52.761000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p25-rd1/?kw=%E9%98%B3%E5%85%89%E8%8A%B1%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:21:56.682000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:23:07.963000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:23:44.922000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:26:55.891000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:27:02.769000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:27:18.535000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:28:12.340000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:29:25.501000*************
+       602 records has been stored in MySQL 
+*******get_content urlopen error record by get_content 2017-05-16 10:30:42.745000*************
+2017-05-16 10:30:42.745000
+Traceback (most recent call last):
+  File "E:\git\spider\html_downloader.py", line 41, in get_content
+    data = response.read()
+  File "G:\Python27\lib\socket.py", line 355, in read
+    data = self._sock.recv(rbufsize)
+  File "G:\Python27\lib\httplib.py", line 588, in read
+    return self._read_chunked(amt)
+  File "G:\Python27\lib\httplib.py", line 648, in _read_chunked
+    value.append(self._safe_read(amt))
+  File "G:\Python27\lib\httplib.py", line 703, in _safe_read
+    chunk = self.fp.read(min(amt, MAXAMOUNT))
+  File "G:\Python27\lib\socket.py", line 384, in read
+    data = self._sock.recv(left)
+timeout: timed out
+
+*******2017-05-16 10:31:31.699000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p10-rd1/?kw=%E7%BB%BF%E8%8B%91%E5%B0%8F%E5%8C%BA&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:33:03.357000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:33:08.933000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:33:26.085000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:36:34.752000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:37:19.681000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:38:52.562000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:40:46.735000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:41:15.991000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:41:42.233000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:42:01.733000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:42:36.382000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:45:35.055000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:46:05.195000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p8-rd1/?kw=%E7%89%A1%E4%B8%B9%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:47:07.394000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:49:08.338000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p14-rd1/?kw=%E4%BD%8F%E5%AE%85%E8%8E%B2%E8%8A%B1%E5%B0%9A%E9%99%A2&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:49:35.269000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:49:44.648000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p1-rd1/?kw=%E9%B9%AD%E6%B1%9F%E6%96%B0%E5%9F%8E&from_url=kw_final#filtersort. 
+
+*******2017-05-16 10:54:12.417000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:57:49.531000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:57:58.941000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:58:22.252000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 10:59:13.304000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 11:00:06.421000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 11:00:40.913000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 11:00:45.687000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 11:01:45.307000*************
+       602 records has been stored in MySQL 
+*******2017-05-16 11:03:41.225000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p16-rd1/?kw=%E6%96%B0%E9%87%91%E8%8A%B1%E5%9B%AD&from_url=kw_final#filtersort. 
+
+*******2017-05-16 11:04:03.844000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:07:04.820000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:07:57.558000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:08:03.321000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:13:12.954000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p25-rd1/?kw=%E6%B9%96%E5%8C%97%E5%A4%A7%E5%8E%A6&from_url=kw_final#filtersort. 
+
+*******2017-05-16 11:13:31.895000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p43-rd1/?kw=%E6%B9%96%E5%8C%97%E5%A4%A7%E5%8E%A6&from_url=kw_final#filtersort. 
+
+*******2017-05-16 11:14:05.974000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:14:30.062000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:15:12.220000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p6-rd1/?kw=%E5%AF%8C%E9%9B%85%E5%9B%BD%E9%99%85%E5%85%AC%E5%AF%93&from_url=kw_final#filtersort. 
+
+*******2017-05-16 11:17:40.548000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:18:49.600000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:18:54.460000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:20:44.334000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:21:11.583000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:21:38.404000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:21:57.752000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:23:38.904000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:24:04.277000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:24:21.373000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:24:30.098000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:25:07.165000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:25:43.956000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:27:41.825000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p19-rd1/?kw=%E7%A6%BE%E7%A5%A5%E5%85%AC%E5%AF%93&from_url=kw_final#filtersort. 
+
+*******2017-05-16 11:28:14.272000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:28:59.323000*************
+       737 records has been stored in MySQL 
+*******2017-05-16 11:30:27.289000*************
+ no new datas have been crawed :http://xm.esf.leju.com/house/n201/. 
+
+*******2017-05-16 11:31:37.593000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p22-rd1/?kw=%E9%87%91%E5%B0%9A%E5%B0%8F%E5%8C%BA&from_url=kw_final#filtersort. 
+
+*******2017-05-16 11:32:55.113000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p32-rd1/?kw=%E9%87%91%E5%B0%9A%E5%B0%8F%E5%8C%BA&from_url=kw_final#filtersort. 
+
+*******2017-05-16 11:33:58.589000*************
+ no new datas have been crawed :http://xm.anjuke.com/sale/p41-rd1/?kw=%E9%87%91%E5%B0%9A%E5%B0%8F%E5%8C%BA&from_url=kw_final#filtersort. 
