@@ -62,12 +62,6 @@ class SpiderMain(object):
         for url in root_url:
             self.urls.add_new_url(url)
         while self.urls.has_new_url() :
-            if self.delay > 0 :
-                sleepSeconds = random.randint(self.delay,self.delay*2)
-                time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
-                print ('craw %d after %d seconds:' %(self.count,sleepSeconds))
-            else:
-                print ('craw %d :' %(self.count))
             new_url = self.urls.get_new_url()
             self.craw_oneurl(new_url,keywords,from_)
         self.print_record()
@@ -83,8 +77,17 @@ class SpiderMain(object):
         
         # 把取url移到外面，可以针对同一链接循环解析
         # new_url = self.urls.get_new_url()
-        # print ('craw %d :' %(self.count))
+        
+        # 延时模块
+        if self.delay > 0 :
+            sleepSeconds = random.randint(self.delay,self.delay*2)
+            time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
+            print ('craw %d after %d seconds:' %(self.count,sleepSeconds))
+        else:
+            print ('craw %d :' %(self.count))
+        
         html_cont = self.downloader.download(new_url,False,True)
+        
         if html_cont == 404:                    #增加对被禁ip的处理
             self.forbidden += 1
             time.sleep(30*self.forbidden)      #被禁止访问了，消停一会
@@ -94,6 +97,7 @@ class SpiderMain(object):
             # 2017.5.11增加404情况回调
             else:
                 return self.craw_oneurl(new_url,keywords,from_)
+        
         elif html_cont is not None:
             new_urls,new_datas = self.parser.parse(html_cont,from_)
 
@@ -103,7 +107,7 @@ class SpiderMain(object):
                 if retries > 0:
                     return self.craw_oneurl(new_url,keywords,from_,retries - 1)
             
-            # 当解析没有得到数据时，会自动重新解析，但超过nodata_pages_stop次数则暂停
+            # 当解析没有得到数据时，我怀疑是网络问题，再解析一次，但超过nodata_pages_stop次数则暂停
             elif len(new_datas) == 0 and len(new_urls) == 0:
                 with open('logtest.txt','a+') as fout:
                     fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
@@ -112,18 +116,13 @@ class SpiderMain(object):
                 print(' There are %s datas and %s urls in %s' %(len(new_datas),len(new_urls),new_url))
                 self.nodata += 1                #只有连续5个页面没有数据才会停止
                 
-                # #连续出现几个页面没有数据的暂停，因为现在404和验证码都会暂停了，不需要在这里控制
-                # if self.nodata >= self.nodata_pages_stop :
-                #     raw_input('5 pages have no datas,press any key to continue......')
-                #     self.nodata = 0
-                
-                # 2017.4.17 如果没有解析出数据，我怀疑是网络问题，再解析一次
-                # if retries > 0:
                 if self.nodata < self.nodata_pages_stop:
                     print("You are still have " + str(self.nodata_pages_stop-self.nodata) + "times to parse this url") 
                     time.sleep(random.randint(3,7))
                     # return self.craw_oneurl(new_url,keywords,from_, retries - 1)
                     return self.craw_oneurl(new_url,keywords,from_)
+            
+            # 正常情况，解析
             else:
                 self.urls.add_new_urls(new_urls)
                 self.comms.add_new_urls([name['community_name'] for name in new_datas])     #2016.5.27,直接从datas里取出community_name
@@ -140,6 +139,8 @@ class SpiderMain(object):
                 self.count += 1
                 self.nodata = 0             #如果有数据，把self.nodata计数器清零
                 self.forbidden = 0          #如果有数据，把self.forbidden计数器清零
+        
+        # html_cont内容是None
         else:
             print('craw %s fail : nothing' %(new_url))
 
