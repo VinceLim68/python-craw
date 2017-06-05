@@ -152,34 +152,6 @@ if __name__=="__main__":
 	for item in comm_arr:
 		print(item[0])
 		print(item[1])
-	# load_arr = matchid.get_comm_arr(u'Sheet1',matchid.exc)
 	
-	# datas = matchid.get_datas(n,step)
-
-	# for data in datas:
-	# 	getid = matchid.get_id_from_arr(data,comm_arr)
-	# 	try:
-	# 		if len(getid) == 1:
-	# 			matchid.insert_for_sale(data,getid[0][2])
-	# 		elif len(getid) == 0:
-				
-	# 			getroad = matchid.get_id_from_arr(data,load_arr)
-	# 			if len(getroad) == 1:
-	# 				matchid.insert_for_sale(data,getroad[0][2])
-	# 			elif len(getroad) == 0:
-	# 				matchid.insert_err(data)
-	# 			elif len(getroad) > 1:
-	# 				matchid.handle_match_mul(data,getroad)
-					
-	# 		elif len(getid) > 1:
-	# 			matchid.handle_match_mul(data,getid)
-				
-		
-	# 		k = k + 1
-
-	# 	except MySQLdb.Error,e:
-	# 		if e.args[0] == 1062 :
-	# 			print(str(dupli)+"aready have")
-	# 			dupli = dupli + 1
 
 	matchid.close_db()

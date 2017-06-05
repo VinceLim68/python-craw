@@ -36,8 +36,8 @@ class SpiderAll(SpiderMain):
         except:
             print "********** %s :Crawing **************"%(self.count1)
         
-        print " Communities : %5.0f / %5.0f ,%6.0f raw_datas ,%6.0f stored in MySQL" \
-                    %(quantity_of_old_comms,self.quantity_of_new_comms + quantity_of_old_comms,self.quantity_of_raw_datas,self.total)
+        print " Communities : %5.0f / %5.0f " \
+                    %(quantity_of_old_comms,self.quantity_of_new_comms + quantity_of_old_comms)
         serch_for = urllib.quote(new_comm)
         
         if from_where == '1':
