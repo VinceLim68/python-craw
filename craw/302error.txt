@@ -1,0 +1,20 @@
+*******get_content urlopen error record by get_content 2017-06-13 08:13:11.824000*************
+2017-06-13 08:13:11.824000
+Traceback (most recent call last):
+  File "E:\git\spider\html_downloader.py", line 34, in get_content
+    response = urllib2.urlopen(request,timeout=10)
+  File "G:\Python27\lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "G:\Python27\lib\urllib2.py", line 435, in open
+    response = meth(req, response)
+  File "G:\Python27\lib\urllib2.py", line 548, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "G:\Python27\lib\urllib2.py", line 467, in error
+    result = self._call_chain(*args)
+  File "G:\Python27\lib\urllib2.py", line 407, in _call_chain
+    result = func(*args)
+  File "G:\Python27\lib\urllib2.py", line 644, in http_error_302
+    self.inf_msg + msg, headers, fp)
+HTTPError: HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.
+The last 30x error message was:
+Found
