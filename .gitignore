@@ -24,4 +24,4 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-logtest.txt
+craw/logtest.txt
