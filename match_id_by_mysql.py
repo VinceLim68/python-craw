@@ -13,21 +13,22 @@ class MatchID(object):
 		self.exc = xlrd.open_workbook('comm.xlsx')
 
 	def get_comm_arr_fromMysql(self,pri):
-		# 查询comm表，生成comm数组，与原表的区分是，他把关键字进行了拆分，一个id会有多个关键字
-		# 返回：每个comm_arr按[id,小区关键字]	
 		where = "where pri_level=" + str(pri)
+		# if pri == 1:
+		# 	where =  "where pri_level=1 "
+		# else:
+		# 	where = "where pri_level is Null"
 		sql = "SELECT comm_name,comm_id,keywords,pri_level FROM comm " + where
 		self.cursor.execute(sql)
 		datas = self.cursor.fetchall()
 		comm_arr = []
 		for data in datas:
-			#keywords用,进行拆分
 			comms = data[2].split(',')
 			for comm in comms:
 				kv = []
 				kv.append(data[1])
 				kv.append(comm)
-				comm_arr.append(kv)		
+				comm_arr.append(kv)	#每个元素	0：小区id,1：小区关键字
 		return comm_arr
 
 
@@ -36,6 +37,7 @@ class MatchID(object):
 	def get_comm_arr(self,table_name,excel):
 		#这是先取出小区列表
 		#根据不同表名（table_name),取出小区列表或者路名列表
+		# excel = xlrd.open_workbook('comm.xlsx')
 		table = excel.sheet_by_name(table_name)
 		nrows = table.nrows
 		ncols = table.ncols
@@ -53,44 +55,26 @@ class MatchID(object):
 
 
 	def get_id_from_arr(self,data,comm_arr):
-		#传入一条挂牌记录(list)，匹配出与小区id相关的数组
+		#传入一条挂牌记录(list)，匹配出相应的小区id(list)
+		str1 = data[11].replace("·","").replace(".","").encode("utf8").upper()
 
-		# 取出小区名称
-		commName = data[11].replace("·","").replace(".","").encode("utf8").upper()
-
-		getid = []				# getid:[开始位置，关键字，id]	
-		
-		# 轮询小区id与其关键字的对应数组
-		for i in comm_arr:								
-			# i[1]是关键字，但可能存在关键后带辅助字的，先将关键字与辅助字拆开
-			key_words = i[1].split("/")					
-			
-			# 在小区名称中查找关键字，不含辅助字
-			start = commName.find(key_words[0].upper())			
-			
-			# 如果找到
+		getid = []					#存放匹配成功的小区关键字
+		for i in comm_arr:								#小区关键字列表来轮询
+			key_words = i[1].split("/")					#对带“/”的关键字进行拆分，第一个是关键字，后面是补充区分的
+			start = str1.find(key_words[0].upper())			#在community_name(data[11])中查找关键字key_words[0],key_words其他元素是辅助
 			if start >= 0:
-				lenth=len(key_words)					
-				
-				# 如果有带辅助字
-				if lenth > 1:				
-					
-					#把title+community_name相加成一个供匹配字段
-					formatch = commName + data[4].encode("utf8").upper()				
-					
-					# 在formatch中查找辅助字
+				lenth=len(key_words)					#对于关键字中有"/"的关键字，要继续用其他关键字进一步匹配
+				if lenth > 1:
+					formatch = str1 + data[4].encode("utf8").upper()				#把title+community_name相加成一个匹配字段
 					for j in range(1,lenth):
-						# 只要找到一个即可退出循环
-						if formatch.find(key_words[j].upper()) >=0:		
+						if formatch.find(key_words[j].upper()) >=0:		#用data[4]title进行匹配
+							# temp = [start,i[1],i[0]]			#只要匹配到一个即可，退出循环
 							temp = [start,key_words[0].upper(),i[0]]
 							getid.append(temp)
 							break
-				# 如果没有辅助字
 				else:
-					temp = [start,key_words[0].upper(),i[0]]			
+					temp = [start,key_words[0].upper(),i[0]]			#对于关键字中没有“/”的，匹配成功就可以了
 					getid.append(temp)
-		
-		# 返回：[起始位置，关键字，id]
 		return getid
 
 	def get_datas(self,n,step):
@@ -152,18 +136,12 @@ class MatchID(object):
 	def handle_match_mul(self,data,getid):
 		# 对匹配成功多于一个id的，进行处理
 		flag = False				#设置标志位，如果能从多个id中成功解析出一个id,则标志位设成ture
-		
-		getid.sort(key=lambda x:x[0]) 			#按照匹配关键字的起始位置排序		
-		
-		#最先匹配到的关键字
+		getid.sort(key=lambda x:x[0]) 			#按照匹配关键字的位置排序，先匹配到的排在前面		
 		first = getid[0]
-		
-		# 用第一个匹配成的合成一个字段：起始位置+小区名称+小区id
-		get = str(getid[0][0]) +',' + str(getid[0][1]) +',' + str(getid[0][2]) + "/"		
+		get = str(getid[0][0]) +',' + str(getid[0][1]) +',' + str(getid[0][2]) + "/"		#起始位置+小区名称+小区id
 		
 		for l in range(1,len(getid)):
-			# 如果第二个匹配到的关键字起始位置大于第一个，就以第一个为准，不用再匹配了
-			if(getid[l][0] > first[0]):			
+			if(getid[l][0] > first[0]):			#当有多个小区名称被匹配成功时，以第一个为准
 				break
 			else:								#如果有并列第一：
 				if len(getid[l][1]) > len(first[1]):		#字符串长的优先

@@ -79,9 +79,10 @@ class SpiderMain(object):
         # 把取url移到外面，可以针对同一链接循环解析
         # new_url = self.urls.get_new_url()
         
+        # 延时模块
         if self.delay > 0 :
             sleepSeconds = random.randint(self.delay,self.delay*2)
-            # time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
+            time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
             print ('craw %d after %d seconds (%d ~ %d):' %(self.count,sleepSeconds,self.delay,self.delay*2))
         else:
             print ('craw %d :' %(self.count))
@@ -143,11 +144,6 @@ class SpiderMain(object):
         # html_cont内容是None
         else:
             print('craw %s fail : nothing' %(new_url))
-
-        # 延时模块：放在最后，第一次抓取时不用延时
-        if self.delay > 0 :
-            # sleepSeconds = random.randint(self.delay,self.delay*2)
-            time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
 
 
     @mytools.mylog
