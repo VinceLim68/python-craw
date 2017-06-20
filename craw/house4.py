@@ -77,7 +77,6 @@ class SpiderMain(object):
     def craw_oneurl(self,new_url,keywords,from_,retries = 3):
         
         # 把取url移到外面，可以针对同一链接循环解析
-        # new_url = self.urls.get_new_url()
         
         if self.delay > 0 :
             sleepSeconds = random.randint(self.delay,self.delay*2)

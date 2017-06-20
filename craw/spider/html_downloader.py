@@ -59,6 +59,9 @@ class HtmlDownloader(object):
                 traceback.print_exc(file=fout)
                 print traceback.format_exc()
             
+            # print(e)
+            # print('*'*80)
+            # time.sleep(15)
             # ±»½ûÖ¹Ê±£¬·µ»Ø404
             if hasattr(e, 'code') and e.code == 404:
                 html_cont = 404 
@@ -68,10 +71,6 @@ class HtmlDownloader(object):
                 time.sleep(random.randint(3,7))
                 return self.get_content(request, retries - 1)
 
-                # if hasattr(e, 'code') and 500 <= e.code < 600:
-                #     print "You are still have " + str(retry) + "times to try open this url"
-                #     time.sleep(random.randint(3,7))
-                #     return get_content(request, retries - 1)
         finally:
             if 'response' in  dir(): response.close()
 
