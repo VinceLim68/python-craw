@@ -25,3 +25,4 @@ wheels/
 .installed.cfg
 *.egg
 craw/logtest.txt
+runtime/*

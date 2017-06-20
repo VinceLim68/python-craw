@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:78:"C:\wamp64\www\gitproject\tp5\public/../application/evalu\view\index\index.html";i:1496112267;s:76:"C:\wamp64\www\gitproject\tp5\public/../application/evalu\view\evalubase.html";i:1497689492;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:78:"C:\wamp64\www\gitproject\tp5\public/../application/evalu\view\index\index.html";i:1496112267;s:76:"C:\wamp64\www\gitproject\tp5\public/../application/evalu\view\evalubase.html";i:1497970165;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +14,20 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<span class="navbar-brand"> <a
-					href="<?php echo url('geturl'); ?>">大叔报价</a>
+				<span class="navbar-brand"> <a href="<?php echo url('geturl'); ?>" style="color:#eee;">大叔报价</a>
 				</span>
-				<ul class="nav navbar-nav">
+				
+			</div>
+
+			<form method="post" class="navbar-form navbar-left" action="">
+				<div class="form-group has-feedback">
+					<input type="text" class="form-control" placeholder="请输入小区名称"
+						name="searchfor" style="width: 350px;">
+					<span class="glyphicon glyphicon-search form-control-feedback"
+						aria-hidden="true"></span>
+				</div>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
 					<li><a href="http://www.kancloud.cn/manual/thinkphp5/118003"
 						target="_blank"> <i class="fa fa-w fa-file-code-o"></i> TP5文档
 					</a></li>
@@ -29,16 +39,6 @@
 					</a></li>
 
 				</ul>
-			</div>
-
-			<form method="post" class="navbar-form navbar-right" action="">
-				<div class="form-group has-feedback">
-					<input type="text" class="form-control" placeholder="请输入小区名称"
-						name="searchfor" style="width: 350px;">
-					<span class="glyphicon glyphicon-search form-control-feedback"
-						aria-hidden="true"></span>
-				</div>
-			</form>
 		</div>
 	</nav>
 
