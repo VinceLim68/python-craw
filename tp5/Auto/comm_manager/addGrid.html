@@ -1,0 +1,138 @@
+<div class="fanbox">
+    <h3>增加新小区</h3>
+    <form id="add_form" >
+        <table width="100%" cellpadding="0" cellspacing="0" class="post_table">
+            <tr>
+                <td width="20%" align="right">小区名称：</td>
+                <td>
+					<input type="text" class="input2" name="add_comm_name"  id="add_comm_name" ></input>
+				</td>
+            </tr>
+			<tr>
+                <td align="right">区域：</td>
+                <td > 
+					<!-- 这里布置了input 和 select 两个标签，其实是为了实现即能输入，又能快选的功能，有点笨 -->
+					<input  id="add_region" name="add_region" style="width:30%;"> </input>
+					<select id="add_region_list" style="width:30%;"> </select> 
+				</td>
+            </tr>
+            
+			<tr>
+                <td align="right">片区：</td>
+                <td> 
+					<input  id="add_block" name="add_block" style="width:30%;"> </input>
+					<select id="add_block_list" name="add_block_list" style="width:30%;" value=""></select>
+				</td>
+            </tr>
+			<tr>
+                <td align="right">关键词：</td>
+                <td><input id="add_keywords" type="text" class="input2" name="add_keywords" style="width:90%"  value=""/></td>
+            </tr>
+			<tr>
+                <td align="right">地址：</td>
+                <td><input type="text" class="input2" id="add_comm_addr" style="width:90%" name="add_comm_addr"  /> </td>
+            </tr>
+            <tr>
+                <td align="right">优先级别：</td>
+                <td><input type="text" class="input2" style="width:100px" id="add_pri_level" name="add_pri_level" maxlength="30" value="0"/> </td>
+            </tr>
+            <tr>
+                <td height="60">&nbsp;</td>
+                <td><input type="submit" class="btn" value="提交"/> <input type="button" class="btn" value="取消" onclick="$.fancybox.close();" /></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#add_form').ajaxForm({
+		url: "addcomm.php",
+		type: "GET",
+		data: {
+			action: "add",
+		},
+		beforeSubmit: validate,
+		success: function(response,status){
+			if(response == '1'){
+				$().message("成功添加");
+				$("#list").trigger("reloadGrid");
+			}else if(response == '2'){
+				$().message("没有需要修改的记录");
+			}else {
+				$("#list").jqGrid('setGridParam', { 
+					url: "addcomm.php", 
+					postData: {'add_comm_name': $("#add_comm_name").val(), }, 
+					page: 1 ,
+				}).trigger("reloadGrid"); 
+			};
+			$.fancybox.close();
+			$("#manage").text("已经存在类似小区，最好从中挑选做修改补充。");
+		}
+			
+		
+	}); 
+	
+	//初始化，把搜索栏中已经找出来的区域集放过来，不用再去麻烦数据库一趟了
+	$("#add_region_list").html($("#search_region").html());
+	
+	//如果区域值发生变化，片区选择集也要随之改变
+	$('#add_region').change(refresh_block); 
+	
+	//通过自动把区域选择集中被选择中的内容放到区域字段中去
+	$("#add_region_list").change(function(){
+		$('#add_region').val($("#add_region_list").val());
+		refresh_block();
+	} );
+	
+	//把选择的片区放到片区字段中去
+	$("#add_block_list").change(function(){
+		$('#add_block').val($("#add_block_list").val());
+	} );
+	
+	//小区名称发生改变时，追加到关键字中去
+	$("#add_comm_name").change(function(){
+		var name = $("#add_comm_name").val();
+		var keyw = $("#add_keywords").val();
+		var n = keyw.indexOf(name);		//查找，关键字中是否有小区名称
+		if (n == -1){					//如果没有
+			if (keyw != ''){
+				keyw = name + ',' + keyw;
+			}else{
+				keyw = name
+			};
+			$("#add_keywords").val(keyw);
+		};
+		//alert($("#add_comm_name").text());
+	} );
+});
+
+function refresh_block(){
+	var re = $("#add_region").val();
+	var blocks = $("#data_hide datalist[name='"+re+"']").html();
+	$("#add_block_list").html(blocks);		//根据选定的区域，添加该区域的片区列表
+};
+
+function validate(formData, jqForm, options) {  
+	
+	if ( $("#add_comm_name").val() == "" || $("#add_region").val() == "" || $("#add_block").val() == "" || $("#add_keywords").val() == "" || $("#add_pri_level").val() == ""){
+		alert("小区名称、区域、片区、关键字、优先级缺一不可");
+		return false;
+	}
+	
+}
+
+function show_request(formData,jqForm,options){
+	//var data = $.param(formData);
+	//alert(formData);
+	for (var i=0; i < formData.length; i++) { 
+        alert(formData[i].name + ',' + formData[i].value );
+		
+    } 
+};
+</script>
+
+
+
+
+

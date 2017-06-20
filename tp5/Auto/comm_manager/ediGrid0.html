@@ -1,0 +1,123 @@
+<div class="fanbox">
+    <h3>修改小区名称</h3>
+    <form id="edi_form" >
+    <!--<form id="edi_form" action="do.php?action=edi" method="post">
+		 <datalist id='region_list'></datalist> 
+		<datalist id='block_list'></datalist>-->
+		<input type="hidden" id="block_hidden"/> 
+		<input type="hidden" name="id" id="id_hidden"/> 
+        <table width="100%" cellpadding="0" cellspacing="0" class="post_table">
+            <tr>
+                <td width="20%" align="right">小区名称：</td>
+                <td>
+					<input type="text" class="input2" name="comm_name"  id="comm_name" ></input>
+					<input id="comm_id" type="text" class="input2" name="comm_id" style="width:20%;"  value=""/>
+				</td>
+            </tr>
+			<tr>
+                <td align="right">区域：</td>
+                <td id="region_td"> 
+					<select id='region_list' name='region' style="width:30%;"> </select>  
+				</td>
+            </tr>
+            
+			<tr>
+                <td align="right">片区：</td>
+                <td> 
+					<select id='block_list' name='block' style="width:30%;" value=""></select>
+					
+				</td>
+            </tr>
+            <tr>
+                <td align="right">片区代码：</td>
+                <td>
+					<input id="block_id" type="text" class="input2" name="block_id" style="width:30%;"  value=""/>
+				</td>
+            </tr>
+			<tr>
+                <td align="right">关键词：</td>
+                <td><input id="keywords" type="text" class="input2" name="keywords" style="width:90%"  value=""/></td>
+            </tr>
+			<tr>
+                <td align="right">地址：</td>
+                <td><input type="text" class="input2" id="comm_addr" style="width:90%" name="comm_addr"  /> </td>
+            </tr>
+            <tr>
+                <td align="right">优先级别：</td>
+                <td><input type="text" class="input2" style="width:100px" id="pri_level" name="pri_level" id="price" maxlength="30" /> </td>
+            </tr>
+            <tr>
+                <td height="60">&nbsp;</td>
+                <td><input type="submit" class="btn" value="提交"/> <input type="button" class="btn" value="取消" onclick="$.fancybox.close();" /></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#edi_form').ajaxForm({
+		url: "do.php",
+		type: "GET",
+		data: {
+			action: "edi",
+		},
+		//beforeSubmit: show_request,
+		/*要验证是否有重复的comm_id*/
+		success: function(response,status){
+			if(response == '1'){
+				$().message("成功修改");
+				$("#list").trigger("reloadGrid");
+			}else if(response == '2'){
+				$().message("没有需要修改的记录");
+			}else{
+				$().message(response);
+			};
+			$.fancybox.close();
+			
+		}
+	}); 
+	$("#region_list").html($("#search_region").html());
+	
+	
+	//$.get('ediGrid.php?action=region',function(response,status,xhr){
+	//	$("#region_list").html(response);
+	//}); 
+	
+	
+	$('#region_list').change(refresh_block); 
+	
+});
+
+function refresh_block(){
+	var re = $("#region_list").val();
+	var blocks = $("#data_hide datalist[name='"+re+"']").html();
+	$("#block_list").html(blocks);		//根据选定的区域，添加该区域的片区列表
+	$("#block_list option[value='"+$("#block_hidden").val()+"']").attr("selected",true);		//修改记录时：把原有片区值设为默认
+};
+
+function validate(formData, jqForm, options) {  
+    for (var i=0; i < formData.length; i++) { 
+        if (!formData[i].value) { 
+			$().message("请输入完整相关信息");
+            return false; 
+        } 
+    } 
+	$().message("正在提交...");
+}
+
+function show_request(formData,jqForm,options){
+	//var data = $.param(formData);
+	//alert(data['comm_name' ]);
+	for (var i=0; i < formData.length; i++) { 
+        alert(formData[i].name + ':' + formData[i].value)
+    } 
+	
+};
+</script>
+
+
+
+
+
+

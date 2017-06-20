@@ -1,0 +1,55 @@
+body {
+margin:0;
+padding:0;
+font-size:12px;
+margin:40px 0 0 0;
+background:#fff;
+}
+#header {
+height:40px;
+width:100%;
+
+position:absolute;
+top:0;
+}
+#header .header_main {
+width:800px;
+height:40px;
+margin:0 auto;
+}
+#header .header_main h1 {
+height:40px;
+line-height:40px;
+font-size:20px;
+color:#666;
+margin:0;
+padding:0 10px;
+float:left;
+}
+#header .header_search {
+float:left;
+padding:6px 0 0 0;
+}
+#header .header_search .search {
+width:300px;
+height:24px;
+border:1px solid #ccc;
+background:#fff;
+font-size:14px;
+color:#666;
+text-indent:5px;
+}
+#header .header_button {
+float:left;
+padding:5px;
+}
+#header .header_member {
+float:right;
+height:40px;
+line-height:40px;
+}
+#header .header_member a {
+font-size:14px;
+text-decoration:none;
+color:#555555;
+}
