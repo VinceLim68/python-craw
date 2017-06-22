@@ -3,6 +3,7 @@ namespace app\evalu\controller;
 
 use think\Controller;
 use app\evalu\model\Sales;
+use app\evalu\model\Comm;
 use think\Loader;
 
 class Index extends Controller
@@ -17,6 +18,41 @@ class Index extends Controller
 
     public function index()
     {
+        if (request()->isPost()) {
+            $result = $this->validate(input('post.'),
+                [
+                    'searchfor'  =>  'require|max:25|min:2',
+                ]);
+        
+        if(true !== $result){
+            // 验证失败 输出错误信息
+            $this->error($result);exit;
+        } else {
+            /* 查询数据并输出 */
+            $list = Comm::getCommsArr();
+            $pickitem = array();
+            foreach($list as $item){
+                $keywords = explode("/",$item[1]);
+                if (strlen($keywords[0]) > strlen(input('searchfor'))){
+                    $pos = strpos($keywords[0], input('searchfor'));
+                }else {
+                    $pos = strpos( input('searchfor'),$keywords[0]);
+                }
+                if ($pos !== false) {
+//                 if (is_int($pos)) {
+                    //找到
+                    $pickitem[] = $item;
+                } 
+            }
+            dump($pickitem);
+        }
+        }
+        
+        return $this->fetch();
+    }
+    public function index_back()
+    {
+        /* 这是原来的index方法，先备份在这里，主要学习验证器的应用 */
         if (request()->isPost()) {
             
             /* 加载验证器来验证 数据*/
