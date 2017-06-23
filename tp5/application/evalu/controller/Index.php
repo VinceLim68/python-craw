@@ -39,7 +39,6 @@ class Index extends Controller
                     $pos = strpos( input('searchfor'),$keywords[0]);
                 }
                 if ($pos !== false) {
-//                 if (is_int($pos)) {
                     //找到
                     $pickitem[] = $item;
                 } 
@@ -50,6 +49,7 @@ class Index extends Controller
         
         return $this->fetch();
     }
+
     public function index_back()
     {
         /* 这是原来的index方法，先备份在这里，主要学习验证器的应用 */
@@ -117,6 +117,9 @@ class Index extends Controller
         
     }
     
+    public function main(){
+        return $this->fetch();
+    }
     
     
   
