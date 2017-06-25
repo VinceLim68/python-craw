@@ -9,9 +9,15 @@ class Comm extends Model {
     protected $pk = 'id';
     protected $table = 'comm';
     
-    public static function getCommsArr(){
+    public function getPriLevelAttr($value)
+    {
+        $pri_level = [0=>'小区级',1=>'区块级'];
+        return $pri_level[$value];
+    }
+    
+    public static function _getCommsArr(){
         /**
-         * 把小区名按关键字拆分后形成一个数组
+         * 这个要删除了，把小区名按关键字拆分后形成一个数组
          */
         $comms = self::field("comm_id,comm_name,pri_level,keywords")->select();
         $comms_arr = array();
@@ -27,4 +33,11 @@ class Comm extends Model {
         return $comms_arr;        
     
     }
+    
+    public static function getAll(){
+        $comms = self::field("comm_id,comm_name,pri_level,keywords")->select();
+        return $comms;
+    }
+
+
 }
