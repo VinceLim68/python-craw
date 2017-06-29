@@ -11,7 +11,7 @@
 #引进将错误信息输出到日志
 #试图处理下载网页时的超时现象
 from __future__ import print_function
-from spider import url_manager,html_downloader,html_outputer,AJK_parser,XM_parser,SF_parser,QF_parser,LJ_parser,mytools
+from spider import url_manager,html_downloader,html_outputer,AJK_parser,XM_parser,SF_parser,QF_parser,LJ_parser,mytools,WB_parser
 import urllib         #2016.5.30取消不必要的包
 import datetime
 import sys
@@ -59,10 +59,15 @@ class SpiderMain(object):
 
 
     def craw(self,root_url,keywords,from_):
+        # 先把第一个root_url加入urls列表中,支持root_url有多个url
         for url in root_url:
             self.urls.add_new_url(url)
+        
+        # 开始循环抓取数据
         while self.urls.has_new_url() :
+            # 取出一个页面
             new_url = self.urls.get_new_url()
+            # 抓取一个页面
             self.craw_oneurl(new_url,keywords,from_)
         self.print_record()
 
@@ -80,7 +85,6 @@ class SpiderMain(object):
         
         if self.delay > 0 :
             sleepSeconds = random.randint(self.delay,self.delay*2)
-            # time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
             print ('craw %d after %d seconds (%d ~ %d):' %(self.count,sleepSeconds,self.delay,self.delay*2))
         else:
             print ('craw %d :' %(self.count))
@@ -111,7 +115,6 @@ class SpiderMain(object):
                 with open('logtest.txt','a+') as fout:
                     fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
                     fout.write( '\n no new datas have been crawed :%s. \n' %new_url)
-                    # fout.write(html_cont)               #把没有数据的页面保存下来看看
                 print(' There are %s datas and %s urls in %s' %(len(new_datas),len(new_urls),new_url))
                 self.nodata += 1                #只有连续5个页面没有数据才会停止
                 
@@ -124,7 +127,14 @@ class SpiderMain(object):
             # 正常情况，解析
             else:
                 self.urls.add_new_urls(new_urls)
-                self.comms.add_new_urls([name['community_name'] for name in new_datas])     #2016.5.27,直接从datas里取出community_name
+                # for date in new_datas:
+                # if new_datas.has_key('comm_url'):
+                #     self.comms.add_new_urls([name['comm_url'] for name in new_datas])
+                # else:
+                #     self.comms.add_new_urls([name['community_name'] for name in new_datas])    
+                # self.comms.add_new_urls([name['community_name'] for name in new_datas])    
+                self.comms.add_new_urls([name['comm_url'] if name.has_key('comm_url') else name['community_name'] for name in new_datas])    
+                # self.comms.add_new_urls([name.has_key('comm_url') ? name['comm_url']:name['community_name'] for name in new_datas])    
                 self.outputer.collect_data(new_datas,keywords)
                 self.quantity_of_datas,self.quantity_of_raw_datas,self.quantity_of_dupli = self.outputer.get_datas_quantity()
                 print("  %6.0f = %6.0f dupli + %5.0f raw_datas + %6.0f stored , %5.0f in list"\
@@ -133,8 +143,6 @@ class SpiderMain(object):
                     print ("try to store")
                     self.total = self.total + self.outputer.out_mysql()
                     self.outputer.clear_datas()
-                    # print ("---------------- %9.0f records has been stored in MySQL -----------------------"%self.total)
-                    # self.print_record()
                 self.count += 1
                 self.nodata = 0             #如果有数据，把self.nodata计数器清零
                 self.forbidden = 0          #如果有数据，把self.forbidden计数器清零
@@ -145,7 +153,6 @@ class SpiderMain(object):
 
         # 延时模块：放在最后，第一次抓取时不用延时
         if self.delay > 0 :
-            # sleepSeconds = random.randint(self.delay,self.delay*2)
             time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
 
 
