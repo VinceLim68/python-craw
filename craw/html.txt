@@ -1,0 +1,1117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <title>【厦门鲁能领秀城二手房|鲁能领秀城二手房买卖】- 厦门58同城</title>
+    <meta name="description" content='58同城鲁能领秀城小区频道为您提供鲁能领秀城租房、二手房价格走势，最新鲁能领秀城二手房租房信息，鲁能领秀城周边介绍、地图位置等关于鲁能领秀城小区信息。 ' />
+   	<meta name="keywords" content='鲁能领秀城' />
+	    <meta name="location" content= "province=福建;city=厦门;coord=118.118047,24.467497"/> 
+    <script type="text/javascript">
+        try{var ____json4fe = {"catentry":[{"dispid":"1","name":"房产信息","listname":"house"},{"dispid":"12","name":"小区","listname":"xiaoqu"}],
+            "locallist":[{dispid:'606', name:'厦门', listname:'xm'}],
+            "start":(new Date()).getTime(),"modules":"list"};
+            ____json4fe.version = 'A';
+            ____json4fe.title='鲁能领秀城二手房';
+            ____json4fe.smsc = 'ce882233f1f0d86eb1b4ad52c68706b0268a12f00cae2d84880dc1ef4a9e08d2d411718abea22e2f8f9a3ba2d11c464764c569350315b71e0346c752619f78a92c9942c8f2904965828800479904c756db5800384209e4d14d326f17d8286a4d';
+            ____json4fe.modules = 'listpage';
+            ____json4fe.xiaoquId='641259';
+            ____json4fe.locallist = [{'dispid':'606','name':'厦门','listname':'xm'}];
+            ____json4fe.xiaoqu_listname = true;
+            ____json4fe.currentPage='ershoufang';
+            ____json4fe.newImVersion = true;
+        }catch(e){};
+    </script>
+    <link type="text/css" rel="stylesheet" href="http://c.58cdn.com.cn/ui7/css/base.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="http://c.58cdn.com.cn/n/css/xiaoqu/xiaoqu_v2_comment.css" media="all"> 
+    <!-- topbar改版本号 -->
+	<link rel="stylesheet" href="http://c.58cdn.com.cn/componentsLoader/dist/CompontsLoader.css"/>	
+	
+	<link rel="stylesheet" type="text/css" href="http://c.58cdn.com.cn/n/css/xiaoqu/list-fang_second-hand.css" media="all"/>
+    <script type="text/javascript" src="http://j1.58cdn.com.cn/js/5_1/jquery1.4.4.js"></script>
+    <script type="text/javascript" src="http://j1.58cdn.com.cn/ui7/js/createElement-lte-IE8.js"></script>
+    <script type="text/javascript" src="http://j1.58cdn.com.cn/js/5_1/comm_js/boot_listpage_version.js"></script>
+    <script type="text/javascript">
+        document.domain = '58.com';
+        //win1 = new GetToolTipWindow('tooltipdiv1', 'keyword1', '1|2','1','');
+        //win1.setSearchButton('searchbtn1');
+        boot.require('util.cookie', function(Frame, cookie){cookie.set('city', 'xm');});
+    </script>
+
+    <!--百度统计开始-->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?ae019ebe194212c4486d09f377276a77";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!--百度统计结束-->
+
+</head>
+<body>
+
+<!-- S= header -->
+<!-- =S header -->
+<!-- topbar js -->
+<!-- <div id="commonTopbar" class="commonTopbar"></div>
+<script src="http://j1.58cdn.com.cn/js/v6/commonTopbar.min.js"></script>
+    <script>
+    (function() {
+        var renderTopbar = function() {
+        if (typeof CommonTopbar !== 'undefined') {
+        CommonTopbar.render({
+        aroundCity: false,
+        weather: false,
+        appQR: true, // homepage QR
+        homepageLink: true,
+        size: 'narrow' // default: 1190px, narrow: 1000px
+        });
+        } else {
+        setTimeout(function() {
+        renderTopbar();
+        }, 100);
+        }
+        };
+        renderTopbar();
+        })();
+        // 换切换城市的链接
+        $('#commonTopbar_ipconfig a').attr('href','http://dict.58.com/xiaoqu/html/changecity?dir=xiaoqu');
+</script> -->
+<div id="commonTopbar" class="commonTopbar">
+<script type="text/javascript">
+    window.wbAsyncInit = function wbAsyncInit( CL ){
+	    CL.invoke('topbar', {
+		    aroundCity: false,
+		    weather: false,
+		    appQR: true, // homepage QR
+		    homepageLink: true,
+		    size: 'narrow' // default: 1190px, narrow: 1000px
+	    });
+    };
+</script>
+</div>
+<script type="text/javascript" src="http://j1.58cdn.com.cn/componentsLoader/dist/ComponentsLoader.js"></script>
+<script type="text/javascript">
+//换切换城市的链接
+function changeCityUrl(){
+	$('#commonTopbar_ipconfig a').attr('href','http://xm.58.com/xiaoqu/changecity');
+}
+setTimeout("changeCityUrl()", 2000);
+</script>
+<header id="header">
+    <div class="logo"><a href="http://www.58.com/" target="_blank">
+        <img alt="中文最大生活信息门户"  src="http://img.58cdn.com.cn/images/logonew.gif"><i>.</i>
+        </a><a class="logoXiaoqu">小区</a></div>
+    <div class="nav">
+    	<a href="/">厦门58同城</a><cite></cite>
+        <a href="/house.shtml">厦门房产信息</a><cite></cite>
+        <a href="/xiaoqu/">厦门小区</a>
+        <cite></cite>
+                <a href="/xiaoqu/609/">思明小区</a>
+        <cite></cite>
+                        <a href="/xiaoqu/8628/">文灶小区</a>
+        <cite></cite>
+                <a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/">鲁能领秀城</a>
+    </div>
+    <span id="post"></span>
+</header>
+<!-- =E header -->
+<!-- =S nav -->
+<nav id="xiaoquNav" class="yahei relative">
+    <ul>
+        <li class="selectedNav" page="xiaoqujianjie"><a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/"><h2>小区简介</h2></a></li>
+        <li page="fangjiadongtai"><a href="http://xm.58.com/fangjia/lunenglingxiucheng1/" onClick="clickLog('from=xiaoqufjdt');"><h2>房价动态</h2></a></li>
+        <li page="ershoufang"><a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/" onClick="clickLog('from=xiaoquesf');"><h2>二手房</h2></a></li>
+        <li page="zufang"><a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/chuzu/" onClick="clickLog('from=xiaoquzu');"><h2>租房</h2></a></li>
+                               <li page="dituzhoubian"><a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/map/"><h2>地图周边</h2></a></li>
+                <li page="wodegaungzhu" class="needLoginLi"><a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/guanzhu/"><h2>我的关注</h2></a></li>
+            </ul>
+        <div class="navbottom"> </div>
+
+</nav>
+<!--新增焦点所需资源位start-->
+<script>
+$(function(){
+	   var $jid=''
+	   if (typeof($jid) == "undefined") {
+		   xinfang();
+		   return;
+	   }
+		if($jid==00){
+			xinfang();
+			return;
+		}	
+	$.ajax({
+		type: 'GET',
+		url: 'http://house.focus.cn/common/newhouse/api/loupandatafordetail.api.php',
+		dataType: 'jsonp',
+		data: { "city_id": '606', "group_id":''},
+		jsonp: 'callback',
+		success: function(valdata) {
+			try {
+				//$("#xiaoquNav ul li").eq(3).after("<li><a target=\"_blank\"  onClick=\"clickLog('fc_sohu_xiaoqu1')\" href=\""+decodeURI(valdata.url)+"\"  rel=\"nofollow\" >新房</a></li>");
+			} catch (e) {
+
+			}
+		}
+		
+	});	
+	
+});
+
+$.extend({ isEmpty:function(v,allowBlank){ return v===null||v===undefined||(($.isArray(v)&&!v.length))||(!allowBlank?v==='':false); }, urlAppend:function(url,s){ if(!$.isEmpty(s)){ return url+(url.indexOf('?')===-1?'?':'&')+s; } return url; } });
+
+function xinfang(){
+	$.getJSON(
+			"http://house.focus.cn/common/newhouse/api/loupandataforinfolist.api.php?city_id=606&callback=?",
+			function(data){
+				if(!data || !data.items)
+					return;
+				var html = [];
+				var key = '', value = '';
+				$(data.items).each(function(i, item){
+					for(var o in item){
+						key = o;
+						value = item[o];
+					}	
+					return false; 
+				});
+				var url=value.substring(0, value.lastIndexOf("focus.cn"));
+				if(!$.isEmpty(url)){
+					//url+="focus.cn/search/index.html";
+					//$("#xiaoquNav ul li").eq(3).after("<li><a target=\"_blank\"  onClick=\"clickLog('fc_sohu_xiaoqu1')\" href=\""+url+"\"  rel=\"nofollow\">新房</a></li>");
+				}				
+			}
+		);
+}
+</script>
+<!--新增焦点所需资源位 end-->
+<script>
+if(!xq.checkIfLogin()){
+	$('#xiaoquNav .needLoginLi').remove();
+}
+$('#xiaoquNav li').removeClass('selectedNav').each(function(){
+	$(this).attr('page')==____json4fe.currentPage&&$(this).addClass('selectedNav');
+})
+if(____json4fe.currentPage=='ershoufang'){
+			$('#post').html('<a href="http://post.58.com/fang/8628/12/s5" rel="nofollow" target="_blank"  class="postBtn"></a>');
+    }else{
+    		$('#post').html('<a href="http://post.58.com/fang/8628/8/s5" rel="nofollow" target="_blank"  class="postBtn"></a>');
+    }
+</script>
+<!-- =E nav -->
+<!-- 统计代码 -->
+<script type="text/javascript"> 
+var _gaq = _gaq || []; var site_name = "58"; 
+var _trackURL="{'cate':'1,69944','area':'606','pagetype':'xiaoqu','page':'xiaoqu-detail'}";
+_gaq.push(['pageTracker._setAccount', 'UA-877409-4']); 
+_gaq.push(['pageTracker._setDomainName', '.58.com']);
+_gaq.push(['pageTracker._setAllowLinker', true]);
+_gaq.push(['pageTracker._addOrganic', 'sogou', 'query']);
+_gaq.push(['pageTracker._addOrganic', 'baidu', 'word']);
+_gaq.push(['pageTracker._addOrganic', 'soso', 'w']); 
+_gaq.push(['pageTracker._addOrganic', 'youdao', 'q']);
+_gaq.push(['pageTracker._addOrganic', '360', 'q']); 
+_gaq.push(['pageTracker._trackPageview']);
+$.getScript( ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js');
+$.getScript('http://track.58.com/referrer2.js');
+function esfhotlist_detail_hotCommunityListLnk_click_data()
+{
+	var areaPath = "";
+			areaPath = "606,609,8628";
+    	if(____json4fe.currentPage=='xiaoqujianjie'){
+		clickLog("from=house_fangchan_xiaoqu_esfhotlist_detail_hotCommunityLnk_clk&AreaPath="+areaPath+"&rand="+Math.random());
+		_gaq.push(['pageTracker._trackEvent', 'detail', 'tag_click', 'house_xiaoqu_esfhotlist_detail_hotCommunityLnk_[xm]']);
+	}else if(____json4fe.currentPage=='ershoufang'){
+		clickLog("from=house_fangchan_xiaoqu_esfhotlist_secHand_list_hotCommunityLnk_clk&AreaPath="+areaPath+"&rand="+Math.random());
+		_gaq.push(['pageTracker._trackEvent', 'list', 'tag_click', 'house_xiaoqu_esfhotlist_secHand_list_hotCommunityLnk_[xm]']);
+	}else if(____json4fe.currentPage=='chuzu'){
+		clickLog("from=house_fangchan_xiaoqu_esfhotlist_rent_list_hotCommunityLnk_clk&AreaPath="+areaPath+"&rand="+Math.random());
+		_gaq.push(['pageTracker._trackEvent', 'list', 'tag_click', 'house_xiaoqu_esfhotlist_rent_list_hotCommunityLnk_[xm]']);
+	}
+}
+</script>
+<!-- E= header -->
+
+<div id="selection">
+<div class="relative relative_show">
+    <dl class="secitem" id="zongjia" data_filter="mp"><dt>总价：</dt><dd><a data_filter="" class='select' rel="nofollow">不限</a>
+        <a data_filter="0_60" rel="nofollow">60万以下</a>
+        <a data_filter="60_80" rel="nofollow">60-80万</a>
+        <a data_filter="80_100" rel="nofollow">80-100万</a>
+        <a data_filter="100_150" rel="nofollow">100-150万</a>
+        <a data_filter="150_200" rel="nofollow">150-200万</a>
+        <a data_filter="200_300" rel="nofollow">200-300万</a>
+        <a data_filter="300_500" rel="nofollow">300-500万</a>
+        <a data_filter="500_1000" rel="nofollow">500-1000万</a>
+        <a data_filter="1000_99999" rel="nofollow">1000万以上</a>
+        <span class="prifilter"  id="minprice_filter">
+            <span class="text text2"><input type="text" text="-" min="0" max="999999" /></span>
+            <span class="dev"> - </span>
+            <span class="text text2">
+                <input type="text" text="万元" min="0" max="999999" moren="99999"/>&nbsp;万元</span>
+            <span class="btn btn2" style="display:none"><input type="button" value="价格筛选" /></span></span></dd></dl>
+       <dl class="secitem" id="area" data_filter="a"><dt>面积：</dt><dd><a data_filter="" class='select' rel="nofollow">不限</a>
+        <a data_filter="0_50" rel="nofollow">50㎡以下</a>
+        <a data_filter="50_70" rel="nofollow">50-70㎡</a>
+        <a data_filter="70_90" rel="nofollow">70-90㎡</a>
+        <a data_filter="90_110" rel="nofollow">90-110㎡</a>
+        <a data_filter="110_130" rel="nofollow">110-130㎡</a>
+        <a data_filter="130_150" rel="nofollow">130-150㎡</a>
+        <a data_filter="150_200" rel="nofollow">150-200㎡</a>
+        <a data_filter="200_300" rel="nofollow">200-300㎡</a>
+        <a data_filter="300_500" rel="nofollow">300-500㎡</a>
+        <a data_filter="500_99999" rel="nofollow">500㎡以上</a>
+        <span class="prifilter"  id="area_filter"><span class="text text2">
+        <input type="text" text="-" min="0" max="99999"/></span><span class="dev"> - </span>
+        <span class="text text2"><input type="text" text="㎡" min="0" max="99999" moren="99999"/></span><span class="dev">㎡ </span><span class="btn btn2" style="display:none"><input type="button" value="面积筛选" /></span></span>
+    </dd></dl>
+
+    <dl class="secitem" id="filter_tingshi" data_filter="shi"><dt>厅室：</dt><dd><a data_filter="" class='select' rel="nofollow">不限</a>
+        <a data_filter="1" rel="nofollow">一室</a>
+        <a data_filter="2" rel="nofollow">二室</a>
+        <a data_filter="3" rel="nofollow">三室</a>
+        <a data_filter="4" rel="nofollow">四室</a>
+        <a data_filter="5" rel="nofollow">四室以上</a>
+        <span class="prifilter" id="tingshi_filter"><span class="text text2">
+        <input type="text" text="室" min="0" max="10"/></span><span class="dev"> 室 </span>
+        <span class="text text2"><input type="text" min="0" max="10" text="厅"/></span><span class="dev"> 厅 </span>
+        <span class="text text2"><input type="text" text="卫 " min="0" max="10"/></span><span class="dev"> 卫 </span><span class="btn btn2" style="display:none"><input type="button" value="厅室筛选"/></span></span>
+    </dd></dl>
+
+    <dl class="secitem" id="floor" data_filter='floor' ><dt>楼层：</dt>
+        <dd><a data_filter="" class='select' rel="nofollow">不限</a>
+    <a href="javascript:;" data_filter='-4_-1'  class="icon_check" rel="nofollow"><i></i>地下</a>
+    <a href="javascript:;" data_filter='1'  class="icon_check" rel="nofollow"><i></i>1层</a>
+    <a href="javascript:;" data_filter='1_6'  class="icon_check" rel="nofollow"><i></i>6层以下</a>
+    <a href="javascript:;" data_filter='6_12'  class="icon_check" rel="nofollow"><i></i>6-12层</a>
+    <a href="javascript:;" data_filter='12_999'  class="icon_check" rel="nofollow"><i></i>12层以上</a>
+    </dd></dl>
+
+    <dl class="secitem" id="fittype" data_filter='fittype' ><dt>装修：</dt><dd><a data_filter="" class='select' rel="nofollow">不限</a>
+        <a href="javascript:;" data_filter='1'  class="icon_check" rel="nofollow"><i></i>毛坯</a>
+        <a href="javascript:;" data_filter='2'  class="icon_check" rel="nofollow"><i></i>简单装修</a>
+        <a href="javascript:;" data_filter='3'  class="icon_check" rel="nofollow"><i></i>中等装修</a>
+        <a href="javascript:;" data_filter='4'  class="icon_check" rel="nofollow"><i></i>精装修</a>
+        <a href="javascript:;" data_filter='5'  class="icon_check" rel="nofollow"><i></i>豪华装修</a>
+    </dd></dl>
+    <div id="local_SearchForm">
+        <input class="local_keyword "   value="">
+       <span class="sbtn" onmouseover="this.className='sbtn hover'"  onmouseout="this.className='sbtn'">
+           <input name="" class="global" value="搜索" type="button"></span>
+    </div>
+</div>
+<div id="selected" class="bar"></div>
+<i class="shadow"></i>
+<div class="line-x"> </div>
+<a href="javascript:;"  id="filter_slide"></a>
+</div>
+
+
+<div id="filter1" style="margin: 0 auto;width: 1000px;">
+    <div class="tabsbar">
+        <div class="list-tabs" id="ib" data_filter="filter_owner">
+                				<a class="sel" href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/">
+            	<span><h1> 鲁能领秀城二手房</h1></span>
+            </a>
+        	<a rel="nofollow" class=" pic " title="免税房源专区" href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang?mianshui=1">
+				<span><i class="icon_realfy"></i>免税房源专区</span>
+			</a>
+					        </div>
+    </div>
+    <div class="filterlistbar">
+        <div class="fl filterlistbar_l">
+            <div class="fl filterCheckbox">
+                <!-- <label for="ispic1"><input type="checkbox"  id="ispic1" data_filter="ispic" >只看有图</label> -->
+<!--                 <label for="isonline1"><input type="checkbox"  id="isonline1"  data_filter="isonline">帮帮在线</label> -->
+                <span>共 <b class="red">3567</b> 条信息</span>
+            </div>
+            <div class="fr filterSort"></div>
+      </div>
+    </div>
+</div>
+
+<div id="main">
+
+<div id="infolist"  class="cleft">
+<div id="top_google_ad"></div>
+  <!-- 小区管理员推荐信息  开始 -->
+      <div class="listwrap">
+<table class="tbimg" cellpadding="0" cellspacing="0">
+<col class="wimg" />
+<col />
+<col class="wjg" />
+<!-- 免税房源 -->
+		<tr logr="x_1_38084142176526">
+    <td class="img">
+    	<div style="display: none;">
+        	        		<input 李德法-厦门丹厦房产行销策划有限公司 />
+        	        </div>
+        <div class="img_list">
+            <a href="http://xm.58.com/ershoufang/29983129550778x.shtml" target="_blank" onClick="clickLog('from=xiaoqu_esfdetail&psid=2ce5c501-4688-4bb8-aa01-18deab9c914a&entityId=29983129550778&entityType=0')"><img src="http://pic3.58cdn.com.cn/anjuke_58/804525ebf0fe4afb6c0235f29bb01e91" alt="" /></a>
+        </div>
+    </td>
+    <td class="t">
+        <a href="http://xm.58.com/ershoufang/29983129550778x.shtml" target="_blank" class="t" onClick="clickLog('from=xiaoqu_esfdetail&psid=2ce5c501-4688-4bb8-aa01-18deab9c914a&entityId=29983129550778&entityType=0')">花园式小区 文灶BRT 电梯高层 南北通透 精装大3房双阳台</a><span class='ico ntu'>[14图]</span>
+        <span class="ico mianshui" title="免税房源"></span><span title="诚信房源" class="ico dun"></span>
+<!--         <span name="zaixian_38084142176526"></span> -->
+        <i class="clear"></i>
+        <!-- 商圈 - 小区 -  begin -->
+        <a href="/wenzhao/" target="_blank" class="a_xq1">文灶 </a> - <a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/" target="_blank" class="a_xq1">鲁能领秀城</a>
+        <!-- 商圈 - 小区 -  end -->
+        <!-- 一句话广告 begin -->
+                <!-- 一句话广告 end -->
+        <!-- 房源特色 -->
+                <span class="label_fang g_tagSon1">花园式小区</span>
+                <span class="label_fang g_tagSon2">封闭式管理</span>
+                <span class="label_fang g_tagSon3">业主惜售</span>
+                <span class="label_fang g_tagSon4">BRT周边</span>
+                <i class="clear"></i>
+        <!-- 房源特色 end -->
+        商品房<span class='c_ccc'>/</span>精装修<span class='c_ccc'>/</span>70年产权<span class='c_ccc'>/</span>朝南北<span class='c_ccc'>/</span>19/33层<span class='c_ccc'>/</span>3室2厅2卫 <span class='c_ccc'>/</span> 今天
+    </td>
+    <td class="tc">
+        <b class='pri'>1050</b> 万<br />
+        <span class="f14">64703元/㎡</span><br/>
+        <span class="f14">3室(162.28㎡)</span>
+    </td>
+	</tr>
+		<tr logr="x_1_41966221691927">
+    <td class="img">
+    	<div style="display: none;">
+        	        		<input 吴丁栋-厦门丹厦房产行销策划有限公司 />
+        	        </div>
+        <div class="img_list">
+            <a href="http://xm.58.com/ershoufang/29982665747916x.shtml" target="_blank" onClick="clickLog('from=xiaoqu_esfdetail&psid=2ce5c501-4688-4bb8-aa01-18deab9c914a&entityId=29982665747916&entityType=0')"><img src="http://pic7.58cdn.com.cn/anjuke_58/770b0bc550868422c69e0ff0305a94d2" alt="" /></a>
+        </div>
+    </td>
+    <td class="t">
+        <a href="http://xm.58.com/ershoufang/29982665747916x.shtml" target="_blank" class="t" onClick="clickLog('from=xiaoqu_esfdetail&psid=2ce5c501-4688-4bb8-aa01-18deab9c914a&entityId=29982665747916&entityType=0')">三面采光送车位 鲁能领秀城 正规3加1房 送入户花园建发物业</a><span class='ico ntu'>[8图]</span>
+        <span class="ico mianshui" title="免税房源"></span><span title="诚信房源" class="ico dun"></span>
+<!--         <span name="zaixian_41966221691927"></span> -->
+        <i class="clear"></i>
+        <!-- 商圈 - 小区 -  begin -->
+        <a href="/wenzhao/" target="_blank" class="a_xq1">文灶 </a> - <a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/" target="_blank" class="a_xq1">鲁能领秀城</a>
+        <!-- 商圈 - 小区 -  end -->
+        <!-- 一句话广告 begin -->
+                <!-- 一句话广告 end -->
+        <!-- 房源特色 -->
+                <i class="clear"></i>
+        <!-- 房源特色 end -->
+        商品房<span class='c_ccc'>/</span>中等装修<span class='c_ccc'>/</span>70年产权<span class='c_ccc'>/</span>朝南北<span class='c_ccc'>/</span>4/32层<span class='c_ccc'>/</span>5室2厅4卫 <span class='c_ccc'>/</span> 05-08
+    </td>
+    <td class="tc">
+        <b class='pri'>1150</b> 万<br />
+        <span class="f14">62500元/㎡</span><br/>
+        <span class="f14">5室(184.0㎡)</span>
+    </td>
+	</tr>
+		<tr logr="x_1_37689901795607">
+    <td class="img">
+    	<div style="display: none;">
+        	        		<input 吴欣怡-厦门麦田人房地产代理有限公司 />
+        	        </div>
+        <div class="img_list">
+            <a href="http://xm.58.com/ershoufang/29982432765134x.shtml" target="_blank" onClick="clickLog('from=xiaoqu_esfdetail&psid=2ce5c501-4688-4bb8-aa01-18deab9c914a&entityId=29982432765134&entityType=0')"><img src="http://pic1.58cdn.com.cn/anjuke_58/c817f9f6555b2d1dfdf4ab76ea843a34" alt="" /></a>
+        </div>
+    </td>
+    <td class="t">
+        <a href="http://xm.58.com/ershoufang/29982432765134x.shtml" target="_blank" class="t" onClick="clickLog('from=xiaoqu_esfdetail&psid=2ce5c501-4688-4bb8-aa01-18deab9c914a&entityId=29982432765134&entityType=0')">文灶 领秀城 高档装修4房 端头采光好 方正 安静</a><span class='ico ntu'>[20图]</span>
+        <span class="ico mianshui" title="免税房源"></span><span title="诚信房源" class="ico dun"></span>
+<!--         <span name="zaixian_37689901795607"></span> -->
+        <i class="clear"></i>
+        <!-- 商圈 - 小区 -  begin -->
+        <a href="/wenzhao/" target="_blank" class="a_xq1">文灶 </a> - <a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/" target="_blank" class="a_xq1">鲁能领秀城</a>
+        <!-- 商圈 - 小区 -  end -->
+        <!-- 一句话广告 begin -->
+                <!-- 一句话广告 end -->
+        <!-- 房源特色 -->
+                <span class="label_fang g_tagSon1">精装修</span>
+                <span class="label_fang g_tagSon2">急售</span>
+                <i class="clear"></i>
+        <!-- 房源特色 end -->
+        商品房<span class='c_ccc'>/</span>精装修<span class='c_ccc'>/</span>70年产权<span class='c_ccc'>/</span>朝南北<span class='c_ccc'>/</span>31/31层<span class='c_ccc'>/</span>4室2厅3卫 <span class='c_ccc'>/</span> 今天
+    </td>
+    <td class="tc">
+        <b class='pri'>1120</b> 万<br />
+        <span class="f14">69956元/㎡</span><br/>
+        <span class="f14">4室(160.1㎡)</span>
+    </td>
+	</tr>
+		<tr logr="x_1_38084142176526">
+    <td class="img">
+    	<div style="display: none;">
+        	        		<input 李德法-厦门丹厦房产行销策划有限公司 />
+        	        </div>
+        <div class="img_list">
+            <a href="http://xm.58.com/ershoufang/29981342654380x.shtml" target="_blank" onClick="clickLog('from=xiaoqu_esfdetail&psid=2ce5c501-4688-4bb8-aa01-18deab9c914a&entityId=29981342654380&entityType=0')"><img src="http://pic4.58cdn.com.cn/anjuke_58/88074f3081b06760d0e7dfb861ce717c" alt="" /></a>
+        </div>
+    </td>
+    <td class="t">
+        <a href="http://xm.58.com/ershoufang/29981342654380x.shtml" target="_blank" class="t" onClick="clickLog('from=xiaoqu_esfdetail&psid=2ce5c501-4688-4bb8-aa01-18deab9c914a&entityId=29981342654380&entityType=0')">电梯超高层 文灶BRT 豪装大3房 花园式小区 封闭式管理</a><span class='ico ntu'>[19图]</span>
+        <span class="ico mianshui" title="免税房源"></span><span title="诚信房源" class="ico dun"></span>
+<!--         <span name="zaixian_38084142176526"></span> -->
+        <i class="clear"></i>
+        <!-- 商圈 - 小区 -  begin -->
+        <a href="/wenzhao/" target="_blank" class="a_xq1">文灶 </a> - <a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/" target="_blank" class="a_xq1">鲁能领秀城</a>
+        <!-- 商圈 - 小区 -  end -->
+        <!-- 一句话广告 begin -->
+                <!-- 一句话广告 end -->
+        <!-- 房源特色 -->
+                <span class="label_fang g_tagSon1">文灶BRT</span>
+                <span class="label_fang g_tagSon2">电梯超高层</span>
+                <span class="label_fang g_tagSon3">花园式小区</span>
+                <span class="label_fang g_tagSon4">封闭式管理</span>
+                <i class="clear"></i>
+        <!-- 房源特色 end -->
+        商品房<span class='c_ccc'>/</span>精装修<span class='c_ccc'>/</span>70年产权<span class='c_ccc'>/</span>朝南北<span class='c_ccc'>/</span>28/32层<span class='c_ccc'>/</span>3室2厅2卫 <span class='c_ccc'>/</span> 今天
+    </td>
+    <td class="tc">
+        <b class='pri'>1125</b> 万<br />
+        <span class="f14">68472元/㎡</span><br/>
+        <span class="f14">3室(164.3㎡)</span>
+    </td>
+	</tr>
+		<tr logr="x_1_41966221691927">
+    <td class="img">
+    	<div style="display: none;">
+        	        		<input 吴丁栋-厦门丹厦房产行销策划有限公司 />
+        	        </div>
+        <div class="img_list">
+            <a href="http://xm.58.com/ershoufang/29981165900203x.shtml" target="_blank" onClick="clickLog('from=xiaoqu_esfdetail&psid=2ce5c501-4688-4bb8-aa01-18deab9c914a&entityId=29981165900203&entityType=0')"><img src="http://pic4.58cdn.com.cn/anjuke_58/770b0bc550868422c69e0ff0305a94d2" alt="" /></a>
+        </div>
+    </td>
+    <td class="t">
+        <a href="http://xm.58.com/ershoufang/29981165900203x.shtml" target="_blank" class="t" onClick="clickLog('from=xiaoqu_esfdetail&psid=2ce5c501-4688-4bb8-aa01-18deab9c914a&entityId=29981165900203&entityType=0')">三面采光送车位 鲁能领秀城 正规3加1房 送入户花园建发物业</a><span class='ico ntu'>[8图]</span>
+        <span class="ico mianshui" title="免税房源"></span><span title="诚信房源" class="ico dun"></span>
+<!--         <span name="zaixian_41966221691927"></span> -->
+        <i class="clear"></i>
+        <!-- 商圈 - 小区 -  begin -->
+        <a href="/wenzhao/" target="_blank" class="a_xq1">文灶 </a> - <a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/" target="_blank" class="a_xq1">鲁能领秀城</a>
+        <!-- 商圈 - 小区 -  end -->
+        <!-- 一句话广告 begin -->
+                <!-- 一句话广告 end -->
+        <!-- 房源特色 -->
+                <i class="clear"></i>
+        <!-- 房源特色 end -->
+        商品房<span class='c_ccc'>/</span>中等装修<span class='c_ccc'>/</span>70年产权<span class='c_ccc'>/</span>朝南北<span class='c_ccc'>/</span>4/32层<span class='c_ccc'>/</span>5室2厅4卫 <span class='c_ccc'>/</span> 05-08
+    </td>
+    <td class="tc">
+        <b class='pri'>1150</b> 万<br />
+        <span class="f14">62500元/㎡</span><br/>
+        <span class="f14">5室(184.0㎡)</span>
+    </td>
+	</tr>
+	<!-- 推广房源 -->
+	<!-- 置顶房源 -->
+	<!-- 精品+普通房源 -->
+	
+</table>
+
+<div id="bottom_google_ad"></div>
+
+<div class="pagerNumber">
+<a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_153/'><span>上一页</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_145/'><span>145</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_146/'><span>146</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_147/'><span>147</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_148/'><span>148</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_149/'><span>149</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_150/'><span>150</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_151/'><span>151</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_152/'><span>152</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_153/'><span>153</span></a><strong>154</strong><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_155/'><span>155</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_156/'><span>156</span></a><a href='http://xm.58.com/xiaoqu/lunenglingxiucheng1/ershoufang/pn_155/' class='next'><span>下一页</span></a>
+</div>
+</div>
+<div id="bottom_zhaoshangjiameng_ad"></div>
+<div id="direct_ad_bottom"></div>
+<div id="wangmeng_list_bottom_ditong"></div>
+</div>
+
+<div class="cright">
+<!-- 去掉淘房网
+<script src="http://58list.taofang.com/58xiaoqu/ershoufang/606-641259.js"></script> -->
+    <dl class="zhoubian2">
+        <dt><strong>周边小区二手房信息</strong></dt>
+			<dd>
+            <div class="zb2-img shouafter">
+                <a href="http://xm.58.com/ershoufang/21542309380362x.shtml" target="_blank"><img src="http://pic1.58cdn.com.cn/p1/small/n_t08d459446db0c800be5ee.jpg" alt="思明文灶虎园路海关宿 3室2厅1卫 90平米" width=80 height=60/></a>
+                <i></i>
+            </div>
+            <div class="zb2-info">
+                <a href="http://xm.58.com/ershoufang/21542309380362x.shtml" target="_blank" rel="nofollow">3室2厅1卫</a>&nbsp;
+                <a>90 ㎡</a><br/>
+                <span style="margin-right: 15px;">南北 </span><span> 4/7 层</span><br/>
+                <span style="color:#E04E3A">1000 万</span>
+            </div>
+        </dd>
+			<dd>
+            <div class="zb2-img shouafter">
+                <a href="http://xm.58.com/ershoufang/26629784927436x.shtml" target="_blank"><img src="http://pic1.58cdn.com.cn/p1/small/n_v1bl2lwtl7s6afp4kp5e3a.jpg" alt="花鸟市场 公园东路 半山别墅 9室9厅9卫 380平米" width=80 height=60/></a>
+                <i></i>
+            </div>
+            <div class="zb2-info">
+                <a href="http://xm.58.com/ershoufang/26629784927436x.shtml" target="_blank" rel="nofollow">9室9厅9卫</a>&nbsp;
+                <a>380 ㎡</a><br/>
+                <span style="margin-right: 15px;">南北 </span><span> 1/4 层</span><br/>
+                <span style="color:#E04E3A">4000 万</span>
+            </div>
+        </dd>
+			<dd>
+            <div class="zb2-img shouafter">
+                <a href="http://xm.58.com/ershoufang/26629773443761x.shtml" target="_blank"><img src="http://pic7.58cdn.com.cn/p1/small/n_v1bl2lwxq6s6afpwfjyvwq.jpg" alt="中山公园 半山别墅 9室9厅9卫 250平米" width=80 height=60/></a>
+                <i></i>
+            </div>
+            <div class="zb2-info">
+                <a href="http://xm.58.com/ershoufang/26629773443761x.shtml" target="_blank" rel="nofollow">9室9厅9卫</a>&nbsp;
+                <a>250 ㎡</a><br/>
+                <span style="margin-right: 15px;">南北 </span><span> / 层</span><br/>
+                <span style="color:#E04E3A">2500 万</span>
+            </div>
+        </dd>
+			<dd>
+            <div class="zb2-img shouafter">
+                <a href="http://xm.58.com/ershoufang/30598117649229x.shtml" target="_blank"><img src="http://pic8.58cdn.com.cn/p1/small/n_v2c587ebcac6ca44479fc8da1db3ecb283.jpg" alt="文灶BRT旁 汇丰家园 十佳小区带电梯2房 空户 读梧村九中" width=80 height=60/></a>
+                <i></i>
+            </div>
+            <div class="zb2-info">
+                <a href="http://xm.58.com/ershoufang/30598117649229x.shtml" target="_blank" rel="nofollow">2室2厅1卫</a>&nbsp;
+                <a>49.20 ㎡</a><br/>
+                <span style="margin-right: 15px;">东北 </span><span> 10/11 层</span><br/>
+                <span style="color:#E04E3A">340 万</span>
+            </div>
+        </dd>
+			<dd>
+            <div class="zb2-img shouafter">
+                <a href="http://xm.58.com/ershoufang/30591619086135x.shtml" target="_blank"><img src="http://pic4.58cdn.com.cn/p1/small/n_v2783216e3e46f43e3910bffb6a47c907e.jpg" alt="思明 文灶建达花园 思明实验二小 双十一中看备注" width=80 height=60/></a>
+                <i></i>
+            </div>
+            <div class="zb2-info">
+                <a href="http://xm.58.com/ershoufang/30591619086135x.shtml" target="_blank" rel="nofollow">1室1厅1卫</a>&nbsp;
+                <a>52.78 ㎡</a><br/>
+                <span style="margin-right: 15px;">南 </span><span> 8/30 层</span><br/>
+                <span style="color:#E04E3A">310 万</span>
+            </div>
+        </dd>
+			<dd>
+            <div class="zb2-img shouafter">
+                <a href="http://xm.58.com/ershoufang/30580637205706x.shtml" target="_blank"><img src="http://pic3.58cdn.com.cn/p1/small/n_v29662a288406c467c9100b998d07ec0b2.jpg" alt="厦禾路文灶汇丰家园小两房出售" width=80 height=60/></a>
+                <i></i>
+            </div>
+            <div class="zb2-info">
+                <a href="http://xm.58.com/ershoufang/30580637205706x.shtml" target="_blank" rel="nofollow">2室1厅1卫</a>&nbsp;
+                <a>49.0 ㎡</a><br/>
+                <span style="margin-right: 15px;">南北 </span><span> 11/11 层</span><br/>
+                <span style="color:#E04E3A">338 万</span>
+            </div>
+        </dd>
+			<dd>
+            <div class="zb2-img shouafter">
+                <a href="http://xm.58.com/ershoufang/30579013624140x.shtml" target="_blank"><img src="http://pic8.58cdn.com.cn/p1/small/n_v2951636990b80497096e0dd327acffb23.jpg" alt="文灶 城市花园 急售降价 精装全明4房 拎包入住" width=80 height=60/></a>
+                <i></i>
+            </div>
+            <div class="zb2-info">
+                <a href="http://xm.58.com/ershoufang/30579013624140x.shtml" target="_blank" rel="nofollow">4室2厅2卫</a>&nbsp;
+                <a>117 ㎡</a><br/>
+                <span style="margin-right: 15px;">西北 </span><span> 8/27 层</span><br/>
+                <span style="color:#E04E3A">668 万</span>
+            </div>
+        </dd>
+			<dd>
+            <div class="zb2-img shouafter">
+                <a href="http://xm.58.com/ershoufang/30577641564587x.shtml" target="_blank"><img src="http://pic6.58cdn.com.cn/p1/small/n_v205bc968f5d6e416cbef8e6c340e59320.jpg" alt="读二小划片一中双十南北通透全明格局满五年" width=80 height=60/></a>
+                <i></i>
+            </div>
+            <div class="zb2-info">
+                <a href="http://xm.58.com/ershoufang/30577641564587x.shtml" target="_blank" rel="nofollow">2室2厅1卫</a>&nbsp;
+                <a>56 ㎡</a><br/>
+                <span style="margin-right: 15px;">南北 </span><span> 5/7 层</span><br/>
+                <span style="color:#E04E3A">298 万</span>
+            </div>
+        </dd>
+			<dd>
+            <div class="zb2-img shouafter">
+                <a href="http://xm.58.com/ershoufang/30547430780856x.shtml" target="_blank"><img src="http://pic5.58cdn.com.cn/anjuke_58/1547f440e8ba4788fc6e73445f93828d" alt="天然氧吧 文屏山庄 已装修 两房格局 通透房型" width=80 height=60/></a>
+                <i></i>
+            </div>
+            <div class="zb2-info">
+                <a href="http://xm.58.com/ershoufang/30547430780856x.shtml" target="_blank" rel="nofollow">2室1厅1卫</a>&nbsp;
+                <a>67.21 ㎡</a><br/>
+                <span style="margin-right: 15px;">南北 </span><span> 5/7 层</span><br/>
+                <span style="color:#E04E3A">299 万</span>
+            </div>
+        </dd>
+			<dd>
+            <div class="zb2-img shouafter">
+                <a href="http://xm.58.com/ershoufang/30545392571087x.shtml" target="_blank"><img src="http://pic8.58cdn.com.cn/anjuke_58/ea5b3d7850ff380e03733af0a49a9169" alt="文屏山庄 天然氧吧 环境美 正规的3房" width=80 height=60/></a>
+                <i></i>
+            </div>
+            <div class="zb2-info">
+                <a href="http://xm.58.com/ershoufang/30545392571087x.shtml" target="_blank" rel="nofollow">3室2厅1卫</a>&nbsp;
+                <a>83.9 ㎡</a><br/>
+                <span style="margin-right: 15px;">南北 </span><span> 7/9 层</span><br/>
+                <span style="color:#E04E3A">430 万</span>
+            </div>
+        </dd>
+	        
+    </dl>
+</div>
+
+ 
+</div>
+
+<div id="categorySearch">
+
+<div class="xb-all">
+<div class="box-xb">
+
+	<div class="xb-xgxx-zb">
+    <div class="box-145"><h2> 鲁能领秀城附近小区：</h2></div>
+    <ul class="box-813">
+				<li><a href="http://xm.58.com/xiaoqu/lingxiucheng/" target="_blank">领秀城</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/lingxiucheng/" target="_blank">领秀城</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/lingxiucheng/" target="_blank">领秀城</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/houdaixilu90hao/" target="_blank">后埭溪路90号</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/wentuhuayuan/" target="_blank">文图花园</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/jinbangshanzhuang/" target="_blank">金榜山庄</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/shamenxingchegongyu/" target="_blank">厦门行车公寓</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/jinfengshanzhuanglyk/" target="_blank">金峰山庄</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/jinbangge/" target="_blank">金榜阁</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/jinbangge/" target="_blank">金榜阁</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/houdaixilu90hao/" target="_blank">后埭溪路90号</a></li>
+				<li><a href="http://xm.58.com/xiaoqu/jinbangtielujiayuan/" target="_blank">金榜铁路家园</a></li>
+		    </ul>
+    <div class="cl"></div>
+</div>
+	<i class="line1"></i>
+<div class="xb-xgxx-js">
+    <div class="box-145">
+       <h2>鲁能领秀城频道简介：</h2>
+    </div>
+    <div class="box-813" style="height:34px">您正在浏览鲁能领秀城，我们为您提供了鲁能领秀城二手房、租房、地图周边、小区图片、房价动态等信息。欢迎访问鲁能领秀城。手机版请点击 <a href="http://m.58.com/xiaoqu/lunenglingxiucheng1/" target="_blank"><font color='red'>鲁能领秀城</font></a></div>
+    <div class="cl"></div>
+</div>
+<div class="xb-xgxx-sq">
+<div class="box-145"><h2>小区直达：</h2></div>
+<div class="box-813-sq">
+<dl id="hotarea" class="hotarea">
+	<dt><span>A</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/yidehuayuannfx/" target="_blank">艾德花园一期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/anbaodasha/" target="_blank">安宝大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/aiqinhai5/" target="_blank">爱琴海</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/antaihuayuaneee/" target="_blank">安泰花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/elishandaisha/" target="_blank">阿里山大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/anxidasha/" target="_blank">安溪大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/aoyongshijie/" target="_blank">奥永世界</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/aiqinhai5/" target="_blank">爱琴海</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/guangjingsenlinguangjinghuayuan/" target="_blank">广景花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/elishandaisha/" target="_blank">阿里山大厦</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_A_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>B</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/bihujiayuan/" target="_blank">碧湖嘉园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/baiyuanshuangxi/" target="_blank">百源双玺</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/binlangxili/" target="_blank">槟榔西里小区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/binlangdongli/" target="_blank">槟榔东里</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/bianPatio/" target="_blank">彼岸Patio</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/bihuhaotingjbq/" target="_blank">碧湖豪庭</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/baolongzhongxin/" target="_blank">宝龙中心一期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/bailuyuanuwn/" target="_blank">白鹭苑</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmbihailantian/" target="_blank">碧海蓝天东区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/boshishanzhuang/" target="_blank">博士山庄</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_B_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>C</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/chengxinshangzhu1/" target="_blank">城鑫尚筑</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/chenglifang/" target="_blank">城立方</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/chengshihuayuanwfl/" target="_blank">城市花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/cuihuzhuangyuan/" target="_blank">翠湖庄园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/cangerxiaoqu/" target="_blank">沧二小区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/cuihumingzhuyiqiyataiguangchang/" target="_blank">翠湖名珠一期亚太广场</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/chengxierli/" target="_blank">城西二里</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/changchengyuemeiwan/" target="_blank">昌城月美湾</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/chengbeixincunrdu/" target="_blank">城北新村</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/chuangguantiyudasha/" target="_blank">创冠体育大厦</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_C_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>D</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/dongfangbaliguangchang/" target="_blank">东方巴黎广场</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xingfushenghuo/" target="_blank">第二城幸福生活</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/kuailetiandi/" target="_blank">第二城快乐天地</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/dongpingshanzhuang/" target="_blank">东坪山庄</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/dongfangbaliket/" target="_blank">东方巴黎</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/hulidatangshijia/" target="_blank">大唐世家二期(湖里)</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/datangshijiasanqi/" target="_blank">大唐世家三期(同安)</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/dongfangshidaiguangchang3/" target="_blank">东方时代广场</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xiangandongfangxincheng/" target="_blank">东方新城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/dongpinghuayuanwgn/" target="_blank">东坪花园</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_D_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>E</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/erqingdasha/" target="_blank">二轻大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/erjiansushe2/" target="_blank">二建宿舍</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ertongyiyuansushe2/" target="_blank">儿童医院宿舍</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_E_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>F</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/fumanshanzhuang/" target="_blank">福满山庄</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/fudaligaizaoxiangmu/" target="_blank">福达里</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/fulongguoji/" target="_blank">福隆国际</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/furongyuanynq/" target="_blank">芙蓉苑</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/fujindajie/" target="_blank">福津大街小区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/fushanxiandaicheng/" target="_blank">富山现代城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/fenghuangchengfni/" target="_blank">凤凰城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/fuxingshiji/" target="_blank">复兴世纪</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/feicuichenghtx/" target="_blank">翡翠城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/fushanmingshiyuan/" target="_blank">富山名士园</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_F_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>G</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/guanhonghuayuan/" target="_blank">冠宏花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmgulongyujing/" target="_blank">古龙御景</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/guomaotianqinwan1/" target="_blank">国贸天琴湾1期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmguojiyoulunchengerqi/" target="_blank">国际邮轮城二期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/gugongyujing/" target="_blank">故宫裕景</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/guandidasha/" target="_blank">官邸大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/guomaolanhai/" target="_blank">国贸蓝海</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/guomaorunyuan1/" target="_blank">国贸润园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/gulonggongyupcg/" target="_blank">古龙公寓</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/guomaojinhaian/" target="_blank">国贸金海岸</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_G_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>H</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmhaixiaguojishequ/" target="_blank">海峡国际社区一期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/haishengweiduoliya/" target="_blank">海晟维多利亚</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/yuzhouhuaqiaohaiyingcheng/" target="_blank">华侨海景城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/huliwandaguangchang1/" target="_blank">湖里万达广场</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/baolizhaoshanghaishangwuyuehua/" target="_blank">海上五月花</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/huifengjiayuanybd/" target="_blank">汇丰家园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/haiwanxinchenglsv/" target="_blank">海湾新城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/huijingxinchengzhongxin/" target="_blank">汇景新城中心</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/huatianhuayuanrwy/" target="_blank">华天花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmhuasengongyuanshoufu/" target="_blank">华森公园首府</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_H_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>I</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/IOIyuanbowan/" target="_blank">IOI园博湾</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/IOIzonglu:cheng/" target="_blank">IOI棕榈城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/IBMETPgongyu/" target="_blank">IBM-ETP公寓</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_I_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>J</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmjiashenghaoyuan/" target="_blank">嘉盛豪园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/shuijingsenlin/" target="_blank">晶尚名苑</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/jianfazhongyangwanqu/" target="_blank">建发中央湾区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/jiarixiangganganchang/" target="_blank">假日香港广场</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/jiayidashaiho/" target="_blank">嘉益大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/jinjitinghuayuanxiaoqu/" target="_blank">金鸡亭花园小区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/jiulongchengiie/" target="_blank">九龙城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/jinboshuian/" target="_blank">金博水岸</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/jinhaiwanxjn/" target="_blank">金海湾</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/jinshangxiaoqu/" target="_blank">金尚首府</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_J_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>K</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/kaiyuexinchengkht/" target="_blank">凯悦新城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/kanglexincunyiqi/" target="_blank">康乐新村一期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/kaixuanguangchanggvg/" target="_blank">凯旋广场</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/kaichenghuayuan/" target="_blank">凯城花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/taiwanjiekeruidasha/" target="_blank">科瑞大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/kengneilu/" target="_blank">坑内路</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/kaiyuelichi/" target="_blank">凯悦丽池大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/kejicunhsw/" target="_blank">科技村</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/kangchengfanglin/" target="_blank">康城芳邻</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/kunlungongyuqbi/" target="_blank">昆仑公寓</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_K_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>L</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/lvyuanshuianmingzhu/" target="_blank">绿苑水岸名筑</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmluobinsenguangchang/" target="_blank">罗宾森璀璨新城1期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmlianfawuyuanwanyihao/" target="_blank">联发五缘湾1号</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/lvyuanxinjingjielvyuanxincheng/" target="_blank">绿苑新城二组团</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmlianfaxinglinwanyihao/" target="_blank">联发杏林湾一号</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/lianfaxinyueyuan/" target="_blank">联发欣悦园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/lujiangxincheng/" target="_blank">鹭江新城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/lehuoxiaozhen/" target="_blank">乐活小镇</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/lvyuanxiaoqubql/" target="_blank">绿苑小区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/lunenglingxiucheng1/" target="_blank">鲁能领秀城</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_L_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>M</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmmeidiyadeng/" target="_blank">美地雅登祥吴一里</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/milanchuntianmgf/" target="_blank">米兰春天</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/mingfahaijingyuan/" target="_blank">明发海景苑</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/mingfabandaoxiangwan/" target="_blank">明发半岛祥湾</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/modengshidai/" target="_blank">摩登时代大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/meirenxincun/" target="_blank">美仁新村</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/mingfahaoting/" target="_blank">明发豪庭</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/meiyanghuayuan/" target="_blank">梅阳花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/mingjueshanzhuang/" target="_blank">铭爵山庄</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/mingfaguojixincheng/" target="_blank">明发国际新城</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_M_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>N</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/nanhuzhongxiangdaishalongmenyuying/" target="_blank">南湖中祥大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ningbaoxiaoqu/" target="_blank">宁宝小区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/nanhuhaoyuan/" target="_blank">南湖豪苑</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/nanhuhuayuannyy/" target="_blank">南湖花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/nanshanxincunsdc/" target="_blank">南山新村</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ningbaoshijia/" target="_blank">宁宝世家</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/nanyangdashaihr/" target="_blank">南洋大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/nanshanxiaoquknd/" target="_blank">南山小区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/nanhumingzhutth/" target="_blank">南湖明珠</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/hongshanbingnanqu/" target="_blank">洪山柄南区</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_N_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>O</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ouzhouxiaozhen2/" target="_blank">欧洲小镇</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/oujingxinghecheng/" target="_blank">欧景星河城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ouzhoucheng3/" target="_blank">欧州城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ouzhouxiaozhen2/" target="_blank">欧洲小镇</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ouzhouyangguang/" target="_blank">欧州阳光</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_O_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>P</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/panjinjinxiujiangnan/" target="_blank">磐金锦绣江南</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/panzhainanxiaoqu/" target="_blank">潘宅南小区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/punanxincun/" target="_blank">浦南新村</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/punanxiaoqu/" target="_blank">浦南安置房</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/panjinwenhuacheng/" target="_blank">磐金文化城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/punanhuayuan/" target="_blank">浦南花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/puyuanshe/" target="_blank">浦园社</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/panlongyuanoog/" target="_blank">蟠龙苑</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/panzhaicun/" target="_blank">潘宅村</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/panlonghaian/" target="_blank">盘龙海岸</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_P_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>Q</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/quanshunquanshuiwan/" target="_blank">泉水湾二期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/quanshunbinhaishangcheng/" target="_blank">泉舜滨海上城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/qiaofucheng/" target="_blank">侨福城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/beiquerli/" target="_blank">前埔北区二里</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/dianshangdongli/" target="_blank">前埔南小区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/shamenqianxiyuan/" target="_blank">千禧园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/qiaojianhuayuan/" target="_blank">侨建花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/wenxingdongerli/" target="_blank">前埔南区文兴二里</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/qianpubeiqu/" target="_blank">前埔北区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/qianpunanqudianshangxili/" target="_blank">前埔南区店上西里</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_Q_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>R</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ruiyinggongyuan/" target="_blank">瑞景公园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ruijingxincun/" target="_blank">瑞景新村</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmruanjianyuanerqi/" target="_blank">软件园二期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/nengqundasha/" target="_blank">荣景花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ruilihuayuanhgh/" target="_blank">瑞丽花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/rongjingjukejidasha/" target="_blank">融景居</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ridongmingzhu/" target="_blank">日东明珠</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/rongfanglipvk/" target="_blank">蓉芳里</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/rongfanglipvk/" target="_blank">蓉芳里</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ruixiangjiayuanxm/" target="_blank">瑞祥家园</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_R_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>S</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/shamenwandaguangchang/" target="_blank">厦门万达广场</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/shengdiyageqwn/" target="_blank">圣地亚哥</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/shuxiangjiayuanxm/" target="_blank">书香佳缘</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmshoukailingxiangguoji/" target="_blank">首开领翔国际</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/shishangguoji/" target="_blank">时尚国际</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/shahangtongchengwan/" target="_blank">厦航同城湾</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/shuijinghujun1/" target="_blank">水晶湖郡一期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/shamenguojiwenhuadasha/" target="_blank">厦门国际文化大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/songbohuating/" target="_blank">松柏华庭</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/shimaohubinshoufu/" target="_blank">世茂湖滨首府B区</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_S_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>T</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/weilaihaianxitianhu/" target="_blank">天湖城天湖</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/tefangwuyuanshangzuo/" target="_blank">特房五缘尚座</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/tefangwuyuanxinzuowuyuanshangzuo/" target="_blank">特房五缘新座</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/tefangwuyuanzunfu/" target="_blank">特房五缘尊府</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/weilaihaianxitianxindao/" target="_blank">天心岛</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/tefangshanshuixinzuo/" target="_blank">特房山水新座</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/taiwanjiejianbangdasha/" target="_blank">台湾街建邦大厦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/tefangshanshuishangzuo/" target="_blank">特房山水尚座</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmjinxiuxiangan/" target="_blank">特房锦绣祥安</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/tonghengdasha/" target="_blank">同亨大厦</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_T_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>U</span></dt>
+	<dd>
+        	  		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_U_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>V</span></dt>
+	<dd>
+        	  		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_V_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>W</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/weilaihaianlanyuewan/" target="_blank">未来海岸蓝月湾一期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmwankejiyuhuafu/" target="_blank">万科金域华府一期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/weilaihaianjilashuijun/" target="_blank">未来海岸系蓝水郡</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/weilaihaianlangqinwan/" target="_blank">未来海岸浪琴湾</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmwankejinyulanwan/" target="_blank">万科金域蓝湾</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmweilaihaianxitianyu/" target="_blank">未来海岸系天御</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/wolongxiaochengeux/" target="_blank">卧龙晓城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/wenpingshanzhuang/" target="_blank">文屏山庄</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/wankejinseyuecheng/" target="_blank">万科金色悦城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/wenyuangongyujfs/" target="_blank">文园公寓</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_W_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>X</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmxinjingguojiwaitan/" target="_blank">新景国际外滩</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmzhuzhaishuijingguoji/" target="_blank">住宅水晶国际</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xiangeli/" target="_blank">仙阁里花园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xinjing58/" target="_blank">新景5.8</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xinjingyuanqhc/" target="_blank">新景园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xiangluhuacheng/" target="_blank">翔鹭花城一期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xinyingtianhuanchang/" target="_blank">新景天湖广场</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xingfumima/" target="_blank">幸福密码</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xinjinggaofenghui/" target="_blank">新景禾祥高峰会</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xintashuishang/" target="_blank">鑫塔水尚</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_X_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>Y</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/yuzhoudaxuecheng/" target="_blank">禹洲城上城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmyuanchangxinhaiwan/" target="_blank">源昌鑫海湾</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/yuzhouzunhai1/" target="_blank">禹洲尊海</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/yuzhoulinghai/" target="_blank">禹洲领海</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/yongshengxincheng/" target="_blank">永升新城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmyuzhouzhongyanghaian/" target="_blank">禹洲中央海岸三期</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/yuzhoudaxuecheng/" target="_blank">禹洲城上城</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/yuzhoushimaoguoji/" target="_blank">禹洲世贸国际</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/yuzhouhuaqiaojinhaian/" target="_blank">禹洲华侨金海岸</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/yuzhoushijihaiwan/" target="_blank">禹洲世纪海湾</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_Y_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+	<dt><span>Z</span></dt>
+	<dd>
+        		    		        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/zhonghangchengguojishequ/" target="_blank">中航城国际社区</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/zhongjunlanwanbandao/" target="_blank">中骏蓝湾半岛</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/zijinjiayuancid/" target="_blank">紫金家园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xmzhongyangmeidi/" target="_blank">中央美地</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/ziranjiayuan/" target="_blank">自然家园</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/zhonghaihuanyutianxiaxm/" target="_blank">中海寰宇天下</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/zhongjuntianyu/" target="_blank">中骏天誉</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/zhongtiehaixi/" target="_blank">中国铁建海曦</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/zhonghaijinchengguoji/" target="_blank">中海锦城国际</a>
+	        	        	&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/zhongtiecaifugangwan/" target="_blank">中铁财富港湾</a>
+	        	      		&nbsp;&nbsp;<a href="http://xm.58.com/xiaoqu/xqlist_Z_1/" target="_blank">更多&gt;&gt;</a>
+   	</dd>
+</dl>
+</div>
+</div>
+
+<!-- 小区城市周边小区列表begin 
+<div class="xb-xgxx-zb">
+    <div class="box-145">厦门周边城市：</div>
+    <ul class="box-813">
+	        <li><a target="_blank" href="http://fz.58.com/xiaoqu/">福州房价</a></li>
+	        <li><a target="_blank" href="http://pt.58.com/xiaoqu/">莆田房价</a></li>
+	        <li><a target="_blank" href="http://qz.58.com/xiaoqu/">泉州房价</a></li>
+	        <li><a target="_blank" href="http://zhangzhou.58.com/xiaoqu/">漳州房价</a></li>
+	        <li><a target="_blank" href="http://wanfengxzp.58.com/xiaoqu/">万丰/小转盘房价</a></li>
+	        <li><a target="_blank" href="http://shunchang.58.com/xiaoqu/">顺昌县房价</a></li>
+	        <li><a target="_blank" href="http://sujiatunzb.58.com/xiaoqu/">苏家屯周边房价</a></li>
+	    </ul>
+    <div class="cl"></div>
+</div>
+<!-- 小区城市周边小区列表end -->
+
+
+</div>
+</div>
+</div>
+
+<!-- =S footer -->
+<footer id="footer" class="footer"><p class="copyright">© 58.com <a id="askicon" target="_blank" title="有问题请与58客服进行对话"
+                                                                    rel="nofollow"
+                                                                    href="http://about.58.com/v5/">帮助中心</a></p></footer>
+<!-- =E footer -->
+
+
+
+
+
+
+<script src="http://track.58.com/adsys/ggafs?r="+ Math.random()></script>
+<script>
+
+    ;(function(){
+        //列表排序 默认 按价格
+        var list=[[{searchKey:'default',text:'默认排序',cls:'sortOpt o_frist'}],
+            [{searchKey:'area_desc',text:'按面积<i class="toDown"></i></span>',cls:'sortOpt'},
+                {searchKey:'area_asc',text:'按面积<i class="toUp"></i></span>',cls:'sortOpt'}],
+            [{searchKey:'totalprice_desc',text:'按总价<i class="toDown"></i></span>',cls:'sortOpt'},
+                {searchKey:'totalprice_asc',text:'按总价<i class="toUp"></i></span>',cls:'sortOpt'}],
+            [{searchKey:'unitprice_desc',text:'按单价<i class="toDown"></i></span>',cls:'sortOpt o_last'},
+                {searchKey:'unitprice_asc',text:'按单价<i class="toUp"></i></span>',cls:'sortOpt o_last'}]
+        ];
+       // xq.sortList({list:list,render:'.filterSort'});
+        //推荐列表项滚动
+       $('.rectable table').length>0&&xq.moveMent('tr',$('.rectable table')).setAutoMove().autoMove.start();
+        //回到顶部组件
+        $.scrollToTop();
+        //列表hover
+        $('.tbimg tr').hoverCls('bg');
+    })()
+
+</script>
+<!-- 统计代码 -->
+<script type="text/javascript">
+$("#zongjia a").live('click',function(){
+	var value = $(this).attr("data_filter");
+	_gaq.push(['pageTracker._trackEvent', 'list', 'fangchan_xiaoqu_ershoufang_totalPrice_click', '//siming/wenzhao/'+value+'']);
+		
+});
+$("#area a").live('click',function(){
+	var value = $(this).attr("data_filter");
+	_gaq.push(['pageTracker._trackEvent', 'list', 'fangchan_xiaoqu_ershoufang_proportion_click', '//siming/wenzhao/'+value+'']);
+		
+});
+$("#filter_tingshi a").live('click',function(){
+	var value = $(this).attr("data_filter");
+	_gaq.push(['pageTracker._trackEvent', 'list',  'fangchan_xiaoqu_ershoufang_hall_click', '//siming/wenzhao/'+value+'']);
+		
+});
+$("#floor a").live('click',function(){
+	var value = $(this).attr("data_filter");
+	_gaq.push(['pageTracker._trackEvent', 'list', 'fangchan_xiaoqu_ershoufang_floors_click', '//siming/wenzhao/'+value+'']);
+		
+});
+$("#fittype a").live('click',function(){
+	var value = $(this).attr("data_filter");
+	_gaq.push(['pageTracker._trackEvent', 'list',  'fangchan_xiaoqu_ershoufang_fitments_click', '//siming/wenzhao/'+value+'']);
+		
+});
+$(".global").live('click',function(){
+	var value = $(".local_keyword ").val();
+	_gaq.push(['pageTracker._trackEvent', 'list', 'fangchan_xiaoqu_ershoufang_search_click', '//siming/wenzhao/'+value+'']);
+		
+});
+$(".list-tabs a").live('click',function(){
+	var value = "common";
+	if($(this).hasClass("pic")){
+		value = "mianshui";
+	}
+	_gaq.push(['pageTracker._trackEvent', 'list', 'fangchan_xiaoqu_ershoufang_tab_click', '//siming/wenzhao/'+value+'']);
+		
+});
+</script>
+</body>
+</html>

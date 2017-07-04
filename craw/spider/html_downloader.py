@@ -43,7 +43,7 @@ class HtmlDownloader(object):
             
             if status != 200 and retries > 0:
                 print('status is %s and retries is %s' %(status,retries))
-                html_cont - None
+                html_cont = None
 
             if response.info().getparam("charset") == "gb2312":
                 html_cont = data.decode("gbk")

@@ -102,7 +102,13 @@ class SpiderMain(object):
                 return self.craw_oneurl(new_url,keywords,from_)
         
         elif html_cont is not None:
-            new_urls,new_datas = self.parser.parse(html_cont,from_)
+            
+            if from_ == '8' and keywords != '*':
+                # 58同城按小区搜索的挂牌信息
+                new_urls,new_datas = self.parser.parseB(html_cont)
+
+            else:
+                new_urls,new_datas = self.parser.parse(html_cont,from_)
 
             # 如果是验证界面，得到延时值，回调函数
             if new_datas == 'checkcode':
@@ -126,14 +132,11 @@ class SpiderMain(object):
             
             # 正常情况，解析
             else:
+                # 取页码表
                 self.urls.add_new_urls(new_urls)
-                # for date in new_datas:
-                # if new_datas.has_key('comm_url'):
-                #     self.comms.add_new_urls([name['comm_url'] for name in new_datas])
-                # else:
-                #     self.comms.add_new_urls([name['community_name'] for name in new_datas])    
-                # self.comms.add_new_urls([name['community_name'] for name in new_datas])    
-                self.comms.add_new_urls([name['comm_url'] if name.has_key('comm_url') else name['community_name'] for name in new_datas])    
+                # 取小区表，但58的不取了
+                if from_ != '8' or  keywords != '*':
+                    self.comms.add_new_urls([name['comm_url'] if name.has_key('comm_url') else name['community_name'] for name in new_datas])    
                 # self.comms.add_new_urls([name.has_key('comm_url') ? name['comm_url']:name['community_name'] for name in new_datas])    
                 self.outputer.collect_data(new_datas,keywords)
                 self.quantity_of_datas,self.quantity_of_raw_datas,self.quantity_of_dupli = self.outputer.get_datas_quantity()

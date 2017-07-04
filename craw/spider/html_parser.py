@@ -123,9 +123,10 @@ class HtmlParser(object):
     def pipe(self,datadic):
         # 2016.6.4增加方法：清理、有效性检验
         if datadic.has_key('total_floor') and datadic.has_key('total_price') and datadic.has_key('area') and datadic.has_key('community_name'):
+            if datadic['total_price'] is None or datadic['area'] is None or datadic['community_name'] is None:return False
             if datadic['total_floor'] > 60: datadic['total_floor'] = 35         #把过高楼层的设为35层
-            if datadic['community_name'] is not None:
-                datadic['community_name'] = datadic['community_name'].strip()
+            # if datadic['community_name'] is not None:
+            datadic['community_name'] = datadic['community_name'].strip()
             if datadic['total_price'] == 0 : return False                       #2016.9.13 价格为0的过滤掉
             if datadic.has_key('builded_year'):
                 if datadic['builded_year'] < 1900: datadic['builded_year'] = 0
@@ -133,6 +134,7 @@ class HtmlParser(object):
             if not datadic.has_key('price'): return False       #2016.8.1 有时解析过程中出错，跳过了price字段解析，造成没有price,舍弃
             #2017.4.14 detail_url字段太长，处理一下
             if len(datadic['details_url']) > 250:datadic['details_url'] = datadic['details_url'][:249]
+            if len(datadic['advantage']) > 20:datadic['advantage'] = datadic['advantage'][:20]
             return datadic
         else:
             if not datadic.has_key('total_floor'):                    #2016.6.1搜房网老是出现无效数据，进行判断，发现是别墅没有记载楼层信息造成的
