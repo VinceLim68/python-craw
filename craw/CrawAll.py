@@ -30,6 +30,7 @@ class SpiderAll(SpiderMain):
         try:
             new_comm = self.comms.get_new_url().encode("utf8")
         except:
+            print('no new_comm')
             return
 
         # 小区列表中还有多少未抓小区，多少已抓小区
@@ -56,8 +57,9 @@ class SpiderAll(SpiderMain):
             search_url = ["http://xm.lianjia.com/ershoufang/rs" + serch_for]
         if from_where == '8':
             search_url = [new_comm]
+            # search_url = ["http://xm.58.com/ershoufang/?key=" + new_comm + "&sourcetype=5"]
 
-        
+        # print(search_url)
         # 按小区抓取数据
         self.craw(search_url,new_comm,from_where)
         self.count1 = self.count1 + 1

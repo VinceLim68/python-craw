@@ -1,6 +1,7 @@
 # coding:utf-8
 import sys
 import MySQLdb
+import MySQLdb.cursors
 reload(sys)
 sys.setdefaultencoding("utf-8")
 import xlrd
@@ -11,7 +12,10 @@ class MatchID(object):
 	"""
 
 	def __init__(self):
-		self.db = MySQLdb.connect(host = "192.168.1.207",user = "root",passwd = "root",port = 3306,db = "property_info",charset = "utf8")
+		self.db = MySQLdb.connect(
+			host = "192.168.1.207",user = "root",passwd = "root",
+			port = 3306,db = "property_info",charset = "utf8",
+			cursorclass = MySQLdb.cursors.DictCursor)
 		self.cursor = self.db.cursor()
 		# self.exc = xlrd.open_workbook('comm.xlsx')		#如果从数据库中匹配则用不到
 
@@ -25,10 +29,10 @@ class MatchID(object):
 		datas = self.cursor.fetchall()
 		comm_arr = []
 		for data in datas:
-			comms = data[2].split(',')		#data[2] = keywords,把keywords用“,”进行拆分
+			comms = data['keywords'].split(',')		#data[2] = keywords,把keywords用“,”进行拆分
 			for comm in comms:
 				kv = []
-				kv.append(data[1])
+				kv.append(data['comm_id'])
 				kv.append(comm)
 				comm_arr.append(kv)		
 		return comm_arr
@@ -37,10 +41,11 @@ class MatchID(object):
 
 
 	def get_id_from_arr(self,data,comm_arr):
-		#传入一条挂牌记录(list)，匹配出与小区id相关的数组
+		# 传入一条挂牌记录(list)，匹配出与小区id相关的数组
+		# 都是在小区名里寻找是否能匹配到关键字
 
 		# 取出小区名称,data[11]=comm_name
-		commName = data[11].replace("·","").replace(".","").encode("utf8").upper()
+		commName = data['community_name'].replace("·","").replace(".","").encode("utf8").upper()
 
 		getid = []				# getid:[开始位置，关键字，id]	
 		
@@ -54,11 +59,11 @@ class MatchID(object):
 			
 			# 如果找到
 			if start >= 0:
-				# 如果有带辅助字
+				# 如果有带辅助字，必须同时匹配到辅助字才可以
 				if len(key_words) > 1:				
 					
 					#把title+community_name相加成一个供匹配字段
-					formatch = commName + data[4].encode("utf8").upper()				
+					formatch = commName + data['title'].encode("utf8").upper()				
 					
 					# 在formatch中查找辅助字
 					for j in range(1,lenth):
@@ -77,33 +82,25 @@ class MatchID(object):
 
 	def get_datas(self,n,step):
 		#从数据库里按要求查出挂牌记录集		
-		sql = "SELECT id,price,area,floor_index,title,spatial_arrangement,total_floor,builded_year,advantage,total_price,\
-				details_url,community_name,first_acquisition_time,from_ FROM for_sale_property ORDER BY id LIMIT " + str(n) + "," + str(step)
+		sql = "SELECT id,title,community_name FROM for_sale_property WHERE community_id is NULL or community_id = 0 ORDER BY id LIMIT " + str(n) + "," + str(step)
 		self.cursor.execute(sql)
 		datas = self.cursor.fetchall()
 		return datas
 
-	def insert_for_sale(self,data,comm_id):
-		# 把匹配成功的记录转到for_sale表中
-		sql_insert ="INSERT for_sale (for_sale_property_id,price,area,floor_index,title,spatial_arrangement,total_floor,builded_year,advantage,total_price,\
-				details_url,community_name,first_acquisition_time,from_,community_id) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-		self.cursor.execute(sql_insert,(data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13],comm_id))
+	def update_id(self,dataid,comm_id):
+		# 把匹配成功的commid写入表中
+		sql_update = "UPDATE for_sale_property SET community_id = comm_id WHERE id = dataid"
+		self.cursor.execute(sql_update)
 		self.db.commit()
 
 	
 	def insert_err(self,data):
-		# 对没有匹配成功的记录转存到for_sale_err表中去，以备人工处理
-		sql_insert ="INSERT for_sale_err (for_sale_property_id,price,area,floor_index,title,spatial_arrangement,total_floor,builded_year,advantage,total_price,\
-			details_url,community_name,first_acquisition_time,from_) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-		self.cursor.execute(sql_insert,(data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13]))
-		self.db.commit()
 		print(str(k)+"---------nofind")
 
 	def insert_mul(self,data,get):
 		# 对匹配到多个id的,而且解析不出来的，转存到for_sale_mul中去，以备人工复核
-		sql_insert ="INSERT for_sale_mul (for_sale_property_id,price,area,floor_index,title,spatial_arrangement,total_floor,builded_year,advantage,total_price,\
-				details_url,community_name,first_acquisition_time,from_,getid) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-		self.cursor.execute(sql_insert,(data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13],get))
+		sql_update = "UPDATE for_sale_property SET community_id = len(get) WHERE id = data['id']"
+		self.cursor.execute(sql_update)
 		self.db.commit()
 		print(str(k)+"---------mul")
 		return
@@ -145,7 +142,9 @@ class MatchID(object):
 		first = getid[0]
 		
 		# 用第一个匹配成的合成一个字段：起始位置+小区名称+小区id
-		get = str(getid[0][0]) +',' + str(getid[0][1]) +',' + str(getid[0][2]) + "/"		
+		# get = str(getid[0][0]) +',' + str(getid[0][1]) +',' + str(getid[0][2]) + "/"		
+		# 传进getid,挑选出get
+		get = getid[0]
 		
 		for l in range(1,len(getid)):
 			# 如果第二个匹配到的关键字起始位置大于第一个，就以第一个为准，不用再匹配了
@@ -155,16 +154,18 @@ class MatchID(object):
 				if len(getid[l][1]) > len(first[1]):		#字符串长的优先
 					first = getid[l]
 				elif len(getid[l][1]) == len(first[1]):		#字符串长度相同的，标志位设成ture,要人工判断一下
-					get += str(getid[l][0]) +',' + str(getid[l][1]) +',' + str(getid[l][2]) + "/"
+					# 起始位置相同，关键字长度相同，不知道是哪个小区了
+					get.append(getid[l])
+					# get += str(getid[l][0]) +',' + str(getid[l][1]) +',' + str(getid[l][2]) + "/"
 					flag = True
 		# 匹配成功写入一张表，没成功就写入另一张表。
 		# 其实不用，成功就写进id,没成功就空着即可
 		if flag:
 			self.insert_mul(data,get)
 		else:
-			self.insert_for_sale(data,first[2])
+			self.update_id(data,first[2])
 
-		self.insert_mul_for_check(data,getid,first[2])
+		# self.insert_mul_for_check(data,getid,first[2])
 
 
 	def close_db(self):
@@ -173,7 +174,7 @@ class MatchID(object):
 
 
 if __name__=="__main__":
-	n = 800000
+	n = 1
 	step = 150000
 	k = 0
 	dupli = 1
@@ -189,12 +190,13 @@ if __name__=="__main__":
 		getid = matchid.get_id_from_arr(data,comm_arr)
 		try:
 			if len(getid) == 1:										#如果匹配到唯一id
-				matchid.insert_for_sale(data,getid[0][2])
+				matchid.update_id(data['id'],getid[0][2])
 			elif len(getid) == 0:									#如果没匹配到comm，就看看按road是否能匹配
 				getroad = matchid.get_id_from_arr(data,road_arr)
 				if len(getroad) == 1:								#匹配到唯一road								
-					matchid.insert_for_sale(data,getroad[0][2])
-				elif len(getroad) == 0:								#如果连road也没匹配成功，插入for_sale_err表中
+					matchid.update_id(data['id'],getroad[0][2])
+				elif len(getroad) == 0:	
+					# pass							#如果连road也没匹配成功，空在那里
 					matchid.insert_err(data)
 				elif len(getroad) > 1:								#如果匹配到不止一个road,进行处理
 					matchid.handle_match_mul(data,getroad)

@@ -13,7 +13,7 @@ class MatchID(object):
 	def __init__(self):
 		self.db = MySQLdb.connect(host = "192.168.1.207",user = "root",passwd = "root",port = 3306,db = "property_info",charset = "utf8")
 		self.cursor = self.db.cursor()
-		self.exc = xlrd.open_workbook('comm.xlsx')		#如果从数据库中匹配则用不到
+		# self.exc = xlrd.open_workbook('comm.xlsx')		#如果从数据库中匹配则用不到
 
 	def get_comm_arr_fromMysql(self,pri):
 		# 从comm表，生成comm数组
