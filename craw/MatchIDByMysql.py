@@ -4,7 +4,7 @@ import MySQLdb
 import MySQLdb.cursors
 reload(sys)
 sys.setdefaultencoding("utf-8")
-import xlrd
+# import xlrd
 
 class MatchID(object):
 	"""
@@ -60,7 +60,8 @@ class MatchID(object):
 			# 如果找到
 			if start >= 0:
 				# 如果有带辅助字，必须同时匹配到辅助字才可以
-				if len(key_words) > 1:				
+				lenth = len(key_words)
+				if lenth > 1:				
 					
 					#把title+community_name相加成一个供匹配字段
 					formatch = commName + data['title'].encode("utf8").upper()				
@@ -89,20 +90,23 @@ class MatchID(object):
 
 	def update_id(self,dataid,comm_id):
 		# 把匹配成功的commid写入表中
-		sql_update = "UPDATE for_sale_property SET community_id = comm_id WHERE id = dataid"
-		self.cursor.execute(sql_update)
+		sql_update = "UPDATE for_sale_property SET community_id = %s WHERE id = %s"
+		# sql_update = "UPDATE for_sale_property SET community_id = comm_id WHERE id = dataid"
+		print(dataid)
+		self.cursor.execute(sql_update,(comm_id,dataid))
 		self.db.commit()
 
 	
 	def insert_err(self,data):
 		print(str(k)+"---------nofind")
+		print(data,'nofind****************')
 
 	def insert_mul(self,data,get):
 		# 对匹配到多个id的,而且解析不出来的，转存到for_sale_mul中去，以备人工复核
-		sql_update = "UPDATE for_sale_property SET community_id = len(get) WHERE id = data['id']"
-		self.cursor.execute(sql_update)
+		sql_update = "UPDATE for_sale_property SET community_id = %s WHERE id = %s"
+		self.cursor.execute(sql_update,(len(get),data['id']))
 		self.db.commit()
-		print(str(k)+"---------mul")
+		print(data['id']+"---------mul")
 		return
 
 	def insert_mul_for_check(self,data,getid,comm_id):
@@ -163,7 +167,7 @@ class MatchID(object):
 		if flag:
 			self.insert_mul(data,get)
 		else:
-			self.update_id(data,first[2])
+			self.update_id(data['id'],first[2])
 
 		# self.insert_mul_for_check(data,getid,first[2])
 
@@ -174,8 +178,8 @@ class MatchID(object):
 
 
 if __name__=="__main__":
-	n = 1
-	step = 150000
+	n = 0
+	step = 100
 	k = 0
 	dupli = 1
 
