@@ -81,7 +81,6 @@ class HtmlParser(object):
         parse_dict = {}
 
         r1_1 = '(\d+)平方米'.decode('utf8')
-        # r1_2 = '(\d+)平米'.decode('utf8')
         r1_2 = '(\d+.?\d+)平米'.decode('utf8')        #厦门house的面积是浮点数
         r1_3 = '(\d+.?\d+)㎡'.decode('utf8')         #2016.9.13增加麦田的面积解析
         r1_4 = '(\d+.?\d+)m²'.decode('utf8')        #2017.3.8安居客
@@ -123,17 +122,22 @@ class HtmlParser(object):
     def pipe(self,datadic):
         # 2016.6.4增加方法：清理、有效性检验
         if datadic.has_key('total_floor') and datadic.has_key('total_price') and datadic.has_key('area') and datadic.has_key('community_name'):
+            
             if datadic['total_price'] is None or datadic['area'] is None or datadic['community_name'] is None:return False
             if datadic['total_floor'] > 60: datadic['total_floor'] = 35         #把过高楼层的设为35层
             # if datadic['community_name'] is not None:
             datadic['community_name'] = datadic['community_name'].strip()
             if datadic['total_price'] == 0 : return False                       #2016.9.13 价格为0的过滤掉
+            
             if datadic.has_key('builded_year'):
                 if datadic['builded_year'] < 1900: datadic['builded_year'] = 0
+            
             if datadic['area'] > 20000: return False        #面积过大，有时是填写错误，而且面积大于20000的价格参考意义也不大，舍弃
             if not datadic.has_key('price'): return False       #2016.8.1 有时解析过程中出错，跳过了price字段解析，造成没有price,舍弃
+            
             #2017.4.14 detail_url字段太长，处理一下
             if len(datadic['details_url']) > 250:datadic['details_url'] = datadic['details_url'][:249]
+            
             if len(datadic['advantage']) > 20:datadic['advantage'] = datadic['advantage'][:20]
             return datadic
         else:

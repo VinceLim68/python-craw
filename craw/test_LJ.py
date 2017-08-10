@@ -10,6 +10,7 @@ sys.setdefaultencoding('utf-8')
 downloader = html_downloader.HtmlDownloader()
 url = 'http://xm.lianjia.com/ershoufang/pg1/'
 html_cont = downloader.download(url,False,True)
+# print(html_cont)
 parser = html_parser.HtmlParser()
 soup = BeautifulSoup(html_cont,'html.parser',from_encoding='urf-8')
 

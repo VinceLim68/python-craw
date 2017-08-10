@@ -52,6 +52,8 @@ class SpiderMain(object):
             self.delay = 3
         elif 'GjParser' in str(parseClass):
             self.delay = 3
+        elif 'LjParser' in str(parseClass):
+            self.delay = 3
         elif 'LejuParser' in str(parseClass):
             self.delay = 3
         else:
@@ -144,12 +146,8 @@ class SpiderMain(object):
                 elif keywords == '*':
                     self.comms.add_new_urls([name['comm_url'] for name in new_datas])
                 
-                # if from_ != '8' or keywords == '*':
-                    # print('i got comms')
-                    # self.comms.add_new_urls([name['comm_url'] if name.has_key('comm_url') else name['community_name'] for name in new_datas])    
-                
+                # self.comms.add_new_urls([name['community_name'] for name in new_datas]) 
 
-                  
                 self.outputer.collect_data(new_datas,keywords)
                 self.quantity_of_datas,self.quantity_of_raw_datas,self.quantity_of_dupli = self.outputer.get_datas_quantity()
                 print("  %6.0f = %6.0f dupli + %5.0f raw_datas + %6.0f stored , %5.0f in list"\

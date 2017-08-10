@@ -71,8 +71,6 @@ class XmParser(HtmlParser):
                     d1 = {}
                     d1 = self.parse_item(item)
                     each_data = dict(each_data, **d1)
-                    
-
                 except Exception, e:
                     with open('logtest.txt','a+') as fout:
                         fout.write('*************' + str(datetime.datetime.now()) + '*************\n')
@@ -84,9 +82,13 @@ class XmParser(HtmlParser):
                         print traceback.format_exc()
                        
             each_data['from'] = "XMHouse" 
+            each_data['price'] = round(each_data['total_price']*10000/each_data['area'],0)
+            # for key,value in each_data.items():
+            #     print('%20s : %s' %(key,value))
             each_data = self.pipe(each_data) 
+            # print(each_data)
             if each_data.has_key('total_floor') and each_data.has_key('total_price') and each_data.has_key('area') and each_data.has_key('community_name'):
-                each_data['price'] = round(each_data['total_price']*10000/each_data['area'],0)
+                # each_data['price'] = round(each_data['total_price']*10000/each_data['area'],0)
                 page_datas.append(each_data)
             else:                
                 if mytools.ShowInvalideData(each_data):page_datas.append(each_data)

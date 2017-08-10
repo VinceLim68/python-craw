@@ -70,3 +70,10 @@ def confir(str):
     for i in range(0,32):
         str = str.replace(chr(i),'')
     return str
+
+def printDic(data):
+    if isinstance(data,dict):
+        for key,value in data.items():
+            print('%20s : %s' %(key,value))
+    else:
+        print('Not a dict!')
