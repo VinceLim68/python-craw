@@ -54,6 +54,8 @@ class SpiderMain(object):
             self.delay = 3
         elif 'LjParser' in str(parseClass):
             self.delay = 3
+        elif 'WBParser' in str(parseClass):
+            self.delay = 0
         elif 'LejuParser' in str(parseClass):
             self.delay = 3
         else:
@@ -106,13 +108,13 @@ class SpiderMain(object):
         
         elif html_cont is not None:
             
-            if from_ == '8' and keywords != '*':
-                # 58同城按小区搜索的挂牌信息
-                new_urls,new_datas = self.parser.parseB(html_cont)
-            else:
-                new_urls,new_datas = self.parser.parse(html_cont,from_)
+            # if from_ == '8' and keywords != '*':
+            #     # 58同城按小区搜索的挂牌信息
+            #     new_urls,new_datas = self.parser.parseB(html_cont)
+            # else:
+            #     new_urls,new_datas = self.parser.parse(html_cont,from_)
             
-            # new_urls,new_datas = self.parser.parse(html_cont,from_)
+            new_urls,new_datas = self.parser.parse(html_cont,from_)
 
             # 如果是验证界面，得到延时值，回调函数
             if new_datas == 'checkcode':
@@ -140,13 +142,12 @@ class SpiderMain(object):
                 self.urls.add_new_urls(new_urls)
 
                 # 取小区表，但58的不取了
-
-                if from_ != '8' :
-                    self.comms.add_new_urls([name['community_name'] for name in new_datas]) 
-                elif keywords == '*':
-                    self.comms.add_new_urls([name['comm_url'] for name in new_datas])
+                # if from_ != '8' :
+                #     self.comms.add_new_urls([name['community_name'] for name in new_datas]) 
+                # elif keywords == '*':
+                #     self.comms.add_new_urls([name['comm_url'] for name in new_datas])
                 
-                # self.comms.add_new_urls([name['community_name'] for name in new_datas]) 
+                self.comms.add_new_urls([name['community_name'] for name in new_datas]) 
 
                 self.outputer.collect_data(new_datas,keywords)
                 self.quantity_of_datas,self.quantity_of_raw_datas,self.quantity_of_dupli = self.outputer.get_datas_quantity()

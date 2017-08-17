@@ -119,10 +119,11 @@ class HtmlDownloader(object):
                 }
                 req.add_header('Accept-encoding', 'gzip')
 
-            # if ".lianjia.com" in url:
-            #     headers = {
-            #             "Host":"xm.lianjia.com",                        
-            #     }
+            if ".lianjia.com" in url:
+                headers = {
+                        # "Host":"xm.lianjia.com",  
+                        "Referer":"https://xm.lianjia.com/ershoufang/"
+                }
 
             for key in headers:
                 req.add_header(key,headers[key])

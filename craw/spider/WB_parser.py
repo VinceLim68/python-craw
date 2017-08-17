@@ -13,16 +13,33 @@ import traceback
 class WBParser(HtmlParser):
 
     def parseB(self,html_cont):
-        # 58同城主页面的数据格式与每个小区下的页面格式不相同，小区页面用 parseB()来抓取
+        # 58同城主页面的数据格式与每个小区下的页面格式不相同，分小区挂牌信息用 parseB()来抓取
         sel = BeautifulSoup(html_cont,'lxml',from_encoding='urf-8')
-        if self._ischeck(sel):
-            new_urls = raw_input('checkcode!!!  checkcode!!!  \ncheckcode!!!  checkcode!!!\nPlease input how many seconds you want to delay:')
+        if self._ischeck(sel,2):
+            new_urls = raw_input('404 \nPlease input how many seconds you want to delay:')
             new_datas = 'checkcode'
         else:
             new_urls = self._get_new_urls_B(sel)      #解析页码
             new_datas = self._get_new_datas_B(sel)    #解析数据
         return new_urls,new_datas
     
+    def _ischeck(self,soup,type=1):
+        # 判断是否是验证界面
+        # print(type(soup))
+        if type ==2 :
+            ischeck = soup.select("title")
+            print('This is from beautifulsoup')
+        else:
+            ischeck = soup.xpath('//title')
+            raw_input(ischeck[0].get_text())
+        if len(ischeck) > 0:            #如果找不到title,就认为不是验证界面
+            title = ischeck[0].get_text().strip()
+            print(title)
+            iscode = (title == "您所访问的页面不存在") or (title == "请输入验证码")
+        else:
+            iscode = False
+        return iscode
+
     def _get_new_urls_B(self , sel):
         new_urls = set()
         pages = sel.select("div.pagerNumber > a")
@@ -87,9 +104,10 @@ class WBParser(HtmlParser):
         # 重写解析主模块，使用lxml
         # sel = etree.HTML(html_cont.encode('utf-8'))   
         sel = html.fromstring(html_cont.encode('utf-8'))
-        
+        # print(html_cont)
+        # sel = BeautifulSoup(html_cont,'lxml',from_encoding='urf-8')
         #辨识是否有验证码的代码
-        if self._ischeck(sel):
+        if self._ischeck(sel,2):
             new_urls = raw_input('checkcode!!!  checkcode!!!  \ncheckcode!!!  checkcode!!!\nPlease input how many seconds you want to delay:')
             new_datas = 'checkcode'
         else:

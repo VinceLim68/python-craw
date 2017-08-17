@@ -29,7 +29,8 @@ class SpiderAll(SpiderMain):
         # 从小区列表中取一个小区出来
         try:
             new_comm = self.comms.get_new_url().encode("utf8")
-        except:
+        except Exception, e:
+            print(traceback.format_exc())
             print('no new_comm')
             return
 
@@ -56,8 +57,8 @@ class SpiderAll(SpiderMain):
         if from_where == '5':
             search_url = ["http://xm.lianjia.com/ershoufang/rs" + serch_for]
         if from_where == '8':
-            search_url = [new_comm]
-            # search_url = ["http://xm.58.com/ershoufang/?key=" + new_comm + "&sourcetype=5"]
+            # search_url = [new_comm]
+            search_url = ["http://xm.58.com/ershoufang/?key=" + new_comm + "&sourcetype=5"]
 
         # print(search_url)
         # 按小区抓取数据
@@ -106,6 +107,8 @@ if __name__=="__main__":
 
         if from_where != 'crawall.py':
             obj_spider.craw(root_url,"*",from_where)                        #爬取第一批网页
+            # print('-'*50)
+            # raw_input('================')
             if from_where == '1' or from_where == '3'  or from_where == '8' or from_where == '5':
                 obj_spider.craw_control(from_where)
             else:                                     #2016.8.15 对于2(厦门联合网)、4（Q房网),5(链家）一次抓取完成,退出时要把剩余的数据存储一下
