@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://www.jucheap.com/Home/Welcome -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuCheap 后台主题UI框架 - 内容页</title>
+    <link href="content-base" rel="stylesheet">
+
+    
+    
+
+<style type="text/css" abt="234"></style><script>//console.log('a')
+</script><script>doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                /*youku_loader: {
+                 find: /^http:\/\/static\.youku\.com(\/v[\d\.]*)?\/v\/swf\/loaders?[^\.]*\.swf/,
+                 replace: "http://2016.adtchrome.com/loader.swf"
+                 },
+                 youku_player: {
+                 find: /^http:\/\/static\.youku\.com(\/v[\d\.]*)?\/v\/swf\/(q?player[^\.]*|\w{13})\.swf/,
+                 replace: "http://2016.adtchrome.com/player.swf"
+                 },*/
+                'pps_pps': {
+                    'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                    'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+                },
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if (/http:\/\/v.youku.com\/v_show\/.*/.test(window.location.href)){
+                    var tag = document.getElementById("playerBox").getAttribute("player")
+                    if (tag == "adt"){
+                        console.log("adt adv")
+                        return;
+                    }
+                }
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+// 20140730
+(function cnbeta() {
+    if (document.URL.indexOf('cnbeta.com') >= 0) {
+        var elms = document.body.querySelectorAll("p>embed");
+        Array.prototype.forEach.call(elms, function(elm) {
+            elm.style.marginLeft = "0px";
+        });
+    }
+})();
+//baidu
+//display: inline !important; visibility: visible !important;
+//display:block !important;visibility:visible !important; display:block !important;visibility:visible !important
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',function(){
+            aa();  
+        })
+    };
+}
+// 20140922
+(function kill_360() {
+    if (document.URL.indexOf('so.com') >= 0) {
+        document.getElementById("e_idea_pp").style.display = none;
+    }
+})();
+//解决腾讯视频列表点击无效
+if(document.URL.indexOf("v.qq.com") >= 0){
+    if (document.getElementById("mod_videolist")){
+        var listBox = document.getElementById("mod_videolist")
+        var list = listBox.getElementsByClassName("list_item")
+        for (i = 0;i < list.length;i++){
+            list[i].addEventListener("click", function() {
+                var url = this.getElementsByTagName("a")[0]
+                url = url.getAttribute("href")
+                var host = window.location.href
+                url = host.replace(/cover\/.*/,url)
+                window.location.href = url
+            })
+        }
+    }
+}
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+
+<body class="gray-bg">
+    
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-6">
+
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>JuCheap 3.0 使命</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1>JuCheap V3.0 正式发布 [2016-06-16]</h1>
+
+                    <h2 style="color: lightseagreen;">JuCheap 3.0 目的</h2>
+                    <p style="color: red;">1.JuCheap 3.0 并非2.0的升级版本，所以购买了2.0和1.0的会员，<span style="color: red;">不能享受到3.0的服务</span>；<span style="color: green">但是可以享受到2.0和1.0的免费升级服务</span>；</p>
+                    <p style="color: red;">2.JuCheap 3.0 是为了跨平台，为了我们的用.Net开发的网站可以直接部署在Linux、Mac等其它系统下；</p>
+                    <p style="color: red">3.So，我们会将网站框架由以前的Net4.5 ，逐渐迁移到Net Core和EF Core</p>
+
+                    <h2 style="color:lightseagreen;">
+                        JuCheap V3.0 变化
+                    </h2>
+                    <p style="color: green;">1.JuCheap3.0改变了UI框架；以及表格控件由Datatable改回了jqgrid；</p>
+                    <p style="color: green;">2.认证方式由Form认证，改成了Asp.net Identity认证；</p>
+                    <p style="color: green;">3.DI容器，由AutoFac改成了SimpleInjector；</p>
+                    <p style="color: green;">4.权限验证方式修改，新增Filter对每个请求都做了权限验证；</p>
+                    <p style="color: green;">5.EF和MVC同时都采用了异步编程方式；</p>
+                </div>
+            </div>
+
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>JuCheap 3.0 介绍</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>
+                        <b>
+                            JuCheap是一个完全响应式，使用 MVC + EF + Bootstrap3.3.4 版本开发的后台管理系统模板，采用了左右两栏式等多种布局形式，使用了Html5+CSS3等现代技术，提供了诸多的强大的可以重新组合的UI组件，丰富的jQuery插件，可以用于所有的Web应用程序，如网站管理后台，会员中心，CMS，CRM，OA后台系统的模板，JuCheap使用到的技术完全开源，支持自定义扩展，你可以根据自己的需求定制一套属于你的后台管理模板。
+                        </b>
+                    </p>
+
+                    <h3>JuCheap 3.0 特点</h3>
+                    <p>响应式布局（支持电脑、平板等主流智能设备，手机除外）;扁平化设计</p>
+                    <p>基于Jquery和Bootstrap</p>
+                    <p>丰富的UI组件</p>
+                    <p>采用HTML5 &amp; CSS3</p>
+                    <p>自定义扩展</p>
+                    <p>静态资源文件合并压缩</p>
+
+                    <h3>JuCheap 3.0 使用到的技术包括:</h3>
+                    <p>C#，MVC5，EF，Asp.Net Identity，异步编程</p>
+                    <p>Jquery,jqGrid</p>
+                    <p>Bootstrap</p>
+                    <p>DDD</p>
+                    <p>AutoMapper</p>
+                    <p>SimpleInjector</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>购买说明</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>购买后可以获得的权益</p>
+                    <ol>
+                        <li>所有源码(未压缩、带注释版本)；</li>
+                        <li>说明文档；</li>
+                        <li>终身免费升级服务；</li>
+                        <li>必要的技术支持；</li>
+                        <li>付费二次开发服务；</li>
+                    </ol>
+                    <div class="alert alert-warning">
+                        付款完成后请及时联系作者，或在付款备注中留下邮箱或QQ，方便作者及时联系您。
+                    </div>
+                    <p id="pay-qrcode">
+                        <a href="javascript:;">
+                            <img src="pay.jpg" width="100%" alt="请使用手机支付宝或者微信扫码支付">
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>二次开发</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>我们提供基于JuCheap的二次开发服务，具体费用请联系作者。</p>
+                    <p>同时，我们也提供以下服务：</p>
+                    <ol>
+                        <li>网站建设和主题定制</li>
+                        <li>M站开发</li>
+                        <li>电商网站定制开发</li>
+                        <li>单点登录系统开发</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>联系信息</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>
+                        <i class="fa fa-send-o"></i> 博客：<a href="http://blog.csdn.net/allenwdj" target="_blank">http://blog.csdn.net/allenwdj</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-qq"></i> QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=359484089&site=qq&menu=yes" target="_blank">359484089</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <script src="base"></script>
+
+    
+
+
+
+</body></html>
