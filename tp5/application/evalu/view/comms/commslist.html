@@ -1,0 +1,38 @@
+{extend name="mainbase" /} 
+{block name="main"}
+ 
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid-bootstrap.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid-bootstrap-ui.css" /> -->
+<link rel="stylesheet" type="text/css" media="screen" href="__CSS__/ui.jqgrid.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="__CSS__/comms/style.css" /> 
+ 
+ 
+<!-- <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script> -->
+<script src="__JS__/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script src="__JS__/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="__JS__/comms/index.js" type="text/javascript"></script>
+ 
+<div class="grid_table">
+	 <input type="hidden" id="data_hide"></input> 
+     <div id="opt">
+        <div id="query">
+            <label>小区：</label><input type="text" class="input" id="search_keywords" />
+            <select type="text" class="input" id="search_region" style="width:80px;height:23px;line-height:23px;padding:0;"></select>
+            <select type="text" class="input" id="search_block" style="width:80px;height:23px;line-height:23px;padding:0;" value=""></select>
+			<!-- <label>片区：</label><input  class="input" id="search_block" style="width:50px;" value=""></input> -->
+			<label>地址：</label><input type="text" class="input" id="search_address" style="width:100px;" />
+            <input type="submit" class="btn btn-info " id="find_btn" value="查 询" />
+	
+        </div>
+        <input type="button" class="btn btn-info" id="add_btn" value="新 增" />
+        <input type="button" class="btn btn-info" id="del_btn" value="删 除" />
+		<input type="button" class="btn btn-info" id="edi_btn" value="修 改" />
+		<!-- <input type="hidden" id="data_hide"></input>  -->
+     </div>
+     <table id="list"></table>
+     <div id="pager"></div>
+	 <div id="manage"></div>
+</div>
+ {/block}
+ 

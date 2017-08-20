@@ -27,3 +27,4 @@ wheels/
 craw/logtest.txt
 tp5/runtime/*
 tp5/application/database.php
+jqgriddemo/class/DBConfig.php
