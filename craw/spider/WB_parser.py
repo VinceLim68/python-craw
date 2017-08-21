@@ -113,7 +113,7 @@ class WBParser(HtmlParser):
         else:
             new_urls = self._get_new_urls(sel)      #解析页码
             new_datas = self._get_new_datas(sel)    #解析数据
-        return new_urls,new_datas
+        return new_urls,new_datas   
 
     def _get_new_urls(self , sel):
         new_urls = set()
