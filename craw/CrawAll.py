@@ -58,7 +58,8 @@ class SpiderAll(SpiderMain):
             search_url = ["http://xm.lianjia.com/ershoufang/rs" + serch_for]
         if from_where == '8':
             # search_url = [new_comm]
-            search_url = ["http://xm.58.com/ershoufang/?key=" + new_comm + "&sourcetype=5"]
+            # search_url = ["http://xm.58.com/ershoufang/?key=" + search_for + "&sourcetype=5"]
+            search_url = ["http://xm.58.com/ershoufang/?key=" + new_comm ]
 
         # print(search_url)
         # 按小区抓取数据
