@@ -8,7 +8,7 @@ class Html_Download(object):
 	def __init__(self):
 
 		#设置超时
-		# socket.setdefaulttimeout(8)
+		socket.setdefaulttimeout(8)
 		
 		#从文件中得到代理列表
 		with open("Proxies.txt","r") as proxy_file:
@@ -18,6 +18,8 @@ class Html_Download(object):
 		with open("user_agent.txt","r") as User_agent_file:
 			self.agent_list = User_agent_file.readlines()
 
+	# 下载主体
+	# 支持延时，文件头，代理，重复抓取
 	def download(self,url,num_retries=3,is_use_header=True):
 		print("Downloadding : %s" %(url))
 		req = urllib2.Request(url)
@@ -63,6 +65,9 @@ class Html_Download(object):
 				if hasattr(e,'code') and 500 <= e.code < 600:
 					return download(url,num_retries-1)
 		return html
+
+	# 构造文件头
+	def headers(self):
 
 # url = r'http://xm.lianjia.com/ershoufang/'
 # url = 'http://www.ifeng.com/'

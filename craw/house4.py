@@ -55,7 +55,7 @@ class SpiderMain(object):
         elif 'LjParser' in str(parseClass):
             self.delay = 3
         elif 'WBParser' in str(parseClass):
-            self.delay = 0
+            self.delay = 2
         elif 'LejuParser' in str(parseClass):
             self.delay = 3
         else:
@@ -118,6 +118,10 @@ class SpiderMain(object):
 
             # 如果是验证界面，得到延时值，回调函数
             if new_datas == 'checkcode':
+                # 如果验证码，先把数据保存
+                print ("======Because checkcode save the data========")
+                self.total = self.total + self.outputer.out_mysql()
+                self.outputer.clear_datas()
                 self.delay = int(new_urls)               # 调整延时值
                 if retries > 0:
                     return self.craw_oneurl(new_url,keywords,from_,retries - 1)

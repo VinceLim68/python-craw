@@ -16,7 +16,8 @@ class HtmlDownloader(object):
 
         #设置超时
         socket.setdefaulttimeout(8)
-        #从文件中得到代理列表
+
+        #从文件中得到代理列表,这个文件是根目录下而不是/spider目录下
         with open("Proxies.txt","r") as proxy_file:
             self.proxy_list = proxy_file.readlines()
         #从文件中得到浏览器列表
@@ -132,6 +133,7 @@ class HtmlDownloader(object):
             agent = choice(self.agent_list).strip('\n')
             req.add_header("GET",url)
             req.add_header("User-Agent",agent)
+            print('User-Agent : %s' %agent)
 
         content = self.get_content(req)
 
