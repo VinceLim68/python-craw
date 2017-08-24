@@ -123,7 +123,15 @@ class HtmlDownloader(object):
             if ".lianjia.com" in url:
                 headers = {
                         # "Host":"xm.lianjia.com",  
-                        "Referer":"https://xm.lianjia.com/ershoufang/"
+                        # "Referer":"https://xm.lianjia.com/ershoufang/"
+                    'Accept':'text/html, application/xhtml+xml, */*',
+                    'Referer':'https://xm.lianjia.com/ershoufang/rs%E6%B3%89%E6%B0%B4%E6%B9%BE%E4%B8%80%E6%9C%9F/',
+                    'Accept-Language':'zh-CN',
+                    'User-Agent':'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/7.0)',
+                    'Accept-Encoding':'deflate',        #//这个会造成抓取失败
+                    'Host':'xm.lianjia.com',
+                    'Connection':'Keep-Alive',
+                    'Cookie':'lianjia_uuid=5bf6b14a-8b3c-437c-a52d-ceb68ff9f161; UM_distinctid=15adef6e3341b5-062bb019e-4349052c-140000-15adef6e3354ed; select_city=350200; _jzqckmp=1; all-lj=eae2e4b99b3cdec6662e8d55df89179a; Hm_lvt_9152f8221cb6243a53c83b956842be8a=1503302867,1503306127,1503387026,1503468661; Hm_lpvt_9152f8221cb6243a53c83b956842be8a=1503470994; CNZZDATA1255847100=932838031-1469061064-%7C1503467486; _jzqa=1.4030431236783739000.1469062989.1503468661.1503470994.56; _jzqc=1; _jzqx=1.1479358284.1503470994.7.jzqsr=xm%2Elianjia%2Ecom|jzqct=/ershoufang/pg82/.jzqsr=xm%2Elianjia%2Ecom|jzqct=/ershoufang/rs%e6%b3%89%e6%b0%b4%e6%b9%be%e4%b8%80%e6%9c%9f/; _smt_uid=57901f4c.225c23b5; CNZZDATA1254525948=1901811509-1469058879-%7C1503470771; _jzqb=1.1.10.1503470994.1; CNZZDATA1255633284=618103687-1469058318-%7C1503467205; _qzja=1.1871061607.1469062988780.1503468660915.1503470993690.1503468712703.1503470993690..0.0.139.56; _qzjb=1.1503470993690.1.0.0.0; _qzjc=1; _qzjto=3.2.0; CNZZDATA1255604082=1618345746-1469059066-%7C1503469466; _gat=1; _gat_global=1; _gat_new_global=1; _ga=GA1.2.1409175644.1469062989; _gid=GA1.2.1387427048.1503277191; _gat_dianpu_agent=1; lianjia_ssid=554a1964-c1e2-4e69-9de1-0da6a67e88e3'
                 }
 
             for key in headers:
@@ -132,7 +140,7 @@ class HtmlDownloader(object):
             #得到随机浏览器，并加入头部信息
             agent = choice(self.agent_list).strip('\n')
             req.add_header("GET",url)
-            req.add_header("User-Agent",agent)
+            # req.add_header("User-Agent",agent)
             print('User-Agent : %s' %agent)
 
         content = self.get_content(req)
