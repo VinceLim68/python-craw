@@ -28,7 +28,7 @@ class PageParser(object):
         # parser_build:解析器------->html.parser,lxml
         return BeautifulSoup(html,parser_build,from_encoding='urf-8') 
 
-    def parse(self,html_cont,parser_build = 'lxml'):
+    def page_parse(self,html_cont,parser_build = 'lxml'):
         # 解析网页的主模块
         soup = slef.get_soup(html_cont,parser_build)
 
@@ -36,11 +36,10 @@ class PageParser(object):
         
         #在这里加上辨识是否有验证码的代码
         if self._ischeck(soup):
-            new_urls = raw_input('checkcode!!!  checkcode!!!  \ncheckcode!!!  checkcode!!!\nPlease input how many seconds you want to delay:')
-            new_datas = 'checkcode'
+            # new_urls = raw_input('checkcode!!!  checkcode!!!  \ncheckcode!!!  checkcode!!!\nPlease input how many seconds you want to delay:')
+            new_urls = new_datas = 'checkcode'
         else:
             new_urls = self.parse_urls(soup)
-            # 2016.5.30直接从字典里提取数据，不再另外加一个小区名的list
             new_datas = self.parse_datas(soup)
         return new_urls,new_datas
     

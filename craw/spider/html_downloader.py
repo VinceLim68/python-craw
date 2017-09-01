@@ -140,7 +140,7 @@ class HtmlDownloader(object):
             #得到随机浏览器，并加入头部信息
             agent = choice(self.agent_list).strip('\n')
             req.add_header("GET",url)
-            # req.add_header("User-Agent",agent)
+            req.add_header("User-Agent",agent)
             print('User-Agent : %s' %agent)
 
         content = self.get_content(req)

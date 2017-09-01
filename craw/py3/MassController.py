@@ -1,37 +1,30 @@
 #coding:utf-8
-#网络物业信息爬虫4.0，模块化，遇错不停止
-#加入厦门房地产联合网解析
-#加入代理功能
-#把解析里的面积、单价、总楼层、建成年份都转换成数字；输出的数据分为抓取到的、和清洗后的。
-#单价直接计算入库，增加按小区关键字抓取
-#可以批量采集xmhouse挂牌信息
-#把不同网站的解析拆成不同的类
-#增加soufan、Qfan
-#对Qfan中第几层解析错误进行了修改,Qfang面积采用取整
-#引进将错误信息输出到日志
-#试图处理下载网页时的超时现象
-from __future__ import print_function
-from spider import url_manager,html_downloader,html_outputer,AJK_parser,XM_parser,SF_parser,QF_parser,LJ_parser,mytools,WB_parser
-import urllib         #2016.5.30取消不必要的包
-import datetime
-import sys
-from urllib import quote
-import traceback  
-import data_stat
-import time,random
-from random import choice
+import UrlManager,ToolsBox
+# from __future__ import print_function
+# from spider import url_manager,html_downloader,html_outputer,AJK_parser,XM_parser,SF_parser,QF_parser,LJ_parser,mytools,WB_parser
+# import urllib         #2016.5.30取消不必要的包
+# import datetime
+# import sys
+# from urllib import quote
+# import traceback  
+# import data_stat
+# import time,random
+# from random import choice
 
 # from guppy import hpy
 
 
-class SpiderMain(object):
+class MassController(object):
     def __init__(self,parseClass):
-        self.urls = url_manager.UrlManager()
-        self.comms = url_manager.UrlManager()
-        self.downloader = html_downloader.HtmlDownloader()
+        
+        self.urls = UrlManager.UrlManager()             #url管理
+        self.comms = UrlManager.UrlManager()            #小区管理
+        
+        self.downloader = Downloader.Downloader()       #下载器
         self.parser = parseClass
-        self.outputer = html_outputer.HtmlOutputer()
-        self.data_stat = data_stat.DataStat()
+        self.outputer = Outputer.Outputer()
+        # self.data_stat = data_stat.DataStat()
+        
         self.count = 1
         self.total = 0
         self.quantity_of_raw_datas = 0
@@ -54,26 +47,31 @@ class SpiderMain(object):
             self.delay = 3
         elif 'LjParser' in str(parseClass):
             self.delay = 3
-        elif 'WBParser' in str(parseClass):
-            self.delay = 2
+        # elif 'WBParser' in str(parseClass):
+        #     self.delay = 2
         elif 'LejuParser' in str(parseClass):
             self.delay = 3
         else:
             self.delay = 0
 
 
-    def craw(self,root_url,keywords,from_):
-        # 先把第一个root_url加入urls列表中,支持root_url有多个url
+    def headers_builder(self):
+        # 构建请求头信息
+
+    def proxy_builder(self):
+        # 构建代理信息
+        
+    def craw_controller(self,root_url,keywords,from_):
+        
+        # 1、把root_url加入urls列表中,支持root_url有多个url
         for url in root_url:
             self.urls.add_new_url(url)
         
-        # 开始循环抓取数据
+        # 2、循环抓取数据
         while self.urls.has_new_url() :
-            # 取出一个页面
-            new_url = self.urls.get_new_url()
-            # if from_ == '8':print(new_url)
-            # 抓取一个页面
-            self.craw_oneurl(new_url,keywords,from_)
+            url = self.urls.get_new_url()
+            self.craw_a_page(url,keywords,from_)
+        
         self.print_record()
 
     def print_record(self):
@@ -82,9 +80,9 @@ class SpiderMain(object):
             fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
             fout.write( '\n %9.0f records has been stored in MySQL ' %self.total)
 
-    @mytools.mylog
-    @mytools.exeTime
-    def craw_oneurl(self,new_url,keywords,from_,retries = 3):
+    @ToolsBox.mylog
+    @ToolsBox.exeTime
+    def craw_a_page(self,new_url,keywords,from_,retries = 3):
         
         # 把取url移到外面，可以针对同一链接循环解析
         
@@ -94,7 +92,8 @@ class SpiderMain(object):
         else:
             print ('craw %d :' %(self.count))
         
-        html_cont = self.downloader.download(new_url,False,True)
+        html_cont = self.downloader.download(new_url,,)
+        download(self,url,headers={},proxy=None,num_retries=3):
         
         if html_cont == 404:                    #增加对被禁ip的处理
             self.forbidden += 1
@@ -174,14 +173,6 @@ class SpiderMain(object):
             time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
 
 
-    @mytools.mylog
-    def out(self,from_):
-        if keywords != "*":
-            v2 = self.data_stat.get_anlyse(keywords,self.outputer.get_datas())
-            print(self.data_stat.info)            
-            self.outputer.out_xlsx(keywords,from_)
-        if "home" not in sys.path[0]:
-            self.total = self.outputer.out_mysql()
 
 if __name__=="__main__":
     keywords = '红树康桥'
