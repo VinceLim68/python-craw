@@ -1,36 +1,37 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<!-- 这是一个原来html的备份文件，因为发现有些冗余的部分，删掉后不知有什么影响 -->
 <html lang="en">
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta charset="utf-8" />
-	<title>大叔评估</title>
-	<meta name="description" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="__CSS__/bootstrap.min.css" />
-		<link rel="stylesheet" href="__CSS__/font-awesome.min.css" />
-	<!-- page specific plugin styles -->
-	<!-- text fonts -->
-		<!-- <link rel="stylesheet" href="__CSS__/fonts.googleapis.com.css" /> -->
-	<!-- ace styles -->
-		<link rel="stylesheet" href="__CSS__/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
-	<!--[if lte IE 9]>
-		<link rel="stylesheet" href="__CSS__/ace-part2.min.css" class="ace-main-stylesheet" />
-	<![endif]-->
-		<link rel="stylesheet" href="__CSS__/ace-skins.min.css" />
-		<link rel="stylesheet" href="__CSS__/ace-rtl.min.css" />
-		<link rel="stylesheet" href="__CSS__/main.css" />
-	<!--[if lte IE 9]>
-		<link rel="stylesheet" href="__CSS__/ace-ie.min.css" />
-	<![endif]-->
-	<!-- inline styles related to this page -->
-	<!-- ace settings handler -->
-		<script src="__JS__/ace-extra.min.js"></script>
-	<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
-	<!--[if lte IE 8]>
-			<script src="__JS__/html5shiv.min.js"></script>
-			<script src="__JS__/respond.min.js"></script>
-	<![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta charset="utf-8" />
+<title>大叔评估</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<!-- bootstrap & fontawesome -->
+<link rel="stylesheet" href="__CSS__/bootstrap.min.css" />
+<link rel="stylesheet" href="__CSS__/font-awesome.min.css" />
+<!-- page specific plugin styles -->
+<!-- text fonts -->
+<link rel="stylesheet" href="__CSS__/fonts.googleapis.com.css" />
+<!-- ace styles -->
+<link rel="stylesheet" href="__CSS__/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<!--[if lte IE 9]>
+			<link rel="stylesheet" href="__CSS__/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+<link rel="stylesheet" href="__CSS__/ace-skins.min.css" />
+<link rel="stylesheet" href="__CSS__/ace-rtl.min.css" />
+<link rel="stylesheet" href="__CSS__/main.css" />
+<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="__CSS__/ace-ie.min.css" />
+		<![endif]-->
+<!-- inline styles related to this page -->
+<!-- ace settings handler -->
+<script src="__JS__/ace-extra.min.js"></script>
+<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+<!--[if lte IE 8]>
+		<script src="__JS__/html5shiv.min.js"></script>
+		<script src="__JS__/respond.min.js"></script>
+		<![endif]-->
 </head>
 <body class="no-skin">
 	<div id="navbar" class="navbar navbar-default          ace-save-state">
@@ -326,95 +327,43 @@
 				} catch (e) {
 				}
 			</script>
-			<!-- sidebar-shortcuts 侧栏快捷图标开始-->
+			<!-- sidebar-shortcuts 开始-->
 			<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 				<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-					<a class="btn btn-success" href="{:url('index/index')}" data-toggle="tooltip" data-placement="auto" title="返回询价" target='_blank'>
-						<i class="fa fa-w fa-bookmark" ></i>
-					</a>
-					<a class="btn btn-info" href="http://v3.bootcss.com/" data-toggle="tooltip" data-placement="auto" title="BS5文档" target='_blank'>
-						<i class="fa fa-w fa-pencil" ></i>
-					</a>
-					<a class="btn btn-warning" href="https://www.kancloud.cn/manual/thinkphp5/118003"  data-toggle="tooltip" data-placement="auto" title="TP5文档" target='_blank'>
-						<i class="fa fa-w fa-file-code-o"></i>
-					</a>
-					<a class="btn btn-danger" href="http://fontawesome.dashgame.com/" data-toggle="tooltip" data-placement="auto" title="图标库" target='_blank'>
-						<i class="fa fa-w fa-hand-o-right"></i>
-					</a>
+					<button class="btn btn-success">
+						<i class="ace-icon fa fa-signal"></i>
+					</button>
+					<button class="btn btn-info">
+						<i class="ace-icon fa fa-pencil"></i>
+					</button>
+					<button class="btn btn-warning">
+						<i class="ace-icon fa fa-users"></i>
+					</button>
+					<button class="btn btn-danger">
+						<i class="ace-icon fa fa-cogs"></i>
+					</button>
 				</div>
-                <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-                <!-- 这个是侧边栏收起时，快捷图标的显示 -->
-                    <span class="btn btn-success"></span>
-                    <span class="btn btn-info"></span>
-                    <span class="btn btn-warning"></span>
-                    <span class="btn btn-danger"></span>
-                </div> 
+                <!--这个用途不明，似乎是为了响应屏幕准备的
+ 				<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+					<span class="btn btn-success"></span>
+					<span class="btn btn-info"></span>
+					<span class="btn btn-warning"></span>
+					<span class="btn btn-danger"></span>
+				</div> 
+                -->
 			</div>
 			<!-- /.sidebar-shortcuts -->
-			
-            <!-- 侧栏列表开始 -->
-            <ul class="nav nav-list">
-                <li class="">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-desktop"></i>
-						<span class="menu-text"> 小区管理 </span>
-						<b class="arrow fa fa-angle-down"></b>
+			<ul class="nav nav-list">
+				<li class="">
+					<a href="{:url('index/index')}">
+						<i class="menu-icon fa fa-tachometer"></i>
+						<span class="menu-text"> 返回询价 </span>
 					</a>
 					<b class="arrow"></b>
-					<ul class="submenu">
-						<li class="">
-							<a href="{:url('Comms/commslist')}">
-								<i class="menu-icon fa fa-caret-right"></i>
-								小区列表
-							</a>
-							<b class="arrow"></b>
-						</li>
-						<li class="">
-							<a href="#" class="dropdown-toggle">
-								<i class="menu-icon fa fa-caret-right"></i>
-								Three Level Menu
-								<b class="arrow fa fa-angle-down"></b>
-							</a>
-							<b class="arrow"></b>
-							<ul class="submenu">
-								<li class="">
-									<a href="#">
-										<i class="menu-icon fa fa-leaf green"></i>
-										Item #1
-									</a>
-									<b class="arrow"></b>
-								</li>
-								<li class="">
-									<a href="#" class="dropdown-toggle">
-										<i class="menu-icon fa fa-pencil orange"></i>
-										4th level
-										<b class="arrow fa fa-angle-down"></b>
-									</a>
-									<b class="arrow"></b>
-									<ul class="submenu">
-										<li class="">
-											<a href="#">
-												<i class="menu-icon fa fa-plus purple"></i>
-												Add Product
-											</a>
-											<b class="arrow"></b>
-										</li>
-										<li class="">
-											<a href="#">
-												<i class="menu-icon fa fa-eye pink"></i>
-												View Products
-											</a>
-											<b class="arrow"></b>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>	
+				</li>
 				<li class="">
 					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-tachometer"></i>
+						<i class="menu-icon fa fa-desktop"></i>
 						<span class="menu-text">询价后台</span>
 						<b class="arrow fa fa-angle-down"></b>
 					</a>
@@ -493,7 +442,159 @@
 						</li>
 					</ul>
 				</li>
-                <li class="">
+				<li class="">
+					<a href="#" class="dropdown-toggle">
+						<i class="menu-icon fa fa-desktop"></i>
+						<span class="menu-text"> UI &amp; Elements </span>
+						<b class="arrow fa fa-angle-down"></b>
+					</a>
+					<b class="arrow"></b>
+					<ul class="submenu">
+						<li class="">
+							<a href="#" class="dropdown-toggle">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Layouts
+								<b class="arrow fa fa-angle-down"></b>
+							</a>
+							<b class="arrow"></b>
+							<ul class="submenu">
+								<li class="">
+									<a href="top-menu.html">
+										<i class="menu-icon fa fa-caret-right"></i>
+										Top Menu
+									</a>
+									<b class="arrow"></b>
+								</li>
+								<li class="">
+									<a href="two-menu-1.html">
+										<i class="menu-icon fa fa-caret-right"></i>
+										Two Menus 1
+									</a>
+									<b class="arrow"></b>
+								</li>
+								<li class="">
+									<a href="two-menu-2.html">
+										<i class="menu-icon fa fa-caret-right"></i>
+										Two Menus 2
+									</a>
+									<b class="arrow"></b>
+								</li>
+								<li class="">
+									<a href="mobile-menu-1.html">
+										<i class="menu-icon fa fa-caret-right"></i>
+										Default Mobile Menu
+									</a>
+									<b class="arrow"></b>
+								</li>
+								<li class="">
+									<a href="mobile-menu-2.html">
+										<i class="menu-icon fa fa-caret-right"></i>
+										Mobile Menu 2
+									</a>
+									<b class="arrow"></b>
+								</li>
+								<li class="">
+									<a href="mobile-menu-3.html">
+										<i class="menu-icon fa fa-caret-right"></i>
+										Mobile Menu 3
+									</a>
+									<b class="arrow"></b>
+								</li>
+							</ul>
+						</li>
+						<li class="">
+							<a href="typography.html">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Typography
+							</a>
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="elements.html">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Elements
+							</a>
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="buttons.html">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Buttons &amp; Icons
+							</a>
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="content-slider.html">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Content Sliders
+							</a>
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="treeview.html">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Treeview
+							</a>
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="jquery-ui.html">
+								<i class="menu-icon fa fa-caret-right"></i>
+								jQuery UI
+							</a>
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="nestable-list.html">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Nestable Lists
+							</a>
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="#" class="dropdown-toggle">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Three Level Menu
+								<b class="arrow fa fa-angle-down"></b>
+							</a>
+							<b class="arrow"></b>
+							<ul class="submenu">
+								<li class="">
+									<a href="#">
+										<i class="menu-icon fa fa-leaf green"></i>
+										Item #1
+									</a>
+									<b class="arrow"></b>
+								</li>
+								<li class="">
+									<a href="#" class="dropdown-toggle">
+										<i class="menu-icon fa fa-pencil orange"></i>
+										4th level
+										<b class="arrow fa fa-angle-down"></b>
+									</a>
+									<b class="arrow"></b>
+									<ul class="submenu">
+										<li class="">
+											<a href="#">
+												<i class="menu-icon fa fa-plus purple"></i>
+												Add Product
+											</a>
+											<b class="arrow"></b>
+										</li>
+										<li class="">
+											<a href="#">
+												<i class="menu-icon fa fa-eye pink"></i>
+												View Products
+											</a>
+											<b class="arrow"></b>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="">
 					<a href="#" class="dropdown-toggle">
 						<i class="menu-icon fa fa-list"></i>
 						<span class="menu-text"> 业务流程 </span>
@@ -703,14 +804,11 @@
 					</ul>
 				</li>
 			</ul>
-			<!-- /.nav-list侧栏列表结束 -->
-            
-            <!-- 侧栏收放按钮 -->
+			<!-- /.nav-list -->
 			<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 				<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
 			</div>
-	        <!-- 侧栏收放按钮结束 -->
-        </div>
+		</div>
 		<!--侧边栏sidebar结束  -->
 		<!-- 主内容main-content开始 -->
 		<div class="main-content">
@@ -799,8 +897,7 @@
 				<!-- /.page-content -->
 			</div>
 		</div>
-		<!-- 主内容/.main-content 结束 -->
-        <!--主内容落款footer开始-->
+		<!-- /.main-content -->
 		<div class="footer">
 			<div class="footer-inner">
 				<div class="footer-content">
@@ -812,16 +909,14 @@
 				</div>
 			</div>
 		</div>
-		<!--主内容落款footer结束-->
-
 	</div>
 	<!-- /.main-container -->
 	<!-- basic scripts -->
 	<!--[if !IE]> -->
-	   <script src="__JS__/jquery-2.1.4.min.js"></script>
+	<script src="__JS__/jquery-2.1.4.min.js"></script>
 	<!-- <![endif]-->
 	<!--[if IE]>
-	   <script src="__JS__/jquery-1.11.3.min.js"></script>
+	<script src="__JS__/jquery-1.11.3.min.js"></script>
 	<![endif]-->
 	<script type="text/javascript">
 		if ('ontouchstart' in document.documentElement)
@@ -831,22 +926,11 @@
 	<script src="__JS__/bootstrap.min.js"></script>
 	<!-- page specific plugin scripts -->
 	<!-- ace scripts -->
-    	<script src="__JS__/ace-elements.min.js"></script>
-    	<script src="__JS__/ace.min.js"></script>
+	<script src="__JS__/ace-elements.min.js"></script>
+	<script src="__JS__/ace.min.js"></script>
 	<!-- inline scripts related to this page -->
 	<!-- Yandex.Metrika counter -->
-    
 	<script type="text/javascript">
-    	$(function () {
-    		  $('[data-toggle="tooltip"]').tooltip({
-    			  delay:{
-    				  show:100,
-    				  hide:100
-    			  },
-    			  container:'body'
-    		  }
-    				  )
-		})
 		(function(d, w, c) {
 			(w[c] = w[c] || []).push(function() {
 				try {
