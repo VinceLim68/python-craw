@@ -62,9 +62,16 @@ class MatchID(object):
                 # 如果有带辅助字，必须同时匹配到辅助字才可以
                 lenth = len(key_words)
                 if lenth > 1:               
-                    
-                    #把title+community_name相加成一个供匹配字段
-                    formatch = commName + data['title'].encode("utf8").upper()              
+                    if data['title']:
+                    # try:
+                        #把title+community_name相加成一个供匹配字段
+                        formatch = commName + data['title'].encode("utf8").upper() 
+                    else:
+                        formatch = commName
+                    # except:
+                    #     print('??????????%s'%(data['id']))
+
+
                     
                     # 在formatch中查找辅助字
                     for j in range(1,lenth):

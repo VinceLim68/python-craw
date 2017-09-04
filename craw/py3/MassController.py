@@ -25,34 +25,34 @@ class MassController(object):
         self.outputer = Outputer.Outputer()
         # self.data_stat = data_stat.DataStat()
         
-        self.count = 1
-        self.total = 0
-        self.quantity_of_raw_datas = 0
-        # self.hp = hpy()
-        self.quantity_of_dupli = 0
-        self.quantity_of_datas = 0
+        # self.count = 1
+        # self.total = 0
+        # self.quantity_of_raw_datas = 0
+        # # self.hp = hpy()
+        # self.quantity_of_dupli = 0
+        # self.quantity_of_datas = 0
         
-        #连续出现几个页面没有数据的暂停
-        self.nodata = 0             
-        self.nodata_pages_stop = 5
+        # #连续出现几个页面没有数据的暂停
+        # self.nodata = 0             
+        # self.nodata_pages_stop = 5
         
-        #连续出现几个404的暂停
-        self.forbidden = 0
-        self.forbidden_pages_stop = 2
+        # #连续出现几个404的暂停
+        # self.forbidden = 0
+        # self.forbidden_pages_stop = 2
         
-        # 设置延时
-        if 'AjkParser' in str(parseClass):
-            self.delay = 3
-        elif 'GjParser' in str(parseClass):
-            self.delay = 3
-        elif 'LjParser' in str(parseClass):
-            self.delay = 3
-        # elif 'WBParser' in str(parseClass):
-        #     self.delay = 2
-        elif 'LejuParser' in str(parseClass):
-            self.delay = 3
-        else:
-            self.delay = 0
+        # # 设置延时
+        # if 'AjkParser' in str(parseClass):
+        #     self.delay = 3
+        # elif 'GjParser' in str(parseClass):
+        #     self.delay = 3
+        # elif 'LjParser' in str(parseClass):
+        #     self.delay = 3
+        # # elif 'WBParser' in str(parseClass):
+        # #     self.delay = 2
+        # elif 'LejuParser' in str(parseClass):
+        #     self.delay = 3
+        # else:
+        #     self.delay = 0
 
 
     def headers_builder(self):
@@ -72,13 +72,13 @@ class MassController(object):
             url = self.urls.get_new_url()
             self.craw_a_page(url,keywords,from_)
         
-        self.print_record()
+    #     self.print_record()
 
-    def print_record(self):
-        #专门在日志里记录已经获取记录数的模块
-        with open('logtest.txt','a+') as fout:
-            fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
-            fout.write( '\n %9.0f records has been stored in MySQL ' %self.total)
+    # def print_record(self):
+    #     #专门在日志里记录已经获取记录数的模块
+    #     with open('logtest.txt','a+') as fout:
+    #         fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
+    #         fout.write( '\n %9.0f records has been stored in MySQL ' %self.total)
 
     @ToolsBox.mylog
     @ToolsBox.exeTime
