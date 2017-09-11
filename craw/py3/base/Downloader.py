@@ -27,10 +27,9 @@ class Downloader(object):
         try:
             r = requests.get(url = url, headers = headers, 
                 timeout = 8, proxies = proxy)
-            # print('-------------{0}'.format(r.status_code))
             if 400 <= r.status_code <500:
                 html = 404
-            elif 500 <= r.status_code <600:         #把递归调用放在服务器端出错时
+            elif 500 <= r.status_code <600:         #递归:服务器端出错时
                 html = self.download(url,num_retries-1)
             else:
                 html = r.text

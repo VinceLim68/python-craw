@@ -1,5 +1,7 @@
 #coding:utf-8
-import UrlManager,ToolsBox
+import UrlManager,ToolsBox,Downloader,Outputer,ReqBuilder
+from random import choice
+import time,random
 # from __future__ import print_function
 # from spider import url_manager,html_downloader,html_outputer,AJK_parser,XM_parser,SF_parser,QF_parser,LJ_parser,mytools,WB_parser
 # import urllib         #2016.5.30取消不必要的包
@@ -8,8 +10,6 @@ import UrlManager,ToolsBox
 # from urllib import quote
 # import traceback  
 # import data_stat
-# import time,random
-# from random import choice
 
 # from guppy import hpy
 
@@ -18,14 +18,18 @@ class MassController(object):
     def __init__(self,parseClass):
         
         self.urls = UrlManager.UrlManager()             #url管理
-        self.comms = UrlManager.UrlManager()            #小区管理
-        
+        # self.comms = UrlManager.UrlManager()            #小区管理
         self.downloader = Downloader.Downloader()       #下载器
         self.parser = parseClass
-        self.outputer = Outputer.Outputer()
-        # self.data_stat = data_stat.DataStat()
+        # self.outputer = Outputer.Outputer()
+        self.rqBuilder = ReqBuilder.ReqBuilder()
         
-        # self.count = 1
+        self.headers = {}                               #构筑请求头
+        self.HTTP404 = 0                                #计数：被404的次数
+        self.HTTP404_stop = 3                           #设置：累计404多少次后暂停程序
+        self.retry_times = 3                            #设置：下载失败后重试的次数
+        self.count = 1                                  #计数：下载页面数
+        self.delay = 3                                  #设置：下载页面之间的延时秒数
         # self.total = 0
         # self.quantity_of_raw_datas = 0
         # # self.hp = hpy()
@@ -34,11 +38,11 @@ class MassController(object):
         
         # #连续出现几个页面没有数据的暂停
         # self.nodata = 0             
-        # self.nodata_pages_stop = 5
+        # self.nodat_stop = 5
         
         # #连续出现几个404的暂停
-        # self.forbidden = 0
-        # self.forbidden_pages_stop = 2
+        # self.HTTP404 = 0
+        # self.HTTP40_stop = 2
         
         # # 设置延时
         # if 'AjkParser' in str(parseClass):
@@ -57,11 +61,14 @@ class MassController(object):
 
     def headers_builder(self):
         # 构建请求头信息
+        agent = self.rqBuilder.get_agent()
+        self.headers["User-Agent"] = agent
 
     def proxy_builder(self):
         # 构建代理信息
+        return self.rqBuilder.get_proxy()
         
-    def craw_controller(self,root_url,keywords,from_):
+    def craw_controller(self,root_url):
         
         # 1、把root_url加入urls列表中,支持root_url有多个url
         for url in root_url:
@@ -70,7 +77,7 @@ class MassController(object):
         # 2、循环抓取数据
         while self.urls.has_new_url() :
             url = self.urls.get_new_url()
-            self.craw_a_page(url,keywords,from_)
+            self.craw_a_page(url)
         
     #     self.print_record()
 
@@ -82,62 +89,59 @@ class MassController(object):
 
     @ToolsBox.mylog
     @ToolsBox.exeTime
-    def craw_a_page(self,new_url,keywords,from_,retries = 3):
+    def craw_a_page(self,new_url):
         
-        # 把取url移到外面，可以针对同一链接循环解析
-        
+        # 计算并打印延时情况 
         if self.delay > 0 :
             sleepSeconds = random.randint(self.delay,self.delay*2)
-            print ('craw %d after %d seconds (%d ~ %d):' %(self.count,sleepSeconds,self.delay,self.delay*2))
+            print ('craw {0} after {1} seconds ({2} ~ {3}):'.format(
+                self.count,sleepSeconds,self.delay,self.delay*2))
         else:
-            print ('craw %d :' %(self.count))
+            print ('craw {0} :'.format(self.count))
         
-        html_cont = self.downloader.download(new_url,,)
-        download(self,url,headers={},proxy=None,num_retries=3):
+        # 获取请求头、代理信息
+        proxy = self.proxy_builder()
+        self.headers_builder()
+
+        # 下载
+        html_cont = self.downloader.download(new_url,headers=self.headers,
+            proxy=proxy,num_retries=self.retry_times)
         
-        if html_cont == 404:                    #增加对被禁ip的处理
-            self.forbidden += 1
-            time.sleep(30*self.forbidden)      #被禁止访问了，消停一会
-            if self.forbidden > self.forbidden_pages_stop:
-                raw_input('It seems you have been forbidden,press any key to continue......')
-                self.forbidden = 0
-            # 2017.5.11增加404情况回调
+        # 对下载内容进行处理
+        # 1、如果被404的处理
+        if html_cont == 404:                    
+            self.HTTP404 += 1
+            time.sleep( 30 * self.HTTP404 )                             #被禁止访问了，消停一会
+            if self.HTTP404 > self.HTTP404_stop:
+                input('你似乎被禁止访问了，按任意键继续......')
+                self.HTTP404 = 0
             else:
-                return self.craw_oneurl(new_url,keywords,from_)
-        
+                return self.craw_a_page(new_url)
+        # 2、正常得到网页
         elif html_cont is not None:
             
-            # if from_ == '8' and keywords != '*':
-            #     # 58同城按小区搜索的挂牌信息
-            #     new_urls,new_datas = self.parser.parseB(html_cont)
-            # else:
-            #     new_urls,new_datas = self.parser.parse(html_cont,from_)
+            new_urls,new_datas = self.parser.page_parse(html_cont)      #返回解析内容
             
-            new_urls,new_datas = self.parser.parse(html_cont,from_)
-
-            # 如果是验证界面，得到延时值，回调函数
-            if new_datas == 'checkcode':
-                # 如果验证码，先把数据保存
-                print ("======Because checkcode save the data========")
+            if new_datas == 'checkcode':                                # 如果解析出是输入验证码
+                input("======遇到验证码页面，先保留已解析的数据========")
                 self.total = self.total + self.outputer.out_mysql()
                 self.outputer.clear_datas()
                 self.delay = int(new_urls)               # 调整延时值
                 if retries > 0:
-                    return self.craw_oneurl(new_url,keywords,from_,retries - 1)
+                    return self.craw_a_page(new_url,retries - 1)
             
-            # 当解析没有得到数据时，我怀疑是网络问题，再解析一次，但超过nodata_pages_stop次数则暂停
-            elif len(new_datas) == 0 and len(new_urls) == 0:
+            elif len(new_datas) == 0 and len(new_urls) == 0:            # 解析无数据
                 with open('logtest.txt','a+') as fout:
                     fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
                     fout.write( '\n no new datas have been crawed :%s. \n' %new_url)
                 print(' There are %s datas and %s urls in %s' %(len(new_datas),len(new_urls),new_url))
                 self.nodata += 1                #只有连续5个页面没有数据才会停止
                 
-                if self.nodata < self.nodata_pages_stop:
-                    print("You are still have " + str(self.nodata_pages_stop-self.nodata) + "times to parse this url") 
+                if self.nodata < self.nodata_stop:
+                    print("You are still have " + str(self.nodata_stop-self.nodata) + "times to parse this url") 
                     time.sleep(random.randint(3,7))
-                    # return self.craw_oneurl(new_url,keywords,from_, retries - 1)
-                    return self.craw_oneurl(new_url,keywords,from_)
+                    # return self.craw_a_page(new_url,keywords,from_, retries - 1)
+                    return self.craw_a_page(new_url,keywords,from_)
             
             # 正常情况，解析
             else:
@@ -162,7 +166,7 @@ class MassController(object):
                     self.outputer.clear_datas()
                 self.count += 1
                 self.nodata = 0             #如果有数据，把self.nodata计数器清零
-                self.forbidden = 0          #如果有数据，把self.forbidden计数器清零
+                self.HTTP404 = 0          #如果有数据，把self.HTTP404计数器清零
         
         # html_cont内容是None
         else:

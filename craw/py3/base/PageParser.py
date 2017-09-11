@@ -36,7 +36,6 @@ class PageParser(object):
         
         #在这里加上辨识是否有验证码的代码
         if self._ischeck(soup):
-            # new_urls = raw_input('checkcode!!!  checkcode!!!  \ncheckcode!!!  checkcode!!!\nPlease input how many seconds you want to delay:')
             new_urls = new_datas = 'checkcode'
         else:
             new_urls = self.parse_urls(soup)
