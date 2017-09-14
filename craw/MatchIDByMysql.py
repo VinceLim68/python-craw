@@ -64,7 +64,11 @@ class MatchID(object):
                 if lenth > 1:               
                     
                     #把title+community_name相加成一个供匹配字段
-                    formatch = commName + data['title'].encode("utf8").upper()              
+                    if data['title']:
+                        formatch = commName + data['title'].encode("utf8").upper()  
+                    else:
+                        formatch = commName
+
                     
                     # 在formatch中查找辅助字
                     for j in range(1,lenth):
