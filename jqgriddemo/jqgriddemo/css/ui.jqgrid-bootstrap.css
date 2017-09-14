@@ -476,14 +476,12 @@ div.tablediv > .table-bordered {
 .ui-jqdialog .ui-jqdialog-titlebar {
 	padding: .1em .1em; 
 	min-height: 35px; 
-	text-align:center;
 }
 .ui-jqdialog .ui-jqdialog-title { 
 	margin: .3em 0 .2em;  
 	font-weight: bold;
 	padding-left :6px;
 	padding-right:6px;
-	font-size: 18px;
 } 
 .ui-jqdialog .ui-jqdialog-titlebar-close { 
 	position: absolute;  
@@ -578,10 +576,8 @@ div.tablediv > .table-bordered {
 .ui-jqdialog-content .CaptionTD {
 	vertical-align: middle;
 	border: 0 none; 
-	padding: 2px;	
+	padding: 2px;
 	white-space: nowrap;
-	text-align : right;
-	padding-right:15px;	
 }
 .ui-jqdialog-content .DataTD {
 	padding: 2px; 
