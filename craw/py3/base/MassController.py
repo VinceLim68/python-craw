@@ -15,13 +15,15 @@ import time,random
 
 
 class MassController(object):
+    
     def __init__(self,parseClass):
         
-        self.urls = UrlManager.UrlManager()             #url管理
-        # self.comms = UrlManager.UrlManager()            #小区管理
-        self.downloader = Downloader.Downloader()       #下载器
+        self.urls = UrlManager.UrlManager()             # url管理
+        self.comms = UrlManager.UrlManager()            # 小区管理
+        self.downloader = Downloader.Downloader()       # 下载器
         self.parser = parseClass
-        # self.outputer = Outputer.Outputer()
+        self.outputer = Outputer.Outputer()
+        self.outputer = Outputer.Outputer()
         self.rqBuilder = ReqBuilder.ReqBuilder()
         
         self.headers = {}                               #构筑请求头
@@ -30,15 +32,14 @@ class MassController(object):
         self.retry_times = 3                            #设置：下载失败后重试的次数
         self.count = 1                                  #计数：下载页面数
         self.delay = 3                                  #设置：下载页面之间的延时秒数
-        # self.total = 0
+        self.total = 0                                  #计数：成功加入数据库的记录数量
         # self.quantity_of_raw_datas = 0
         # # self.hp = hpy()
         # self.quantity_of_dupli = 0
         # self.quantity_of_datas = 0
         
-        # #连续出现几个页面没有数据的暂停
-        # self.nodata = 0             
-        # self.nodat_stop = 5
+        self.nodata = 0                                 #计数：连续出现解析不出数据的次数
+        self.nodat_stop = 4                             #设置：同一页面如果解析不出数据，可重复次数
         
         # #连续出现几个404的暂停
         # self.HTTP404 = 0
@@ -99,7 +100,7 @@ class MassController(object):
         else:
             print ('craw {0} :'.format(self.count))
         
-        # 获取请求头、代理信息
+        # 获取请求头、代理信息,每个页面都不相同
         proxy = self.proxy_builder()
         self.headers_builder()
 
@@ -123,52 +124,40 @@ class MassController(object):
             new_urls,new_datas = self.parser.page_parse(html_cont)      #返回解析内容
             
             if new_datas == 'checkcode':                                # 如果解析出是输入验证码
-                input("======遇到验证码页面，先保留已解析的数据========")
+                self.delay = input("遇到验证码，输入延时秒数后，保留已解析的数据......")
                 self.total = self.total + self.outputer.out_mysql()
-                self.outputer.clear_datas()
-                self.delay = int(new_urls)               # 调整延时值
                 if retries > 0:
                     return self.craw_a_page(new_url,retries - 1)
-            
             elif len(new_datas) == 0 and len(new_urls) == 0:            # 解析无数据
-                with open('logtest.txt','a+') as fout:
-                    fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
-                    fout.write( '\n no new datas have been crawed :%s. \n' %new_url)
-                print(' There are %s datas and %s urls in %s' %(len(new_datas),len(new_urls),new_url))
-                self.nodata += 1                #只有连续5个页面没有数据才会停止
-                
+                self.nodata += 1                
                 if self.nodata < self.nodata_stop:
-                    print("You are still have " + str(self.nodata_stop-self.nodata) + "times to parse this url") 
+                    print("页面{0}未解析出数据，可再试{1}次".format(new_url,self.nodata_stop-self.nodata)) 
                     time.sleep(random.randint(3,7))
-                    # return self.craw_a_page(new_url,keywords,from_, retries - 1)
-                    return self.craw_a_page(new_url,keywords,from_)
-            
-            # 正常情况，解析
-            else:
-                # 取页码表
+                    return self.craw_a_page(new_url)
+                else:
+                    with open('logtest.txt','a+') as fout:
+                        fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
+                        fout.write( '\n no new datas have been crawed :%s. \n' %new_url)
+            else:                                                        # 正常情况，解析
+                print('页面:{0},获得{1}个数据，{2}个页面链接'.format(new_url,len(new_datas),len(new_urls)))
+                # 把页面链接放入url管理器
                 self.urls.add_new_urls(new_urls)
-
-                # 取小区表，但58的不取了
-                # if from_ != '8' :
-                #     self.comms.add_new_urls([name['community_name'] for name in new_datas]) 
-                # elif keywords == '*':
-                #     self.comms.add_new_urls([name['comm_url'] for name in new_datas])
-                
-                self.comms.add_new_urls([name['community_name'] for name in new_datas]) 
-
-                self.outputer.collect_data(new_datas,keywords)
-                self.quantity_of_datas,self.quantity_of_raw_datas,self.quantity_of_dupli = self.outputer.get_datas_quantity()
-                print("  %6.0f = %6.0f dupli + %5.0f raw_datas + %6.0f stored , %5.0f in list"\
-                %(self.quantity_of_dupli + self.quantity_of_raw_datas + self.total,self.quantity_of_dupli,self.quantity_of_raw_datas,self.total,self.quantity_of_datas ))
-                if self.quantity_of_raw_datas > 3000:
-                    print ("try to store")
+                # 把小区名称放入小区管理器
+                for data in new_datas:
+                    self.comms.add_new_urls(data['community_name'])
+                # 把挂牌信息传入outputer，清除无效数据后，放在outputer.raw_datas记录集中
+                self.outputer.collect_data(new_datas)
+                data_num = self.outputer.get_datas_quantity()
+                print("  {0} = {1} dupli + {2} raw_datas + {3} stored "
+                    .format(data_num['dupli_count'] + data_num['r_data'] + self.total,
+                        data_num['dupli_count'],data_num['r_data'],self.total)
+                if data_num['r_data'] > 3000:
+                    print ("正在存入数据库中，请稍侯......")
                     self.total = self.total + self.outputer.out_mysql()
-                    self.outputer.clear_datas()
                 self.count += 1
-                self.nodata = 0             #如果有数据，把self.nodata计数器清零
-                self.HTTP404 = 0          #如果有数据，把self.HTTP404计数器清零
-        
-        # html_cont内容是None
+                self.nodata = 0                         #如果有数据，把self.nodata计数器清零
+                self.HTTP404 = 0                        #如果有数据，把self.HTTP404计数器清零
+        # 3、html_cont内容是None，感觉不会出现
         else:
             print('craw %s fail : nothing' %(new_url))
 
@@ -179,35 +168,35 @@ class MassController(object):
 
 
 if __name__=="__main__":
-    keywords = '红树康桥'
-    serch_for = quote(keywords)
-    from_where = 6
+    # keywords = '红树康桥'
+    # serch_for = quote(keywords)
+    # from_where = 6
 
-    #1----安居客，2----XMHOUSE，3--搜房网，4----Q房网，5----链家
+    # #1----安居客，2----XMHOUSE，3--搜房网，4----Q房网，5----链家
 
-    if from_where == 1:
-        root_url = ['http://xm.anjuke.com/sale/p1-rd1/?kw=' + serch_for + '&from_url=kw_final#filtersort']
-        obj_spider = SpiderMain(AJK_parser.AjkParser())
-    if from_where == 2:
-        root_url = ['http://esf.xmhouse.com/sell/t4_r_a_u_l_z_s_itp_b_it_if_ih_p-_ar-_pt_o_ps_1.html'] if keywords == '*' \
-                else ['http://esf.xmhouse.com/sell/t4_r_a_u_l_z_s1_itp_b0_it_if_ih1_p-_ar-_pt_o0_ps20_1.html?keyWord=' + serch_for ]
-        obj_spider = SpiderMain(XM_parser.XmParser())
-    if from_where == 3:
-        root_url = ['http://esf.xm.fang.com/house/c61-kw' + urllib.quote(unicode(keywords,"utf-8").encode('gbk')) +'/']
-        obj_spider = SpiderMain(SF_parser.SfParser())
-    if from_where == 4:
-        root_url = ['http://xiamen.qfang.com/sale/f1','http://xiamen.qfang.com/sale/f2'] if keywords == '*' \
-                else ["http://xiamen.qfang.com/sale/f1?keyword=" + serch_for,"http://xiamen.qfang.com/sale/f2?keyword=" + serch_for]
-        obj_spider = SpiderMain(QF_parser.QfParser())
-    if from_where == 5:
-        root_url = ['http://xm.lianjia.com/ershoufang/pg1/'] if keywords == '*' \
-                else ["http://xm.lianjia.com/ershoufang/rs" + serch_for]
-        obj_spider = SpiderMain(LJ_parser.LjParser())
-    if from_where == 6:
-        root_url = ['http://xm.ganji.com/fang5/o1/'] 
-        obj_spider = SpiderMain(LJ_parser.LjParser())
+    # if from_where == 1:
+    #     root_url = ['http://xm.anjuke.com/sale/p1-rd1/?kw=' + serch_for + '&from_url=kw_final#filtersort']
+    #     obj_spider = SpiderMain(AJK_parser.AjkParser())
+    # if from_where == 2:
+    #     root_url = ['http://esf.xmhouse.com/sell/t4_r_a_u_l_z_s_itp_b_it_if_ih_p-_ar-_pt_o_ps_1.html'] if keywords == '*' \
+    #             else ['http://esf.xmhouse.com/sell/t4_r_a_u_l_z_s1_itp_b0_it_if_ih1_p-_ar-_pt_o0_ps20_1.html?keyWord=' + serch_for ]
+    #     obj_spider = SpiderMain(XM_parser.XmParser())
+    # if from_where == 3:
+    #     root_url = ['http://esf.xm.fang.com/house/c61-kw' + urllib.quote(unicode(keywords,"utf-8").encode('gbk')) +'/']
+    #     obj_spider = SpiderMain(SF_parser.SfParser())
+    # if from_where == 4:
+    #     root_url = ['http://xiamen.qfang.com/sale/f1','http://xiamen.qfang.com/sale/f2'] if keywords == '*' \
+    #             else ["http://xiamen.qfang.com/sale/f1?keyword=" + serch_for,"http://xiamen.qfang.com/sale/f2?keyword=" + serch_for]
+    #     obj_spider = SpiderMain(QF_parser.QfParser())
+    # if from_where == 5:
+    #     root_url = ['http://xm.lianjia.com/ershoufang/pg1/'] if keywords == '*' \
+    #             else ["http://xm.lianjia.com/ershoufang/rs" + serch_for]
+    #     obj_spider = SpiderMain(LJ_parser.LjParser())
+    # if from_where == 6:
+    #     root_url = ['http://xm.ganji.com/fang5/o1/'] 
+    #     obj_spider = SpiderMain(LJ_parser.LjParser())
 
-    obj_spider.craw(root_url,keywords,from_where)
-    obj_spider.out(from_where)
+    # obj_spider.craw(root_url,keywords,from_where)
+    # obj_spider.out(from_where)
 
 

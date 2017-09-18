@@ -15,7 +15,7 @@ def mylog(func):
             with open('logtest.txt','a+') as fout:
                 fout.write('\n               *******' + func.__name__ + '*******,error record by @mylog on ' + str(datetime.datetime.now()) + '*************\n')
                 traceback.print_exc(file=fout) 
-                print traceback.format_exc()
+                print(traceback.format_exc())
         # return func
         # return result
     return _deco
@@ -74,7 +74,9 @@ def confir(str):
 
 def printDic(data):
     if isinstance(data,dict):
-        for key,value in data.items():
-            print('%20s : %s' %(key,value))
+        # for key,value in data.items():
+        #     print('%20s : %s' %(key,value))
+        for key in data:
+            print('%20s : %s' %(key,data[key]))
     else:
         print('Not a dict!')

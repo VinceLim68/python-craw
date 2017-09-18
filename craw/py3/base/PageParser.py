@@ -32,8 +32,6 @@ class PageParser(object):
         # 解析网页的主模块
         soup = slef.get_soup(html_cont,parser_build)
 
-        # soup = BeautifulSoup(html_cont,'lxml',from_encoding='urf-8')        #2016.7.28改用lxml模块解析，否则Q房网解析会有问题
-        
         #在这里加上辨识是否有验证码的代码
         if self._ischeck(soup):
             new_urls = new_datas = 'checkcode'
@@ -124,12 +122,12 @@ class PageParser(object):
         return parse_dict;
 
     def pipe(self,datadic):
-        # 2016.6.4增加方法：清理、有效性检验
+        # 有效性检验
         if datadic.has_key('total_floor') and datadic.has_key('total_price') and datadic.has_key('area') and datadic.has_key('community_name'):
             
-            if datadic['total_price'] is None or datadic['area'] is None or datadic['community_name'] is None:return False
+            if datadic['total_price'] is None or datadic['area'] is None:return False
+            if datadic['community_name'] is None or len(datadic['community_name'])<=2:return False
             if datadic['total_floor'] > 60: datadic['total_floor'] = 35         #把过高楼层的设为35层
-            # if datadic['community_name'] is not None:
             datadic['community_name'] = datadic['community_name'].strip()
             if datadic['total_price'] == 0 : return False                       #2016.9.13 价格为0的过滤掉
             

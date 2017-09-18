@@ -55,9 +55,8 @@ class LjParser(PageParser):
 
 
     def parse_urls(self , soup):
-
         new_urls = set()
-        links = soup.select("div.house-lst-page-box")       #2016.11.11修改，网页改了
+        links = soup.select("div.house-lst-page-box")       
         
         if len(links) == 0 :
             print "Only 1 page!!"
