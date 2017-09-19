@@ -55,7 +55,7 @@ class SpiderMain(object):
         elif 'LjParser' in str(parseClass):
             self.delay = 3
         elif 'WBParser' in str(parseClass):
-            self.delay = 2
+            self.delay = 0
         elif 'LejuParser' in str(parseClass):
             self.delay = 3
         else:
