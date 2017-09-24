@@ -10,7 +10,7 @@ def mylog(func):
             # func(*a,**b)                  #以前只有return,但发现有返回值的函数加装饰器时，总是返回空，所以改成return func(*a,**b)
             return func(*a,**b)
             # return
-        except Exception, e:
+        except Exception as e:
             # result = None
             with open('logtest.txt','a+') as fout:
                 fout.write('\n               *******' + func.__name__ + '*******,error record by @mylog on ' + str(datetime.datetime.now()) + '*************\n')
@@ -31,7 +31,7 @@ def exeTime(func):
 def pri(string):
     if len(string)%2 != 0:
         string = string + ' '
-    print string
+    print(string)
 
 def clearStr(string):
     # 清理字符串中的回车、空格等
@@ -48,23 +48,24 @@ def ShowInvalideData(each_data):
                 each_data['floor_index'] = 1
                 each_data['spatial_arrangement'] = each_data['spatial_arrangement'] + u"别墅"
                 # page_datas.append(each_data)
-                print "没有总楼层,按照别墅填充！！！".encode("gbk")
+                print("没有总楼层,按照别墅填充！！！")
                 for key,value in each_data.items():print(" %s : %s"%(key,value))
-                print "="*35
+                print( "="*35)
                 return True
             else:
-                print "！！！没有总楼层！！！".encode("gbk")
+                print("！！！没有总楼层！！！")
         elif not each_data.has_key('total_price'):
-            print "！！！没有总价！！！".encode("gbk")
+            print ("！！！没有总价！！！")
         elif not each_data.has_key('area'):
-            print "！！！没有面积！！！".encode("gbk")
+            print( "！！！没有面积！！！")
         elif not each_data.has_key('community_name'):
-            print "！！！小区名！！！".encode("gbk")                 
+            print ("！！！小区名！！！")                 
+            # print "！！！小区名！！！".encode("gbk")                 
         # for item in list(house.stripped_strings):print(item)
         # print "-"*25
         # for key,value in each_data.items():print(" %s : %s"%(key,value))
         printDic(each_data)
-        print "="*35
+        print( "="*35)
     return False
 
 def confir(str):
@@ -77,6 +78,11 @@ def printDic(data):
         # for key,value in data.items():
         #     print('%20s : %s' %(key,value))
         for key in data:
-            print('%20s : %s' %(key,data[key]))
+            print('%20s : %s'%(key,data[key]))
     else:
         print('Not a dict!')
+
+def strToInt(string1):
+    if isinstance(string1, str):
+        string1 = int(round(float(string1)))
+    return string1

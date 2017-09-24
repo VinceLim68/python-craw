@@ -1,8 +1,7 @@
-#coding:utf-8
 # import sys
 # import xlsxwriter
 # import myStat
-import bloomfilter
+import BloomFilter
 import ToolsBox
 import pyMySql
 import datetime

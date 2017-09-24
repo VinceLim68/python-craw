@@ -1,4 +1,3 @@
-#coding:utf-8
 import UrlManager,ToolsBox,Downloader,Outputer,ReqBuilder
 from random import choice
 import time,random
@@ -148,11 +147,9 @@ class MassController(object):
                 # 把挂牌信息传入outputer，清除无效数据后，放在outputer.raw_datas记录集中
                 self.outputer.collect_data(new_datas)
                 data_num = self.outputer.get_datas_quantity()
-                print("  {0} = {1} dupli + {2} raw_datas + {3} stored "
-                    .format(data_num['dupli_count'] + data_num['r_data'] + self.total,
-                        data_num['dupli_count'],data_num['r_data'],self.total)
-                if data_num['r_data'] > 3000:
-                    print ("正在存入数据库中，请稍侯......")
+
+                if 3000 < data_num['r_data']:
+                    print("正在存入数据库中，请稍侯......")
                     self.total = self.total + self.outputer.out_mysql()
                 self.count += 1
                 self.nodata = 0                         #如果有数据，把self.nodata计数器清零
@@ -168,11 +165,8 @@ class MassController(object):
 
 
 if __name__=="__main__":
-    # keywords = '红树康桥'
-    # serch_for = quote(keywords)
-    # from_where = 6
-
-    # #1----安居客，2----XMHOUSE，3--搜房网，4----Q房网，5----链家
+    url = 'http://xm.58.com/ershoufang/pn2/'
+    MC = MassController()
 
     # if from_where == 1:
     #     root_url = ['http://xm.anjuke.com/sale/p1-rd1/?kw=' + serch_for + '&from_url=kw_final#filtersort']

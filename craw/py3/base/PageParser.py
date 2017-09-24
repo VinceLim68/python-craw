@@ -1,8 +1,8 @@
 #coding:utf-8
 from bs4 import BeautifulSoup
-# import re
-# import datetime
-# import traceback
+import re
+import datetime
+import traceback
 # import sys
 # reload(sys)
 # sys.setdefaultencoding('utf8')
@@ -26,7 +26,7 @@ class PageParser(object):
     def get_soup(self,html,parser_build = 'lxml'):
         # 根据不同的解析器得到soup
         # parser_build:解析器------->html.parser,lxml
-        return BeautifulSoup(html,parser_build,from_encoding='urf-8') 
+        return BeautifulSoup(html,parser_build)
 
     def page_parse(self,html_cont,parser_build = 'lxml'):
         # 解析网页的主模块
@@ -45,23 +45,30 @@ class PageParser(object):
         高层/(共30层)-->拆成楼层和总层数,        安居客、链家中使用
         传入：        item-->字符串        sep-->分隔符
         '''
-        if '(' in unicode(item):
+        if '(' in item:
             sep = '('
-        elif '/' in unicode(item):
+        elif '/' in item:
             sep = '/'  
-        elif '（' in unicode(item):      #2016.12.1增加全角的（
+        elif '（' in item:      #2016.12.1增加全角的（
             sep = '（'    
         else:
             sep = '/'     
         try:
+            after_sep = (item.split(sep)[1]) if sep in item else item
+            # print(after_sep)
+            get_num = re.sub("\D", "", after_sep)
 
-            total_floor = int(filter(str.isdigit,((item.split(sep)[1]) if sep in item else item).encode("utf-8")))
-            index = item.split(sep)[0] if sep in item else " "  
-            if unicode(index) == u" ":
+            # toNum = filter(str.isdigit,((item.split(sep)[1]) if sep in item else item).encode("utf-8"))
+            # str1 = filter(str.isdigit(),toNum.encode("utf-8"))
+            # print(get_num)
+            total_floor = int(get_num)
+            # total_floor = int(filter(str.isdigit,((item.split(sep)[1]) if sep in item else item).encode("utf-8")))
+            index = item.split(sep)[0] if sep in item else " "
+            if index == u" ":
                 floor_index = 0
-            elif u"高" in unicode(index):
+            elif u"高" in index:
                 floor_index = int(total_floor*5/6)
-            elif u"低" in unicode(index):
+            elif u"低" in index:
                 floor_index = int(total_floor/6)
             else:
                 floor_index = int(total_floor/2)
@@ -82,16 +89,16 @@ class PageParser(object):
 
         parse_dict = {}
 
-        r1_1 = '(\d+)平方米'.decode('utf8')
-        r1_2 = '(\d+.?\d+)平米'.decode('utf8')        #厦门house的面积是浮点数
-        r1_3 = '(\d+.?\d+)㎡'.decode('utf8')         #2016.9.13增加麦田的面积解析
-        r1_4 = '(\d+.?\d+)m²'.decode('utf8')        #2017.3.8安居客
-        r2_1 = '\d+室'.decode('utf8')
-        r2_2 = '\d+房'.decode('utf8')
-        r3 = '(\d+)元/'.decode('utf8')
-        r4 = '\d+层'.decode('utf8')
-        r5_1 = '(\d{4})年'.decode('utf8')
-        r5_2 = '年.*(\d{4})'.decode('utf8')
+        r1_1 = '(\d+)平方米'
+        r1_2 = '(\d+.?\d+)平米'        #厦门house的面积是浮点数
+        r1_3 = '(\d+.?\d+)㎡'         #2016.9.13增加麦田的面积解析
+        r1_4 = '(\d+.?\d+)m²'        #2017.3.8安居客
+        r2_1 = '\d+室'
+        r2_2 = '\d+房'
+        r3 = '(\d+)元/'
+        r4 = '\d+层'
+        r5_1 = '(\d{4})年'
+        r5_2 = '年.*(\d{4})'
 
 
         if re.search(r1_1, string, flags=0):
@@ -123,19 +130,20 @@ class PageParser(object):
 
     def pipe(self,datadic):
         # 有效性检验
-        if datadic.has_key('total_floor') and datadic.has_key('total_price') and datadic.has_key('area') and datadic.has_key('community_name'):
-            
+        # if datadic.has_key('total_floor') and datadic.has_key('total_price') and datadic.has_key('area') and datadic.has_key('community_name'):
+        if ('total_floor' in datadic.keys()) and ('total_price' in datadic.keys()) and ('area' in datadic.keys()) and ('community_name' in datadic.keys())  :
+
             if datadic['total_price'] is None or datadic['area'] is None:return False
             if datadic['community_name'] is None or len(datadic['community_name'])<=2:return False
             if datadic['total_floor'] > 60: datadic['total_floor'] = 35         #把过高楼层的设为35层
             datadic['community_name'] = datadic['community_name'].strip()
             if datadic['total_price'] == 0 : return False                       #2016.9.13 价格为0的过滤掉
             
-            if datadic.has_key('builded_year'):
+            if 'builded_year' in datadic.keys():
                 if datadic['builded_year'] < 1900: datadic['builded_year'] = 0
             
             if datadic['area'] > 20000: return False        #面积过大，有时是填写错误，而且面积大于20000的价格参考意义也不大，舍弃
-            if not datadic.has_key('price'): return False       #2016.8.1 有时解析过程中出错，跳过了price字段解析，造成没有price,舍弃
+            if 'price' not in datadic.keys(): return False       #2016.8.1 有时解析过程中出错，跳过了price字段解析，造成没有price,舍弃
             
             #2017.4.14 detail_url字段太长，处理一下
             if len(datadic['details_url']) > 250:datadic['details_url'] = datadic['details_url'][:249]
