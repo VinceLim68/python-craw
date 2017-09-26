@@ -132,9 +132,9 @@ class HtmlParser(object):
             
             if datadic.has_key('builded_year'):
                 if datadic['builded_year'] < 1900: datadic['builded_year'] = 0
-            
+            if datadic['area'] == 0:return False
             if datadic['area'] > 20000: return False        #面积过大，有时是填写错误，而且面积大于20000的价格参考意义也不大，舍弃
-            if not datadic.has_key('price'): return False       #2016.8.1 有时解析过程中出错，跳过了price字段解析，造成没有price,舍弃
+            # if not datadic.has_key('price'): return False       #2016.8.1 有时解析过程中出错，跳过了price字段解析，造成没有price,舍弃
             
             #2017.4.14 detail_url字段太长，处理一下
             if len(datadic['details_url']) > 250:datadic['details_url'] = datadic['details_url'][:249]

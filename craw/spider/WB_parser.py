@@ -82,26 +82,26 @@ class WBParser(HtmlParser):
                     string = mytools.clearStr(string).encode('utf8')
                     d1 = {}
                     d1 = self.parse_item(string)
-                    each_data = dict(each_data, **d1) 
-            
+                    each_data = dict(each_data, **d1)
+
             comms = details[1].xpath('.//a')
             each_data['community_name'] = comms[0].text
-            
+
             if comms[0].get('href') is None:
                 each_data['comm_url'] = ''
             else:
                 each_data['comm_url'] = 'http://xm.58.com' + comms[0].get('href')
-            each_data['price'] = round(float(each_data['total_price']*10000/each_data['area']),2)
             each_data['from'] = "58"
 
-            each_data = self.pipe(each_data)       
+            each_data = self.pipe(each_data)
 
             if each_data:
-            # if each_data.has_key('total_floor') and each_data.has_key('total_price') and each_data.has_key('area') and each_data.has_key('community_name'):
+                each_data['price'] = round(float(each_data['total_price']*10000/each_data['area']),2)
+                # if each_data.has_key('total_floor') and each_data.has_key('total_price') and each_data.has_key('area') and each_data.has_key('community_name'):
                 page_datas.append(each_data)
             else:
                 if mytools.ShowInvalideData(each_data):page_datas.append(each_data)
-        
+
         # print('debug:this page have %s datas' %len(page_datas))    
 
         return page_datas           

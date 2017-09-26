@@ -95,14 +95,16 @@ class AjkParser(HtmlParser):
 
             each_data = self.pipe(each_data)        #2016.6.4增加一个专门的数据处理
 
-            if each_data.has_key('total_floor') and each_data.has_key('total_price') and each_data.has_key('area') and each_data.has_key('community_name'):
-                page_datas.append(each_data)
+            if each_data:
+                if each_data.has_key('community_name'):
+                    page_datas.append(each_data)
+                else:
+                    if mytools.ShowInvalideData(each_data):page_datas.append(each_data)
             else:
                 if mytools.ShowInvalideData(each_data):page_datas.append(each_data)
                 
             # if each_data:
             #     page_datas.append(each_data)
-
 
         return page_datas           #2016.5.30直接从字典里提取数据，不再另外加一个小区名的list
 
