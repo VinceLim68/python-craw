@@ -5,7 +5,8 @@ class WbPage(PageParser.PageParser):
 
     def _ischeck(self,soup,type=1):
         # 判断是否是验证界面
-        ischeck = soup.select("title") if type == 2 else soup.xpath('//title')
+        ischeck = soup.select("title")
+        # if type == 2 else soup.xpath('//title')
 
         if len(ischeck) > 0:            #如果找不到title,就认为不是验证界面
             title = ischeck[0].get_text().strip() if type == 2 else ischeck[0].text
@@ -72,8 +73,9 @@ if __name__ == "__main__":
     parser = WbPage()
     url = 'http://xm.58.com/ershoufang/pn2/'
     html_cont = downloader.download(url)
-    soup = parser.get_soup(html_cont)
-    datas = parser.parse_datas(soup)
-    urls = parser.parse_urls(soup)
+    urls,datas = parser.page_parse(html_cont)
+    # soup = parser.get_soup(html_cont)
+    # datas = parser.parse_datas(soup)
+    # urls = parser.parse_urls(soup)
     # ToolsBox.printDic(urls)
-    print(urls)
+    print(datas)

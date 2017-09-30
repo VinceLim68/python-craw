@@ -1,14 +1,15 @@
 # import sys
 # import xlsxwriter
 # import myStat
-import BloomFilter
+import bloomfilter
 import ToolsBox
-import pyMySql
+import pymysql
 import datetime
 import traceback
 
 class Outputer(object):
     # 数据后处理器
+    __instance = None
 
     def __init__(self):
         # reload(sys)
@@ -117,7 +118,7 @@ class Outputer(object):
     #     return self.datas
 
     def get_datas_quantity(self):
-        data_num = []
+        data_num = {}
         data_num['r_data'] = len(self.raw_datas)                #计数：有效数据数量
         data_num['dupli_count'] = self.dupli_count              #计数：重复数据
         return data_num

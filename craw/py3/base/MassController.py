@@ -1,5 +1,5 @@
-import UrlManager,ToolsBox,Downloader,Outputer,ReqBuilder
-from random import choice
+import UrlManager,ToolsBox,Downloader,Outputer,ReqBuilder,WbPage
+# from random import choice
 import time,random
 # from __future__ import print_function
 # from spider import url_manager,html_downloader,html_outputer,AJK_parser,XM_parser,SF_parser,QF_parser,LJ_parser,mytools,WB_parser
@@ -20,7 +20,7 @@ class MassController(object):
         self.urls = UrlManager.UrlManager()             # url管理
         self.comms = UrlManager.UrlManager()            # 小区管理
         self.downloader = Downloader.Downloader()       # 下载器
-        self.parser = parseClass
+        self.parser = parseClass()
         self.outputer = Outputer.Outputer()
         self.outputer = Outputer.Outputer()
         self.rqBuilder = ReqBuilder.ReqBuilder()
@@ -32,32 +32,10 @@ class MassController(object):
         self.count = 1                                  #计数：下载页面数
         self.delay = 3                                  #设置：下载页面之间的延时秒数
         self.total = 0                                  #计数：成功加入数据库的记录数量
-        # self.quantity_of_raw_datas = 0
-        # # self.hp = hpy()
-        # self.quantity_of_dupli = 0
-        # self.quantity_of_datas = 0
-        
+
         self.nodata = 0                                 #计数：连续出现解析不出数据的次数
         self.nodat_stop = 4                             #设置：同一页面如果解析不出数据，可重复次数
         
-        # #连续出现几个404的暂停
-        # self.HTTP404 = 0
-        # self.HTTP40_stop = 2
-        
-        # # 设置延时
-        # if 'AjkParser' in str(parseClass):
-        #     self.delay = 3
-        # elif 'GjParser' in str(parseClass):
-        #     self.delay = 3
-        # elif 'LjParser' in str(parseClass):
-        #     self.delay = 3
-        # # elif 'WBParser' in str(parseClass):
-        # #     self.delay = 2
-        # elif 'LejuParser' in str(parseClass):
-        #     self.delay = 3
-        # else:
-        #     self.delay = 0
-
 
     def headers_builder(self):
         # 构建请求头信息
@@ -73,6 +51,7 @@ class MassController(object):
         # 1、把root_url加入urls列表中,支持root_url有多个url
         for url in root_url:
             self.urls.add_new_url(url)
+            print(url)
         
         # 2、循环抓取数据
         while self.urls.has_new_url() :
@@ -89,7 +68,7 @@ class MassController(object):
 
     @ToolsBox.mylog
     @ToolsBox.exeTime
-    def craw_a_page(self,new_url):
+    def craw_a_page(self,new_url,retries = 3):
         
         # 计算并打印延时情况 
         if self.delay > 0 :
@@ -100,7 +79,8 @@ class MassController(object):
             print ('craw {0} :'.format(self.count))
         
         # 获取请求头、代理信息,每个页面都不相同
-        proxy = self.proxy_builder()
+        # proxy = self.proxy_builder()
+        proxy = None
         self.headers_builder()
 
         # 下载
@@ -119,7 +99,6 @@ class MassController(object):
                 return self.craw_a_page(new_url)
         # 2、正常得到网页
         elif html_cont is not None:
-            
             new_urls,new_datas = self.parser.page_parse(html_cont)      #返回解析内容
             
             if new_datas == 'checkcode':                                # 如果解析出是输入验证码
@@ -138,7 +117,7 @@ class MassController(object):
                         fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
                         fout.write( '\n no new datas have been crawed :%s. \n' %new_url)
             else:                                                        # 正常情况，解析
-                print('页面:{0},获得{1}个数据，{2}个页面链接'.format(new_url,len(new_datas),len(new_urls)))
+                print('本页面      datas:{0}，urls:{1}'.format(len(new_datas),len(new_urls)))
                 # 把页面链接放入url管理器
                 self.urls.add_new_urls(new_urls)
                 # 把小区名称放入小区管理器
@@ -165,8 +144,9 @@ class MassController(object):
 
 
 if __name__=="__main__":
-    url = 'http://xm.58.com/ershoufang/pn2/'
-    MC = MassController()
+    url = ['http://xm.58.com/ershoufang/pn2/']
+    MC = MassController(WbPage.WbPage)
+    MC.craw_controller(url)
 
     # if from_where == 1:
     #     root_url = ['http://xm.anjuke.com/sale/p1-rd1/?kw=' + serch_for + '&from_url=kw_final#filtersort']

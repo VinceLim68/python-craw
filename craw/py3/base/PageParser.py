@@ -30,7 +30,7 @@ class PageParser(object):
 
     def page_parse(self,html_cont,parser_build = 'lxml'):
         # 解析网页的主模块
-        soup = slef.get_soup(html_cont,parser_build)
+        soup = self.get_soup(html_cont,parser_build)
 
         #在这里加上辨识是否有验证码的代码
         if self._ischeck(soup):
