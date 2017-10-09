@@ -1,17 +1,5 @@
 import UrlManager,ToolsBox,Downloader,Outputer,ReqBuilder,WbPage
-# from random import choice
 import time,random
-# from __future__ import print_function
-# from spider import url_manager,html_downloader,html_outputer,AJK_parser,XM_parser,SF_parser,QF_parser,LJ_parser,mytools,WB_parser
-# import urllib         #2016.5.30取消不必要的包
-# import datetime
-# import sys
-# from urllib import quote
-# import traceback  
-# import data_stat
-
-# from guppy import hpy
-
 
 class MassController(object):
     
@@ -30,11 +18,11 @@ class MassController(object):
         self.HTTP404_stop = 3                           #设置：累计404多少次后暂停程序
         self.retry_times = 3                            #设置：下载失败后重试的次数
         self.count = 1                                  #计数：下载页面数
-        self.delay = 3                                  #设置：下载页面之间的延时秒数
+        self.delay = 0                                  #设置：下载页面之间的延时秒数
         self.total = 0                                  #计数：成功加入数据库的记录数量
 
         self.nodata = 0                                 #计数：连续出现解析不出数据的次数
-        self.nodat_stop = 4                             #设置：同一页面如果解析不出数据，可重复次数
+        self.nodata_stop = 4                             #设置：同一页面如果解析不出数据，可重复次数
         
 
     def headers_builder(self):
@@ -126,8 +114,11 @@ class MassController(object):
                 # 把挂牌信息传入outputer，清除无效数据后，放在outputer.raw_datas记录集中
                 self.outputer.collect_data(new_datas)
                 data_num = self.outputer.get_datas_quantity()
+                print("共%6.0f = %6.0f 重复 + %5.0f 数据池 + %6.0f 存入数据库 "
+                      % (data_num['dupli_count'] + data_num['r_data'] + self.total,
+                         data_num['dupli_count'],data_num['r_data'], self.total))
 
-                if 3000 < data_num['r_data']:
+                if 2000 < data_num['r_data']:
                     print("正在存入数据库中，请稍侯......")
                     self.total = self.total + self.outputer.out_mysql()
                 self.count += 1
