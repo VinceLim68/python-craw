@@ -97,7 +97,8 @@ class Outputer(object):
                     data['details_url'],data['community_name'],self.now,data['from']))
                 success = success + 1
                 self.conn.commit()
-            except MySQLError as e:
+            except pymysql.err.IntegrityError as e:
+            # except MySQLError as e:
                 if e.args[0] == 1062 :
                     dupli = dupli + 1
                 else:
@@ -106,7 +107,9 @@ class Outputer(object):
                         traceback.print_exc(file=fout)
                     print(traceback.format_exc())
                         # traceback.print_exc()
-                    print(MySQLError,":",e)
+                    # print(MySQLError,":",e)
+                    code, message = e.args
+                    print(code,message)
 
         # cursor.close()
         # db.close()

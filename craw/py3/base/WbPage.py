@@ -1,4 +1,3 @@
-#做成一个继承的类，只是增加_get_new_urls()和_get_new_datas()
 import PageParser,ToolsBox,Downloader
 
 class WbPage(PageParser.PageParser):
