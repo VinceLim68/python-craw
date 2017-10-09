@@ -9,7 +9,8 @@
 	<!-- bootstrap & fontawesome -->
 		<link rel="stylesheet" href="__CSS__/bootstrap.min.css" />
 		<link rel="stylesheet" href="__CSS__/font-awesome.min.css" />
-	<!-- page specific plugin styles -->
+	<!-- 这里放页面特定的css文件page specific plugin styles -->
+		{block name="pg_cs"}{/block}
 	<!-- text fonts -->
 		<!-- <link rel="stylesheet" href="__CSS__/fonts.googleapis.com.css" /> -->
 	<!-- ace styles -->
@@ -33,7 +34,7 @@
 	<![endif]-->
 </head>
 <body class="no-skin">
-	<div id="navbar" class="navbar navbar-default          ace-save-state">
+	<div id="navbar" class="navbar navbar-default  navbar-fixed-top ace-save-state">
 		<div class="navbar-container ace-save-state" id="navbar-container">
 			<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
 				<span class="sr-only">Toggle sidebar</span>
@@ -51,6 +52,7 @@
 			</div>
 			<div class="navbar-buttons navbar-header pull-right" role="navigation">
 				<ul class="nav ace-nav">
+                    <!--任务进度提示  -->
 					<li class="grey dropdown-modal">
 						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 							<i class="ace-icon fa fa-tasks"></i>
@@ -117,6 +119,7 @@
 							</li>
 						</ul>
 					</li>
+                    <!-- 待完成事项 -->
 					<li class="purple dropdown-modal">
 						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 							<i class="ace-icon fa fa-bell icon-animated-bell"></i>
@@ -178,7 +181,8 @@
 							</li>
 						</ul>
 					</li>
-					<li class="green dropdown-modal">
+					<!-- 消息提示 -->
+                    <li class="green dropdown-modal">
 						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 							<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
 							<span class="badge badge-success">5</span>
@@ -275,7 +279,8 @@
 							</li>
 						</ul>
 					</li>
-					<li class="light-blue dropdown-modal">
+					<!-- 登录者信息 -->
+                    <li class="light-blue dropdown-modal">
 						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 							<img class="nav-user-photo" src="__PIC__/user.jpg" alt="Jason's Photo" />
 							<span class="user-info">
@@ -329,17 +334,19 @@
 			<!-- sidebar-shortcuts 侧栏快捷图标开始-->
 			<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 				<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-					<a class="btn btn-success" href="{:url('index/index')}" data-toggle="tooltip" data-placement="auto" title="返回询价" target='_blank'>
-						<i class="fa fa-w fa-bookmark" ></i>
+					<a class="btn btn-success" href="http://www.trirand.com/jqgridwiki/doku.php?id=wiki:jqgriddocs" data-toggle="tooltip" data-placement="auto" title="JqGrid文档" target='_blank'>
+						<i class="fa fa-list" ></i>
+<!-- 						<i class="fa fa-w fa-bookmark" ></i> -->
 					</a>
 					<a class="btn btn-info" href="http://v3.bootcss.com/" data-toggle="tooltip" data-placement="auto" title="BS5文档" target='_blank'>
 						<i class="fa fa-w fa-pencil" ></i>
 					</a>
 					<a class="btn btn-warning" href="https://www.kancloud.cn/manual/thinkphp5/118003"  data-toggle="tooltip" data-placement="auto" title="TP5文档" target='_blank'>
-						<i class="fa fa-w fa-file-code-o"></i>
+						<i class="fa fa-tumblr-square"></i>
+<!-- 						<i class="fa fa-w fa-file-code-o"></i> -->
 					</a>
 					<a class="btn btn-danger" href="http://fontawesome.dashgame.com/" data-toggle="tooltip" data-placement="auto" title="图标库" target='_blank'>
-						<i class="fa fa-w fa-hand-o-right"></i>
+						<i class="fa fa-fonticons"></i>
 					</a>
 				</div>
                 <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
@@ -370,52 +377,17 @@
 							<b class="arrow"></b>
 						</li>
 						<li class="">
-							<a href="#" class="dropdown-toggle">
+							<a href="{:url('Comms/testlist')}" >
 								<i class="menu-icon fa fa-caret-right"></i>
-								Three Level Menu
-								<b class="arrow fa fa-angle-down"></b>
+								原来jqgrid的例子
 							</a>
-							<b class="arrow"></b>
-							<ul class="submenu">
-								<li class="">
-									<a href="#">
-										<i class="menu-icon fa fa-leaf green"></i>
-										Item #1
-									</a>
-									<b class="arrow"></b>
-								</li>
-								<li class="">
-									<a href="#" class="dropdown-toggle">
-										<i class="menu-icon fa fa-pencil orange"></i>
-										4th level
-										<b class="arrow fa fa-angle-down"></b>
-									</a>
-									<b class="arrow"></b>
-									<ul class="submenu">
-										<li class="">
-											<a href="#">
-												<i class="menu-icon fa fa-plus purple"></i>
-												Add Product
-											</a>
-											<b class="arrow"></b>
-										</li>
-										<li class="">
-											<a href="#">
-												<i class="menu-icon fa fa-eye pink"></i>
-												View Products
-											</a>
-											<b class="arrow"></b>
-										</li>
-									</ul>
-								</li>
-							</ul>
 						</li>
 					</ul>
 				</li>	
 				<li class="">
 					<a href="#" class="dropdown-toggle">
 						<i class="menu-icon fa fa-tachometer"></i>
-						<span class="menu-text">询价后台</span>
+						<span class="menu-text">备份(多级菜单)</span>
 						<b class="arrow fa fa-angle-down"></b>
 					</a>
 					<b class="arrow"></b>
@@ -496,22 +468,21 @@
                 <li class="">
 					<a href="#" class="dropdown-toggle">
 						<i class="menu-icon fa fa-list"></i>
-						<span class="menu-text"> 业务流程 </span>
+						      <span class="menu-text"> 当前文件的地址 </span>
 						<b class="arrow fa fa-angle-down"></b>
 					</a>
 					<b class="arrow"></b>
 					<ul class="submenu">
 						<li class="">
-							<a href="tables.html">
+							<a href="{:url('index/geturl')}">
 								<i class="menu-icon fa fa-caret-right"></i>
-								勘察
+                                                                          获取当前路径信息
 							</a>
 							<b class="arrow"></b>
 						</li>
 						<li class="">
 							<a href="jqgrid.html">
 								<i class="menu-icon fa fa-caret-right"></i>
-								撰写报告
 							</a>
 							<b class="arrow"></b>
 						</li>
@@ -520,15 +491,15 @@
 				<li class="">
 					<a href="#" class="dropdown-toggle">
 						<i class="menu-icon fa fa-pencil-square-o"></i>
-						<span class="menu-text"> Forms </span>
+						<span class="menu-text"> 挂牌信息 </span>
 						<b class="arrow fa fa-angle-down"></b>
 					</a>
 					<b class="arrow"></b>
 					<ul class="submenu">
 						<li class="">
-							<a href="form-elements.html">
+							<a href="{:url('Sales/salesList')}">
 								<i class="menu-icon fa fa-caret-right"></i>
-								Form Elements
+								挂牌信息
 							</a>
 							<b class="arrow"></b>
 						</li>
@@ -666,16 +637,16 @@
 					<b class="arrow"></b>
 					<ul class="submenu">
 						<li class="">
-							<a href="faq.html">
+							<a href="#">
 								<i class="menu-icon fa fa-caret-right"></i>
-								FAQ
+								<?php echo '工作目录'.getcwd(); ?>
 							</a>
 							<b class="arrow"></b>
 						</li>
 						<li class="">
 							<a href="error-404.html">
 								<i class="menu-icon fa fa-caret-right"></i>
-								Error 404
+								<?php echo '当前文件名'.dirname(__FILE__);  ?>
 							</a>
 							<b class="arrow"></b>
 						</li>
@@ -718,18 +689,11 @@
 				<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 					{block name="breadcrumb"}{/block}
 					<!-- /.breadcrumb -->
-					<div class="nav-search" id="nav-search">
-						<form class="form-search">
-							<span class="input-icon">
-								<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-								<i class="ace-icon fa fa-search nav-search-icon"></i>
-							</span>
-						</form>
-					</div>
-					<!-- /.nav-search -->
+
 				</div>
 				<div class="page-content">
-					<div class="ace-settings-container" id="ace-settings-container">
+					<!-- 这是整个页面右侧可拉出的设置菜单 -->
+                    <div class="ace-settings-container" id="ace-settings-container">
 						<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
 							<i class="ace-icon fa fa-cog bigger-130"></i>
 						</div>
@@ -789,10 +753,12 @@
 						</div>
 						<!-- /.ace-settings-box -->
 					</div>
-					<!-- /.ace-settings-container -->
+					<!-- /页面右侧可拉出的设置菜单结束.ace-settings-container -->
 					<div class="row">
-						<div class="col-xs-12">{block name="main"}{/block}</div>
-						<!-- /.col -->
+						<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+							{block name="main"}{/block}
+						</div><!-- /.col -->
 					</div>
 					<!-- /.row -->
 				</div>
@@ -829,12 +795,16 @@
 					+ "<"+"/script>");
 	</script>
 	<script src="__JS__/bootstrap.min.js"></script>
-	<!-- page specific plugin scripts -->
+	<!-- 这里放特定页面需要加载的JS -->
+		{block name="pg_js"}{/block}
+	
 	<!-- ace scripts -->
     	<script src="__JS__/ace-elements.min.js"></script>
     	<script src="__JS__/ace.min.js"></script>
+	
 	<!-- inline scripts related to this page -->
-	<!-- Yandex.Metrika counter -->
+	{block name="pg_inline_js"}{/block}
+	
     
 	<script type="text/javascript">
     	$(function () {
@@ -847,52 +817,7 @@
     		  }
     				  )
 		})
-		(function(d, w, c) {
-			(w[c] = w[c] || []).push(function() {
-				try {
-					w.yaCounter25836836 = new Ya.Metrika({
-						id : 25836836,
-						webvisor : true,
-						clickmap : true,
-						trackLinks : true,
-						accurateTrackBounce : true
-					});
-				} catch (e) {
-				}
-			});
-
-			var n = d.getElementsByTagName("script")[0], s = d
-					.createElement("script"), f = function() {
-				n.parentNode.insertBefore(s, n);
-			};
-			s.type = "text/javascript";
-			s.async = true;
-			s.src = (d.location.protocol == "https:" ? "https:" : "http:")
-					+ "//mc.yandex.ru/metrika/watch.js";
-
-			if (w.opera == "[object Opera]") {
-				d.addEventListener("DOMContentLoaded", f, false);
-			} else {
-				f();
-			}
-		})(document, window, "yandex_metrika_callbacks");
 	</script>
-	<!-- /Yandex.Metrika counter -->
-	<script>
-		(function(i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function() {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script',
-				'//www.google-analytics.com/analytics.js', 'ga');
 
-		ga('create', 'UA-38894584-2', 'auto');
-		ga('send', 'pageview');
-	</script>
 </body>
 </html>

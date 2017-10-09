@@ -1,4 +1,3 @@
-#coding:utf-8
 import urllib2
 import socket
 from random import choice
@@ -14,22 +13,22 @@ class HtmlDownloader(object):
 
     def __init__(self):
 
-        #ÉèÖÃ³¬Ê±
+        #ï¿½ï¿½ï¿½Ã³ï¿½Ê±
         socket.setdefaulttimeout(8)
 
-        #´ÓÎÄ¼þÖÐµÃµ½´úÀíÁÐ±í,Õâ¸öÎÄ¼þÊÇ¸ùÄ¿Â¼ÏÂ¶ø²»ÊÇ/spiderÄ¿Â¼ÏÂ
+        #ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ÐµÃµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½,ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ç¸ï¿½Ä¿Â¼ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½/spiderÄ¿Â¼ï¿½ï¿½
         with open("Proxies.txt","r") as proxy_file:
             self.proxy_list = proxy_file.readlines()
-        #´ÓÎÄ¼þÖÐµÃµ½ä¯ÀÀÆ÷ÁÐ±í
+        #ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ÐµÃµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
         with open("user_agent.txt","r") as User_agent_file:
             self.agent_list = User_agent_file.readlines()
 
 
 
-    # @mytools.mylog             #2016.6.1Ê¹ÓÃ×°ÊÎÆ÷´¦Àí´íÎóÐÅÏ¢,µ«ÊÇ²»ÖªµÀÎªÊ²Ã´£¬¼ÓÉÏ×°ÊÎÆ÷»á·µ»Ønone
+    # @mytools.mylog             #2016.6.1Ê¹ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢,ï¿½ï¿½ï¿½Ç²ï¿½Öªï¿½ï¿½ÎªÊ²Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½á·µï¿½ï¿½none
     def get_content(self,request,retries = 3):
 
-        # ´ò¿ªÊ§°Ü¿ÉÒÔÖØÊÔ£¬²¢ÇÒÖÐ¼äËæ»úÍ£Ãë
+        # ï¿½ï¿½Ê§ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½
 
         try:
             response = urllib2.urlopen(request,timeout=10)
@@ -54,7 +53,7 @@ class HtmlDownloader(object):
         # except urllib2.URLError as e:
             # print('error now %s' %e)
             html_cont = None
-            with open('logtest.txt','a+') as fout:      #2017.3°Ñ´íÎóÈÕÖ¾¸Ä³Élogtest.txt
+            with open('logtest.txt','a+') as fout:      #2017.3ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ä³ï¿½logtest.txt
                 fout.write('\n*******get_content urlopen error record by get_content ' + str(datetime.datetime.now()) + '*************\n')
                 fout.write(str(datetime.datetime.now()) + '\n')
                 traceback.print_exc(file=fout)
@@ -63,10 +62,10 @@ class HtmlDownloader(object):
             # print(e)
             # print('*'*80)
             # time.sleep(15)
-            # ±»½ûÖ¹Ê±£¬·µ»Ø404
+            # ï¿½ï¿½ï¿½ï¿½Ö¹Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½404
             if hasattr(e, 'code') and e.code == 404:
                 html_cont = 404 
-            #³öÏÖ·þÎñÆ÷´íÎóÊ±¿ÉÒÔÖØÐÂÁ¬½Ó
+            #ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             elif retries > 0:
                 # print("You are still have " + str(retries) + "times to try open this url")
                 time.sleep(random.randint(3,7))
@@ -84,7 +83,7 @@ class HtmlDownloader(object):
             return None
 
         if is_use_proxy:
-            #µÃµ½Ëæ»ú´úÀí£¬µ«Ã¿¸öµ¥Ôª»á¶àÒ»¸ö»»ÐÐ·û£¬ÓÃstrip('\n')°ÑËüÈ¥µô
+            #ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½strip('\n')ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½
             ip = choice(self.proxy_list).strip('\n')
             proxy = {'http':'http://' + ip}
             proxy_support = urllib2.ProxyHandler(proxy)
@@ -92,7 +91,7 @@ class HtmlDownloader(object):
             urllib2.install_opener(opener)
             print "Ip "+ ip + "  try to open :" + url
         else:
-            #Ç°ÃæÒòÎªÒÑ¾­½¨Á¢ÁË´úÀí£¬ÕâÀïÊÇ¼ÌÐøÊ¹ÓÃÔ­À´µÄ´úÀí£¬¶ø²»ÊÇ²»ÓÃ´úÀí
+            #Ç°ï¿½ï¿½ï¿½ï¿½Îªï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¼ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ô­ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½ï¿½Ã´ï¿½ï¿½ï¿½
             print " Try to open : " + url 
 
         req = urllib2.Request(url)
@@ -129,7 +128,7 @@ class HtmlDownloader(object):
             for key in headers:
                 req.add_header(key,headers[key])
 
-            #µÃµ½Ëæ»úä¯ÀÀÆ÷£¬²¢¼ÓÈëÍ·²¿ÐÅÏ¢
+            #ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½Ï¢
             agent = choice(self.agent_list).strip('\n')
             req.add_header("GET",url)
             req.add_header("User-Agent",agent)

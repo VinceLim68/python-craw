@@ -6,14 +6,22 @@ class Comm extends Model {
     /**
      * 操作表：小区信息
      */
-    protected $pk = 'id';
+    protected $pk = 'Id';
     protected $table = 'comm';
+    protected $resultSetType = 'collection';		//这个设置可以很快把返回数据集转成array
+    protected $field = true;						//忽略非数据表字段而不报错
     
     public function getPriLevelAttr($value)
     {
         $pri_level = [0=>'小区级',1=>'区块级'];
         return $pri_level[$value];
     }
+    
+/*     public function setPriLevelAttr($value)
+    {
+    	$pri_level = array('小区级'=>0,'区块级'=>1);
+    	return $pri_level[$value];
+    } */
     
     public static function _getCommsArr(){
         /**
@@ -38,6 +46,18 @@ class Comm extends Model {
         $comms = self::field("comm_id,comm_name,pri_level,keywords")->select();
         return $comms;
     }
+    
+    public static function getRegions(){
+    	$regions = self::field('region')->distinct(true)->select()->toArray();
+    	return $regions;
+    }
+    
+    public static function getBlockByRegion($reg){
+    	$blocks = self::field('block')->distinct(true)->where('region',$reg)->select()->toArray();
+    	return $blocks;
+    }
+    
+   
 
 
 }

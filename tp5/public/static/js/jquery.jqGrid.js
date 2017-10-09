@@ -5662,6 +5662,7 @@ $.jgrid.extend({
 			} catch(e) {
 				cc = $("td:eq("+iCol+")",$t.rows[iRow]);
 			}
+			//alert(cm);
 			if (cm.editable===true && ed===true && !cc.hasClass("not-editable-cell") && (!$.isFunction($t.p.isCellEditable) || $t.p.isCellEditable.call($t,nm,iRow,iCol))) {
 				if(parseInt($t.p.iCol,10)>=0  && parseInt($t.p.iRow,10)>=0) {
 					//$("td:eq("+$t.p.iCol+")",$t.rows[$t.p.iRow]).removeClass("edit-cell " + highlight);
@@ -5687,6 +5688,7 @@ $.jgrid.extend({
 					$t.p.beforeEditCell.call($t, $t.rows[iRow].id,nm,tmp,iRow,iCol);
 				}
 				var opt = $.extend({}, cm.editoptions || {} ,{id:iRow+"_"+nm,name:nm,rowId: $t.rows[iRow].id, oper:'edit'});
+				
 				var elc = $.jgrid.createEl.call($t,cm.edittype,opt,tmp,true,$.extend({},$.jgrid.ajaxOptions,$t.p.ajaxSelectOptions || {}));
 				if( $.inArray(cm.edittype, ['text','textarea','password','select']) > -1) {
 					$(elc).addClass(inpclass);
@@ -6555,6 +6557,7 @@ $.extend($.jgrid,{
 					elem.multiple="multiple";
 					$(elem).attr("aria-multiselectable","true");
 				} else { msl = false; }
+				//alert(editoptions);
 				if(options.dataUrl != null) {
 					var rowid = null, postData = options.postData || ajaxso.postData;
 					try {
@@ -6564,6 +6567,7 @@ $.extend($.jgrid,{
 					if ($t.p && $t.p.idPrefix) {
 						rowid = $.jgrid.stripPref($t.p.idPrefix, rowid);
 					}
+					//alert(options.dataUrl);
 					$.ajax($.extend({
 						url: $.isFunction(options.dataUrl) ? options.dataUrl.call($t, rowid, vl, String(options.name)) : options.dataUrl,
 						type : "GET",
@@ -6571,15 +6575,18 @@ $.extend($.jgrid,{
 						data: $.isFunction(postData) ? postData.call($t, rowid, vl, String(options.name)) : postData,
 						context: {elem:elem, options:options, vl:vl},
 						success: function(data){
+							//alert(data);
 							var ovm = [], elem = this.elem, vl = this.vl,
 							options = $.extend({},this.options),
 							msl = options.multiple===true,
 							cU = options.cacheUrlData === true,
 							oV ='', txt,
 							a = $.isFunction(options.buildSelect) ? options.buildSelect.call($t,data) : data;
+							//alert(a);
 							if(typeof a === 'string') {
-								a = $( $.trim( a ) ).html();
-							}
+								//a = $( $.trim( a ) ).html();
+								//上面这句话是错误的，造成程序运行不通，是bug
+							};
 							if(a) {
 								$(elem).append(a);
 								setAttributes(elem, options, postData ? ['postData'] : undefined );
