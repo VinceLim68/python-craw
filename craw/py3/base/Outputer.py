@@ -18,11 +18,11 @@ class Outputer(object):
         self.raw_datas = []                     #数据集：原始数据
         self.dupli_count = 0                    #计数：重复的数据
         self.now = datetime.date.today()        #字段：插入记录的日期
-        
+
         self.key_infos = bloomfilter.BloomFilter(0.001,1000000)     #学习使用bloomfilter
 
         try:
-            self.conn=pymysql.connect(host = "192.168.1.207",user = "root",passwd = "root",db = "property_info",charset = "utf8")      
+            self.conn=pymysql.connect(host = "192.168.1.207",user = "root",passwd = "root",db = "property_info",charset = "utf8")
         except:
             print( "Connect failed")
         self.cur = self.conn.cursor(cursor=pymysql.cursors.DictCursor)            # 用字典
@@ -34,36 +34,36 @@ class Outputer(object):
             Outputer.__instance = object.__new__(cls,*args,**kwd)
         return Outputer.__instance
 
-    
-    def pipe(self,datadic):
-        # 清理无效数据
-        if datadic.has_key('total_floor') and datadic.has_key('total_price') and datadic.has_key('area') and datadic.has_key('community_name'):
-            if datadic['community_name'] is None or len(datadic['community_name'])<=2:return False
-            datadic['community_name'] = datadic['community_name'].strip()
-            
-            if datadic['total_price'] is None or datadic['area'] is None :return False
-            if datadic['total_floor'] > 60: datadic['total_floor'] = 35         #把过高楼层的设为35层
-            if datadic['total_price'] == 0 : return False                       #2016.9.13 价格为0的过滤掉
-            
-            if datadic.has_key('builded_year'):
-                if datadic['builded_year'] < 1900: datadic['builded_year'] = 0
-            
-            if datadic['area'] > 20000: return False                            #面积过大，有时是填写错误，而且面积大于20000的价格参考意义也不大，舍弃
-            if not datadic.has_key('price'): return False                       #2016.8.1 有时解析过程中出错，跳过了price字段解析，造成没有price,舍弃
-            
-            # detail_url字段太长，处理一下
-            if len(datadic['details_url']) > 250:datadic['details_url'] = datadic['details_url'][:249]
-            
-            if len(datadic['advantage']) > 20:datadic['advantage'] = datadic['advantage'][:20]
-            return datadic
-        else:
-            if not datadic.has_key('total_floor'):                    #2016.6.1搜房网老是出现无效数据，进行判断，发现是别墅没有记载楼层信息造成的
-                if u"别墅" in datadic['title']:
-                    datadic['total_floor'] = 4
-                    datadic['floor_index'] = 1
-                    datadic['spatial_arrangement'] = datadic['spatial_arrangement'] + u"别墅"
-                    return datadic
-            return False
+
+    # def pipe(self,datadic):
+    #     # 清理无效数据
+    #     if datadic.has_key('total_floor') and datadic.has_key('total_price') and datadic.has_key('area') and datadic.has_key('community_name'):
+    #         if datadic['community_name'] is None or len(datadic['community_name'])<=2:return False
+    #         datadic['community_name'] = datadic['community_name'].strip()
+    #
+    #         if datadic['total_price'] is None or datadic['area'] is None :return False
+    #         if datadic['total_floor'] > 60: datadic['total_floor'] = 35         #把过高楼层的设为35层
+    #         if datadic['total_price'] == 0 : return False                       #2016.9.13 价格为0的过滤掉
+    #
+    #         if datadic.has_key('builded_year'):
+    #             if datadic['builded_year'] < 1900: datadic['builded_year'] = 0
+    #
+    #         if datadic['area'] > 20000: return False                            #面积过大，有时是填写错误，而且面积大于20000的价格参考意义也不大，舍弃
+    #         if not datadic.has_key('price'): return False                       #2016.8.1 有时解析过程中出错，跳过了price字段解析，造成没有price,舍弃
+    #
+    #         # detail_url字段太长，处理一下
+    #         if len(datadic['details_url']) > 250:datadic['details_url'] = datadic['details_url'][:249]
+    #
+    #         if len(datadic['advantage']) > 20:datadic['advantage'] = datadic['advantage'][:20]
+    #         return datadic
+    #     else:
+    #         if not datadic.has_key('total_floor'):                    #2016.6.1搜房网老是出现无效数据，进行判断，发现是别墅没有记载楼层信息造成的
+    #             if u"别墅" in datadic['title']:
+    #                 datadic['total_floor'] = 4
+    #                 datadic['floor_index'] = 1
+    #                 datadic['spatial_arrangement'] = datadic['spatial_arrangement'] + u"别墅"
+    #                 return datadic
+    #         return False
 
     def collect_data(self,datas):
         # 清理重复数据
@@ -79,12 +79,12 @@ class Outputer(object):
                 self.dupli_count += 1
 
 
-    
+
     @ToolsBox.mylog
     def out_mysql(self):
         dupli = 0       #计数：插入数据库时的重复记录值
-        success = 0     #计数：插入数据库的成功记录数量 
-        
+        success = 0     #计数：插入数据库的成功记录数量
+
         sql = """
             INSERT for_sale_property (title,area,spatial_arrangement,price,floor_index,
             total_floor,builded_year,advantage,total_price,details_url,community_name,
@@ -111,6 +111,7 @@ class Outputer(object):
         # cursor.close()
         # db.close()
         print("本次共{0}个数据，存入{1},重复{2}".format(len(self.raw_datas),success,dupli))
+        self.dupli_count += dupli
         self.clear_datas()
         return success
 
@@ -126,4 +127,9 @@ class Outputer(object):
     def clear_datas(self):
         # self.datas = []             #清洗后的数据
         self.raw_datas = []         #原始数据
+        return
+
+    def close_db(self):
+        self.cur.close()
+        self.conn.close()
         return
