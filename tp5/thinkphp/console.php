@@ -8,7 +8,6 @@
 // +----------------------------------------------------------------------
 // | Author: yunwuxin <448901948@qq.com>
 // +----------------------------------------------------------------------
-
 namespace think;
 
 // ThinkPHP 引导文件
@@ -16,5 +15,5 @@ namespace think;
 require __DIR__ . '/base.php';
 
 // 执行应用
-App::initCommon();
-Console::init();
+App::initCommon ();
+Console::init ();

@@ -10,7 +10,7 @@ class Sales extends Controller {
 	protected $db;
 	protected function _initialize() {
 		parent::_initialize ();
-		$this->db = new SalesModel();
+		$this->db = new SalesModel ();
 	}
 	
 	/*
@@ -18,12 +18,13 @@ class Sales extends Controller {
 	 */
 	public function index() {
 		// 取没有小区id的记录，用empty('community')就好，但不知如何用
-// 		$list = Db::table ( 'for_sale_property' )->where ( 'community_id', NULL )
-// 			->whereor ( 'community_id', 0 )->paginate ( 100 );
-		//测试一下速度
-		$list = $this->db->field('details_url',true)->where ( '1=1' )
-			->order ( ['id' => 'asc' ] )->paginate(500);
-// 		var_dump($list);
+		// $list = Db::table ( 'for_sale_property' )->where ( 'community_id', NULL )
+		// ->whereor ( 'community_id', 0 )->paginate ( 100 );
+		// 测试一下速度
+		$list = $this->db->field ( 'details_url', true )->where ( '1=1' )->order ( [ 
+				'id' => 'asc' 
+		] )->paginate ( 500 );
+		// var_dump($list);
 		$this->assign ( 'list', $list );
 		return $this->fetch ();
 	}
@@ -50,21 +51,22 @@ class Sales extends Controller {
 		$where = '1=1';
 		$outputs = array ();
 		
-		$list = $this->db->field('details_url',true)->limit ( $limit )->page ( $page )->where ( $where )
-			->order ( ['id' => $sord ] )->select ()->toArray ();
+		$list = $this->db->field ( 'details_url', true )->limit ( $limit )->page ( $page )->where ( $where )->order ( [ 
+				'id' => $sord 
+		] )->select ()->toArray ();
 		/*
 		 * 返回值：total总页数,page当前页码,records总记录数,
 		 * rows数据集,id每条记录的唯一id,cell具体每条记录的内容
 		 */
-		if(input('dontCount') and input('records')){
-// 			echo '不去读数据库';
-			$outputs['readfrommysql'] = 'false';
-			$outputs['records'] = input('records');
-		}else{
-			$outputs['readfrommysql'] = 'true';
-			$outputs ['records'] = $this->db->count();
+		if (input ( 'dontCount' ) and input ( 'records' )) {
+			// echo '不去读数据库';
+			$outputs ['readfrommysql'] = 'false';
+			$outputs ['records'] = input ( 'records' );
+		} else {
+			$outputs ['readfrommysql'] = 'true';
+			$outputs ['records'] = $this->db->count ();
 		}
-// 		$total = ceil ( $records / $limit );
+		// $total = ceil ( $records / $limit );
 		$outputs ['page'] = $page;
 		$outputs ['total'] = ceil ( $outputs ['records'] / $limit );
 		$outputs ['rows'] = $list;

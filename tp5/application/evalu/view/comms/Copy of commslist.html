@@ -1,13 +1,10 @@
-{extend name="mainbase" /} 
-{block name="pg_cs"}
+{extend name="mainbase" /} {block name="pg_cs"}
 <!-- 以下三个是本页加的CSS -->
 <link rel="stylesheet" href="__CSS__/jquery-ui.min.css" />
 <link rel="stylesheet" href="__CSS__/bootstrap-datepicker3.min.css" />
 <!--    这个是弹出的编辑窗口   -->
 <link rel="stylesheet" href="__CSS__/ui.jqgrid.min.css" />
-{/block}
-{block name="breadcrumb"}
-
+{/block} {block name="breadcrumb"}
 <ul class="breadcrumb">
     <li>
         <i class="ace-icon fa fa-home home-icon"></i>
@@ -42,9 +39,8 @@
 <script src="__JS__/bootstrap-datepicker.min.js"></script>
 <script src="__JS__/jquery.jqgrid.min.js"></script>
 <script src="__JS__/grid.locale-en.js"></script>
-
 {/block}{block name="pg_inline_js"}
-    <script type="text/javascript">
+<script type="text/javascript">
         var grid_data = 
             [ 
                 {id:"1",name:"Desktop Computer",note:"note",stock:"Yes",ship:"FedEx", sdate:"2007-12-03"},
@@ -479,5 +475,4 @@
                 });
             });
         </script>
-
 {/block}
