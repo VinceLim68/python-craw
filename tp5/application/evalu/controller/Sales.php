@@ -44,6 +44,7 @@ class Sales extends Controller {
 		$limit = input ( 'rows' ); // 每页几条记录
 		$sidx = input ( 'sidx' ); // 排序字段
 		$sord = input ( 'sord' ); // 正序还是倒序
+		$action = input('action');//决定要取出什么数据
 		
 		if (! $sidx) {
 			$sidx = 1;
@@ -51,9 +52,15 @@ class Sales extends Controller {
 		$where = '1=1';
 		$outputs = array ();
 		
-		$list = $this->db->field ( 'details_url', true )->limit ( $limit )->page ( $page )->where ( $where )->order ( [ 
-				'id' => $sord 
-		] )->select ()->toArray ();
+		if (!$action or $action=='all'){
+			$list = $this->db->field ( 'details_url', true )->limit ( $limit )->page ( $page )
+				->where ( $where )->order ( [ 'id' => $sord ] )->select ()->toArray ();
+		}elseif ($action == 'nomatch'){
+			$list = $this->db->field ( 'details_url', true )->limit ( $limit )->page ( $page )
+				->where ( $where )->where ( 'community_id', NULL )->whereor ( 'community_id', 0 )
+				->order ( [ 'id' => $sord ] )->select ()->toArray ();
+		}
+	
 		/*
 		 * 返回值：total总页数,page当前页码,records总记录数,
 		 * rows数据集,id每条记录的唯一id,cell具体每条记录的内容
@@ -64,7 +71,12 @@ class Sales extends Controller {
 			$outputs ['records'] = input ( 'records' );
 		} else {
 			$outputs ['readfrommysql'] = 'true';
-			$outputs ['records'] = $this->db->count ();
+			if (!$action or $action=='all'){
+				$outputs ['records'] = $this->db->count('id');
+			}elseif ($action == 'nomatch'){
+				$outputs ['records'] = $this->db->where ( $where )->where ( 'community_id', NULL )
+					->whereor ( 'community_id', 0 )->count();
+			}
 		}
 		// $total = ceil ( $records / $limit );
 		$outputs ['page'] = $page;

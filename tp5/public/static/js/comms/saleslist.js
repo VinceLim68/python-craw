@@ -194,6 +194,7 @@ jQuery(function($) {
 //			alert(rowNum);
 			jQuery(grid_selector).jqGrid('setGridParam', {
 				postData: {
+					'action': $("#saleslist_hidden").val(),
 					'dontCount': true, 
 					'records':rowNum,
 					}, 
@@ -306,11 +307,26 @@ jQuery(function($) {
 	
 	
 	jQuery("#nomatch").on('click',function no_match_id(){
-		alert('no match id');
 		$("#saleslist_hidden").val('nomatch');
-		alert($("#saleslist_hidden").val());
+		jQuery(grid_selector).jqGrid('setGridParam', {
+			postData: {
+				'action': $("#saleslist_hidden").val(),
+				}, 
+		}).trigger('reloadGrid');
 	});
-
+	
+	jQuery("#getval").on('click',function (){
+		alert($("#saleslist_hidden").val());
+	} );
+	
+	jQuery("#allsales").on('click',function (){
+		$("#saleslist_hidden").val('all');
+		jQuery(grid_selector).jqGrid('setGridParam', {
+			postData: {
+				'action': $("#saleslist_hidden").val(),
+				}, 
+		}).trigger('reloadGrid');
+	} );
 		
      
 })
