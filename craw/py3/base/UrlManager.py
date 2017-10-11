@@ -10,9 +10,12 @@ class UrlManager(object):
 
     def add_new_url(self,url):
         if url is None or url.strip() == "":
-            return
+            return False
         if url not in self.new_urls and url not in self.old_urls:
             self.new_urls.add(url)
+            return url
+        return False
+
 
     def add_new_urls(self,urls):
         if urls is None or len(urls) == 0:

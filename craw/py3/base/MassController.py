@@ -10,7 +10,6 @@ class MassController(object):
         self.downloader = Downloader.Downloader()       # 下载器
         self.parser = parseClass()
         self.outputer = Outputer.Outputer()
-        self.outputer = Outputer.Outputer()
         self.rqBuilder = ReqBuilder.ReqBuilder()
         
         self.headers = {}                               #构筑请求头
@@ -46,8 +45,6 @@ class MassController(object):
             url = self.urls.get_new_url()
             self.craw_a_page(url)
         
-    #     self.print_record()
-
     # def print_record(self):
     #     #专门在日志里记录已经获取记录数的模块
     #     with open('logtest.txt','a+') as fout:
@@ -91,26 +88,35 @@ class MassController(object):
             
             if new_datas == 'checkcode':                                # 如果解析出是输入验证码
                 self.delay = input("遇到验证码，输入延时秒数后，保留已解析的数据......")
+                if self.delay == '':
+                    self.delay = 0
+                else:
+                    self.delay = ToolsBox.strToInt(self.delay)
                 self.total = self.total + self.outputer.out_mysql()
                 if retries > 0:
                     return self.craw_a_page(new_url,retries - 1)
             elif len(new_datas) == 0 and len(new_urls) == 0:            # 解析无数据
                 self.nodata += 1                
                 if self.nodata < self.nodata_stop:
-                    print("页面{0}未解析出数据，可再试{1}次".format(new_url,self.nodata_stop-self.nodata)) 
+                    print("本页面未解析出数据，可再试{0}次".format(self.nodata_stop-self.nodata))
                     time.sleep(random.randint(3,7))
                     return self.craw_a_page(new_url)
                 else:
                     with open('logtest.txt','a+') as fout:
                         fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
-                        fout.write( '\n no new datas have been crawed :%s. \n' %new_url)
+                        fout.write('\n 本页面无数据:%s. \n' %new_url)
             else:                                                        # 正常情况，解析
                 print('本页面      datas:{0}，urls:{1}'.format(len(new_datas),len(new_urls)))
                 # 把页面链接放入url管理器
                 self.urls.add_new_urls(new_urls)
                 # 把小区名称放入小区管理器
                 for data in new_datas:
-                    self.comms.add_new_urls(data['community_name'])
+                    if len(data['community_name']) > 11 :
+                        print('{0}---->名字过长的小区名将被忽略。'.format(data['community_name']))
+                    else:
+                        comm = self.comms.add_new_url(data['community_name'])
+                        if comm:
+                            print('>>>>>>>>>>>>>>>>{0}'.format(comm))
                 # 把挂牌信息传入outputer，清除无效数据后，放在outputer.raw_datas记录集中
                 self.outputer.collect_data(new_datas)
                 data_num = self.outputer.get_datas_quantity()
@@ -118,15 +124,17 @@ class MassController(object):
                       % (data_num['dupli_count'] + data_num['r_data'] + self.total,
                          data_num['dupli_count'],data_num['r_data'], self.total))
 
-                if 2000 < data_num['r_data']:
+                if 3000 < data_num['r_data']:
                     print("正在存入数据库中，请稍侯......")
-                    self.total = self.total + self.outputer.out_mysql()
+                    storenum = self.outputer.out_mysql()
+                    if storenum:
+                        self.total = self.total + storenum
                 self.count += 1
                 self.nodata = 0                         #如果有数据，把self.nodata计数器清零
                 self.HTTP404 = 0                        #如果有数据，把self.HTTP404计数器清零
-        # 3、html_cont内容是None，感觉不会出现
+        # 3、html_cont内容是None，这是出现500以上的download失败
         else:
-            print('craw %s fail : nothing' %(new_url))
+            print('未能从服务器上下载{0}'.format(new_url))
 
         # 延时模块：放在最后，第一次抓取时不用延时
         if self.delay > 0 :

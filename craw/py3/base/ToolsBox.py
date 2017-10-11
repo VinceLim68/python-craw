@@ -84,5 +84,8 @@ def printDic(data):
 
 def strToInt(string1):
     if isinstance(string1, str):
-        string1 = int(round(float(string1)))
+        try:
+            string1 = int(round(float(string1)))
+        except ValueError as e:
+            string1 = 0
     return string1

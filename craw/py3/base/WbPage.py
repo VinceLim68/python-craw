@@ -12,7 +12,9 @@ class WbPage(PageParser.PageParser):
             iscode = (title == "您所访问的页面不存在") or (title == "请输入验证码")
         else:
             iscode = False
-        if iscode : print('debug: title is %s' %title.decode("utf-8").encode("gb2312"))
+        if iscode :
+            print('调试：页面标题是---->{0}'.format(title))
+            # print('debug: title is %s' %title.decode("utf-8").encode("gb2312"))
         
         return iscode
 
@@ -53,7 +55,7 @@ class WbPage(PageParser.PageParser):
                 each_data['comm_url'] = ''
             else:
                 each_data['comm_url'] = 'http://xm.58.com' + comms[0].get('href')
-            each_data['price'] = round(float(each_data['total_price'] * 10000 / each_data['area']), 2)
+            # each_data['price'] = round(float(each_data['total_price'] * 10000 / each_data['area']), 2)
             each_data['from'] = "58"
 
             each_data = self.pipe(each_data)

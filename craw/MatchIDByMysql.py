@@ -17,7 +17,6 @@ class MatchID(object):
             port = 3306,db = "property_info",charset = "utf8",
             cursorclass = MySQLdb.cursors.DictCursor)
         self.cursor = self.db.cursor()
-        # self.exc = xlrd.open_workbook('comm.xlsx')        #如果从数据库中匹配则用不到
 
     def get_comm_arr_fromMysql(self,pri):
         # 从comm表，生成comm数组
@@ -137,7 +136,7 @@ class MatchID(object):
                 self.cursor.execute(sql_insert,(data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],\
                     data[9],data[10],data[11],data[12],data[13],get1,comm_id))
                 self.db.commit()
-            except MySQLdb.Error,e:
+            except MySQLdb.Error as e:
                 pass
 
     def handle_match_mul(self,data,getid):

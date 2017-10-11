@@ -29,19 +29,16 @@ class Downloader(object):
             if 400 <= r.status_code <500:
                 html = 404
             elif 500 <= r.status_code <600:         #递归:服务器端出错时
-                html = self.download(url,num_retries-1)
+                if num_retries > 0:
+                    print('服务器瑞出现问题，将再下载{0}次'.format(num_retries-1))
+                    html = self.download(url,num_retries-1)
+                else:
+                    html = None
             else:
                 html = r.text
-            # print(r.status_code)
-            # print((r.history))
-            # print(type(r))
         except Exception as e:
-            print("Request failed: {0}".format(e))
-            # print(r.status_code)
+            print("Request failed(在Downloader里): {0}".format(e))
             html = None
-            # if num_retries > 0:
-            #     # if hasattr(e,'code') and 500 <= e.code <600:
-            #     html = self.download(url,num_retries-1)
 
         return html
 

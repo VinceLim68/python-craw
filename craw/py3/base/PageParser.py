@@ -130,11 +130,14 @@ class PageParser(object):
 
     def pipe(self,datadic):
         # 有效性检验
-        # if datadic.has_key('total_floor') and datadic.has_key('total_price') and datadic.has_key('area') and datadic.has_key('community_name'):
         if ('total_floor' in datadic.keys()) and ('total_price' in datadic.keys()) and ('area' in datadic.keys()) and ('community_name' in datadic.keys())  :
 
-            if datadic['total_price'] is None or datadic['area'] is None:return False
-            if datadic['community_name'] is None or len(datadic['community_name'])<=2:return False
+            if datadic['total_price'] is None or datadic['area'] is None or datadic['area'] == 0:
+                return False
+            else:
+                datadic['price'] = round(float(datadic['total_price'] * 10000 / datadic['area']), 2)
+            if datadic['community_name'] is None or len(datadic['community_name'])<=2:
+                return False
             if datadic['total_floor'] > 60: datadic['total_floor'] = 35         #把过高楼层的设为35层
             datadic['community_name'] = datadic['community_name'].strip()
             if datadic['total_price'] == 0 : return False                       #2016.9.13 价格为0的过滤掉
@@ -151,8 +154,12 @@ class PageParser(object):
             if len(datadic['advantage']) > 20:datadic['advantage'] = datadic['advantage'][:20]
             return datadic
         else:
-            if not datadic.has_key('total_floor'):                    #2016.6.1搜房网老是出现无效数据，进行判断，发现是别墅没有记载楼层信息造成的
+            if not ('total_floor' in datadic.keys()) and ('total_price' in datadic.keys()) and ('area' in datadic.keys()) and ('community_name' in datadic.keys())  :
                 if u"别墅" in datadic['title']:
+                    if datadic['total_price'] is None or datadic['area'] is None or datadic['area'] == 0:
+                        return False
+                    else:
+                        datadic['price'] = round(float(datadic['total_price'] * 10000 / datadic['area']), 2)
                     datadic['total_floor'] = 4
                     datadic['floor_index'] = 1
                     datadic['spatial_arrangement'] = datadic['spatial_arrangement'] + u"别墅"
