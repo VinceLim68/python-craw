@@ -42,7 +42,8 @@ class GjParser(HtmlParser):
 			each_data['from'] = "ganji"
 			each_data = self.pipe(each_data)
 
-			if each_data.has_key('total_floor') and each_data.has_key('total_price') and each_data.has_key('area') and each_data.has_key('community_name'):
+			if each_data:
+			# if each_data and each_data.has_key('total_floor') and each_data.has_key('total_price') and each_data.has_key('area') and each_data.has_key('community_name'):
 				page_datas.append(each_data)
 			else:
 				if mytools.ShowInvalideData(each_data):page_datas.append(each_data)

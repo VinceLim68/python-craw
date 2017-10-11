@@ -48,6 +48,8 @@ class LjParser(HtmlParser):
             each_data['price'] = float(each_data['total_price']*10000/each_data['area'])
             each_data['from'] = "lianjia"
 
+            each_data = self.pipe(each_data)  
+
             if each_data.has_key('total_floor') and each_data.has_key('total_price') and each_data.has_key('area') and each_data.has_key('community_name'):
                 page_datas.append(each_data)
             else:

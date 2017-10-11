@@ -26,7 +26,9 @@ jQuery(function($) {
 		url : 'getSales', 
 		mtype : 'POST',
 		datatype : "json", // 请求的数据类型
-		
+		postData: {
+			'action': $("#saleslist_hidden").val(),
+			}, 
 		height: 250,
 		colModel: [{
 			name: 'id',
@@ -298,8 +300,15 @@ jQuery(function($) {
 	
 	jQuery("#salesheadsearch").on('submit',function(){
 		var myinput = $('#nav-search-input').val();
-
 		alert(myinput);
+	});
+	
+	
+	
+	jQuery("#nomatch").on('click',function no_match_id(){
+		alert('no match id');
+		$("#saleslist_hidden").val('nomatch');
+		alert($("#saleslist_hidden").val());
 	});
 
 		

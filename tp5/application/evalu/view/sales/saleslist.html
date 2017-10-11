@@ -17,18 +17,18 @@
 </ul>
 <div class="btn-group" style="float: right; margin-top: 5px">
     <button data-toggle="dropdown" class="btn btn-success btn-sm dropdown-toggle">
-        Info small
+        操作
         <span class="ace-icon fa fa-caret-down icon-on-right"></span>
     </button>
     <ul class="dropdown-menu dropdown-info dropdown-menu-right">
         <li>
-            <a href="#">Action</a>
+            <a href="javascript:void(0);" onclick="js_method()">所有挂牌信息</a>
         </li>
         <li>
-            <a href="#">Another action</a>
+            <a href="javascript:no_match_id()" onclick="no_match_id()" id="nomatch">未匹配小区id的挂牌信息</a>
         </li>
         <li>
-            <a href="#">Something else here</a>
+            <a href="#">匹配多个小区的挂牌信息</a>
         </li>
         <li class="divider"></li>
         <li>
@@ -55,6 +55,8 @@
         </small>
     </h1>
 </div>
+<input type="hidden" id="saleslist_hidden" value="all">
+
 <table id="grid-table"></table>
 <div id="grid-pager"></div>
 {/block} {block name="pg_js"}
