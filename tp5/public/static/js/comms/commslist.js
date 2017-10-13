@@ -377,14 +377,14 @@ jQuery(function($) {
 				afterSubmit : function(response, postdata)
 				{
 					//alert(response.Text);
-					var props = "" ; 
+/*					var props = "" ; 
 					// 开始遍历 
 					for ( var p in response ){ // 方法 
-					if ( typeof ( response [ p ]) == " function " ){ response [ p ]() ; 
+						if ( typeof ( response [ p ]) == " function " ){ response [ p ]() ; 
 					} else { // p 为属性名称，response[p]为对应属性的值 
-					props += p + " = " + response [ p ] + " ;\n " ; 
+						props += p + " = " + response [ p ] + " ;\n " ; 
 					} } // 最后显示所有的属性 
-					//alert ( props ) ;
+					alert ( props ) ;*/
 					//alert(response.responseText);
 					if(response.responseText == 1){
 						jQuery(grid_selector).jqGrid('setGridParam', {

@@ -25,7 +25,7 @@
             <a href="#" id="allsales">所有挂牌信息</a>
         </li>
         <li>
-            <a href="#"  id="nomatch">未匹配小区id的挂牌信息</a>
+            <a href="#" id="nomatch">未匹配到小区id的挂牌信息</a>
         </li>
         <li>
             <a href="#" id="mulmatch">匹配多个小区的挂牌信息</a>
@@ -33,6 +33,9 @@
         <li class="divider"></li>
         <li>
             <a href="#" id="getval">获得当前input值</a>
+        </li>
+                <li>
+            <a href="#" id="getval">匹配小区ID</a>
         </li>
     </ul>
 </div>
@@ -59,10 +62,28 @@
 
 <table id="grid-table"></table>
 <div id="grid-pager"></div>
+
+<div class="contextMenu row" id="contextMenu" style="display:none;">
+    <ul >
+        <li id="add">
+            <i class="fa fa-external-link fa-lg" style="float:left;margin-top:4px;"></i>
+            <span style="font-size:100%; font-family:Verdana;margin-left:10px;">跳转详细页面</span>
+        </li>
+        <li id="edit">
+            <i class="fa fa-plus-square-o fa-lg" style="float:left;margin-top:4px;"></i>
+            <span style="font-size:100%; font-family:Verdana;margin-left:10px;">匹配小区ID</span>
+        </li>                
+        <li id="del">
+            <span class="glyphicon glyphicon-trash" style="float:left"></span>
+            <span style="font-size:100%; font-family:Verdana;margin-left:10px;">Delete Row</span>
+        </li>                
+    </ul>
+</div>
 {/block} {block name="pg_js"}
 <script src="__JS__/bootstrap-datepicker.min.js"></script>
 <script src="__JS__/jquery.jqgrid.js"></script>
 <script src="__JS__/grid.locale-en.js"></script>
+<script src="__JS__/jquery.contextmenu.js"></script>
 {/block}{block name="pg_inline_js"}
 <script src="__JS__/comms/saleslist.js"></script>
 {/block}

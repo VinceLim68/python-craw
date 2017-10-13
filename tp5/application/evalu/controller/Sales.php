@@ -85,4 +85,11 @@ class Sales extends Controller {
 		
 		return $outputs;
 	}
+	
+	public function getUrlById(){
+		$byId = input('ID');
+		$url = $this->db->field('details_url')->where('id',$byId)->find();
+		//echo $url;
+		return $url['details_url'];
+	}
 }

@@ -171,7 +171,7 @@ jQuery(function($) {
 		multiselect: true,
 		// multikey: "ctrlKey",
         multiboxonly: true,
-
+        gridComplete: initGrid,
 
 
 		editurl: "./dummy.php",// nothing is saved
@@ -191,7 +191,6 @@ jQuery(function($) {
 		
 		onPaging:function(){
 			var rowNum = jQuery(grid_selector).jqGrid('getGridParam','records');
-//			alert(rowNum);
 			jQuery(grid_selector).jqGrid('setGridParam', {
 				postData: {
 					'action': $("#saleslist_hidden").val(),
@@ -199,13 +198,72 @@ jQuery(function($) {
 					'records':rowNum,
 					}, 
 			});
-			//alert('onpaging');
 		},
 
 
 
 	});
 	
+	function initGrid() {
+        $(this).contextMenu('contextMenu', {
+			menuStyle :{
+				width : "150px"
+			},
+            bindings: {
+                'add': function (t) {
+                	var rowKey = $(grid_selector).jqGrid('getGridParam',"selrow");
+
+                    if (rowKey){
+                    	//alert("Selected row primary key is: " + rowKey);
+                    	var sale_url = $.ajax({
+                    		url:'getUrlById',
+                    		data:{
+                    			ID:rowKey,
+                    		},
+                    		success:function(response){  
+                    			window.open(response) ; 
+            		        }  
+                    		
+                    	});
+    					
+               /*     	var props = "" ; 
+                    	var response = sale_url;
+    					// 开始遍历 
+    					for ( var p in response ){ // 方法 
+    						if ( typeof ( response [ p ]) == " function " ){ 
+    							//response [ p ]() ; 
+    						} else { // p 为属性名称，response[p]为对应属性的值 
+    							props += p + " = " + response [ p ] + " ;\n " ; 
+    						} 
+						} // 最后显示所有的属性 
+    					alert ( props ) ;*/
+                    	//alert(sale_url);
+                    	jQuery(grid_selector).jqGrid('setSelection',rowKey);
+                    }else{
+                    	alert("No rows are selected");
+                    }
+                },
+                'edit': function (t) {
+                	//alert(t);
+                    alert("Add Row Command Selected");
+                },
+                'del': function (t) {
+                    alert("Delete Row Command Selected");
+                }
+            },
+            onContextMenu: function (event, menu) {
+                var rowId = $(event.target).parent("tr").attr("id")
+                var rowKey = $(grid_selector).jqGrid('getGridParam',"selrow");
+                //原因不明：在偶数页，点击右键弹出菜单时，onContextMenu会执行两次，造成选择失败。
+                //所以在这里人为控制一下，如果已经选择成功，就不再执行
+                if (rowId != rowKey)
+                	jQuery(grid_selector).jqGrid('setSelection',rowId);
+                return true;
+            }
+        }
+        );
+    }
+		
 	function beforeDeleteCallback(e) {
 		var form = $(e[0]);
 		if(form.data('styled')) return false;
@@ -275,7 +333,7 @@ jQuery(function($) {
 					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
 					style_edit_form(form);
 				}
-			},{},{},{},{},{},
+			},{},{},{},{},{}
 	)
 	
 	function style_edit_form(form) {
