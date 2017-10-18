@@ -1,123 +1,64 @@
-{extend name="mainbase" /}
-{block name="breadcrumb"}
+{extend name="mainbase" /} {block name="pg_cs"}
+<!-- 以下三个是本页加的CSS -->
+<link rel="stylesheet" href="__CSS__/jquery-ui.min.css" />
+<link rel="stylesheet" href="__CSS__/bootstrap-datepicker3.min.css" />
+<!--    这个是弹出的编辑窗口   -->
+<link rel="stylesheet" href="__CSS__/ui.jqgrid.min.css" />
+{/block} {block name="breadcrumb"}
 <ul class="breadcrumb">
     <li>
         <i class="ace-icon fa fa-home home-icon"></i>
         <a href="#">Home</a>
     </li>
     <li>
-        <a href="#">小区管理</a>
+        <a href="#" title='<?php echo __DIR__ ?>'>__DIR__</a>
     </li>
-    <li class="active">小区列表</li>
+    <li>
+        <a href="#" title='<?php echo dirname(__FILE__) ?>'>dirname(__FILE__)</a>
+    </li>
+    <li>
+        <a href="#" title='<?php echo "PHP_SELF".$_SERVER["PHP_SELF"] ?>'>当前脚本</a>
+    </li>
+    <li>
+        <a href="#" title='<?php echo "SCRIPT_FILENAME".$_SERVER["SCRIPT_FILENAME"] ?>'>执行脚本</a>
+    </li>
+    <li class="active" title='<?php echo "__FILE__".__FILE__ ?>'>__FILE__</li>
 </ul>
-{/block} 
-{block name="main"}
-    <script type="text/ecmascript" src="__JS__/jquery-3.2.1.js"></script> 
-    <script type="text/ecmascript" src="__JS__/grid.locale-en.js"></script>
-    <!-- <script type="text/ecmascript" src="__JS__/jquery.jqGrid.min.js"></script> -->
-    <script src="__JS__/jquery.jqGrid.min.js"></script>
-    <link rel="stylesheet" href="__CSS__/bootstrap.min.css"> 
-    <link rel="stylesheet" type="text/css" media="screen" href="__CSS__/ui.jqgrid-bootstrap.css" />
-    <script>
-        $.jgrid.defaults.width = 780;
-        $.jgrid.defaults.responsive = true;
-        $.jgrid.defaults.styleUI = 'Bootstrap';
-    </script>
-    <script src="__JS__/bootstrap.min.js"></script>
-<div style="margin-left:20px">
-    <table id="jqGrid"></table>
-    <div id="jqGridPager"></div>
+{/block} {block name="main"}
+<div class="page-header">
+    <h1>
+        小区管理
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            小区信息的增删改查
+        </small>
+    </h1>
 </div>
-<script type="text/javascript"> 
-    
-
-$(document).ready(function () {
-/*  var template = "<div style='margin-left:15px;'><div> Customer ID <sup>*</sup>:</div><div> {CustomerID} </div>";
-    template += "<div> Company Name: </div><div>{CompanyName} </div>";
-    template += "<div> Phone: </div><div>{Phone} </div>";
-    template += "<div> Postal Code: </div><div>{PostalCode} </div>";
-    template += "<div> City:</div><div> {City} </div>";
-    template += "<hr style='width:100%;'/>";
-    template += "<div> {sData} {cData}  </div></div>"; */
-
-    $("#jqGrid").jqGrid({
-        url:'do.php',  //请求数据的url地址
-        mtype:'POST',
-        datatype: "json",  //请求的数据类型
-        caption:'小区信息',
-        //colNames:['编号','小区名称','区域','片区','小区编号', '片区编号','关键词','地址','优先'], //数据列名称（数组）
-        colModel:[ //数据列各参数信息设置
-            {label: '编号',name:'ID',index:'ID', width:40,align:'center',key:true},
-            {label: '小区名称',name:'comm_name',editable:true,index:'comm_name', width:80,editable: true,},
-            {label: '区域',name:'region',editable:true,index:'region',align:'center', width:40,editable: true},
-            {label: '片区',name:'block',editable:true,index:'block', align:'center',width:60,editable: true},
-            {label: '小区编号',name:'comm_id',editable:true,index:'comm_id',align:'center', width:70,editable: true},
-            {label: '片区编号',name:'block_id',editable:true,index:'block_id',align:'center', width:40,editable: true},
-            {label: '关键词',name:'keywords',editable:true,index:'keywords', width:200,editable: true},
-            {label: '地址',name:'comm_addr',editable:true,index:'comm_addr', width:200,editable: true},
-            {label: '优先',name:'pri_level',editable:true,index:'pri_level', width:35,align:'center',editable: true}  
-        ],
-        multiselect: true,
-        rowNum:60, //每页显示记录数
-        rowList:[10,20,30,60], //分页选项，可以下拉选择每页显示记录数
-        postData:{key1:'key1'}  ,
-        /* url: 'data.json',
-        datatype: "json",
-        colModel: [
-            { label: 'Category Name', name: 'CategoryName', width: 75 },
-            { label: 'Product Name', name: 'ProductName', width: 90 },
-            { label: 'Country', name: 'Country', width: 100 },
-            { label: 'Price', name: 'Price', width: 80, sorttype: 'integer' },
-            // sorttype is used only if the data is loaded locally or loadonce is set to true
-            { label: 'Quantity', name: 'Quantity', width: 80, sorttype: 'number' }                   
-        ], */
-        viewrecords: true, // show the current page, data rang and total records on the toolbar
-        width: 960,
-        height: 450,
-        sortable:true,  //可以排序
-        sortname: 'ID',  //排序字段名
-/*         rowNum: 30, */
-        //loadonce: true, // this is just for the demo
-        pager: "#jqGridPager"
-    });
-    
-    $('#jqGrid').navGrid('#jqGridPager',
-             // the buttons to appear on the toolbar of the grid
-            { edit: true, add: true, del: true, search: false, refresh: false, view: false, position: "left", cloneToTop: false },
-            // options for the Edit Dialog
-            {
-                editCaption: "修改小区信息",
-                recreateForm: true,
-                checkOnUpdate : true,
-                checkOnSubmit : true,
-                closeAfterEdit: true,
-                errorTextFormat: function (data) {
-                    return 'Error: ' + data.responseText
-                }
-            },
-            // options for the Add Dialog
-            {
-                closeAfterAdd: true,
-                addCaption: "新增小区",
-                recreateForm: true,
-                errorTextFormat: function (data) {
-                    return 'Error: ' + data.responseText
-                }
-            },
-            // options for the Delete Dailog
-            {
-                errorTextFormat: function (data) {
-                    return 'Error: ' + data.responseText
-                }
-            });
-
-    
-    
-});
-
- </script>
-
- 
-
+<div class="widget-box">
+    <div class="widget-header" id='search_div' style='padding-top: 5px; background: #5AA7D6;'>
+        <form class="form-inline" style="float: right;">
+            <input class="input-small" id="search_keywords" placeholder="小区名..." type="text">
+            <select class="form-control " id="search_region" style="width: 90px; margin-bottom: 2px;"></select>
+            <input class="input-small" id="s_block" placeholder="版块..." type="text" list="search_block">
+            <datalist id="search_block" style="font-family: inherit; font-size: 14px; padding: 5px 4px 6px;"></datalist>
+            <input class="input" id="search_address" placeholder="地址..." type="text">
+            <button type="button" id="find_btn" class="btn btn-sm btn-info" style="margin-right: 20px; border-radius: 20px; margin-bottom: 3px;">
+                <span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+                查询
+            </button>
+        </form>
+    </div>
+    <div class="widget-body">
+        <div class="widget-main" style='padding: 0;'>
+            <table id="gridtable"></table>
+            <div id="gridtable_pager"></div>
+        </div>
+    </div>
+</div>
+{/block} {block name="pg_js"}
+<script src="__JS__/bootstrap-datepicker.min.js"></script>
+<script src="__JS__/jquery.jqgrid.js"></script>
+<script src="__JS__/grid.locale-en.js"></script>
+{/block}{block name="pg_inline_js"}
+<script src="__JS__/comms/commslist.js"></script>
 {/block}
- 

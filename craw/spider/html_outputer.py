@@ -2,7 +2,7 @@
 import sys
 import xlsxwriter
 # import myStat
-import bloomfilter
+from bloomfilter import BloomFilter
 import mytools
 import MySQLdb
 import datetime
@@ -16,7 +16,7 @@ class HtmlOutputer():
         self.raw_datas = []         #原始数据
         
         # self.key_infos = set()      #帮助去除重复数据
-        self.key_infos = bloomfilter.BloomFilter(0.001,1000000)     #学习使用bloomfilter
+        self.key_infos = BloomFilter(0.001, 1000000)     #学习使用bloomfilter
         
         self.dupli_count = 0
 
