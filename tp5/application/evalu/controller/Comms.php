@@ -4,6 +4,7 @@ namespace app\evalu\controller;
 
 use think\Controller;
 use app\evalu\model\Comm;
+use think\Db;
 
 class Comms extends Controller {
 	protected $db;
@@ -81,7 +82,7 @@ class Comms extends Controller {
 	}
 	
 	/*
-	 * 增加、修改小区记录
+	 * 增加、修改、删除小区记录
 	 */
 	public function editComm() {
 		$vars = input ( '' );
@@ -111,7 +112,11 @@ class Comms extends Controller {
 		} elseif ($vars ['oper'] == 'del') { // 删除记录
 			$del_id = explode ( ',', $vars ['id'] );
 			foreach ( $del_id as $myid ) {
+				$comm_id = $this->db->field('comm_id')->where ( 'Id', $myid )->find();
 				$this->db->where ( 'Id', $myid )->delete ();
+				//删除之后还要把挂牌信息里相关的commid改成0
+				Db::table('for_sale_property')->where('community_id',$comm_id['comm_id'])->update(['community_id'=>0]);
+
 			}
 		}
 	}

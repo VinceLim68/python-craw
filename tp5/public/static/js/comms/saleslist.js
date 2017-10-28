@@ -182,10 +182,10 @@ jQuery(function($) {
 		loadComplete : function() {
 			var table = this;
 			setTimeout(function() {
-				// styleCheckbox(table);
-				// updateActionIcons(table);
+				//styleCheckbox(table);
+				//updateActionIcons(table);
 				updatePagerIcons(table);
-				// enableTooltips(table);
+				//enableTooltips(table);
 			}, 0);
 		},	
 		
@@ -212,10 +212,8 @@ jQuery(function($) {
             bindings: {
                 'add': function (t) {
                 	var rowKey = $(grid_selector).jqGrid('getGridParam',"selrow");
-
                     if (rowKey){
-                    	//alert("Selected row primary key is: " + rowKey);
-                    	var sale_url = $.ajax({
+                    	$.ajax({
                     		url:'getUrlById',
                     		data:{
                     			ID:rowKey,
@@ -240,12 +238,29 @@ jQuery(function($) {
                     	//alert(sale_url);
                     	jQuery(grid_selector).jqGrid('setSelection',rowKey);
                     }else{
-                    	alert("No rows are selected");
+                    	alert("请先选择一行");
                     }
                 },
                 'edit': function (t) {
-                	//alert(t);
-                    alert("Add Row Command Selected");
+                	var rowKey = $(grid_selector).jqGrid('getGridParam',"selrow");
+                    if (rowKey){
+                    	var rowData = $(grid_selector).jqGrid('getRowData',rowKey);
+                    	var rowComm = rowData.community_name;
+                    	var rowTitle = rowData.title;
+                    	$.ajax({
+                    		url:'matchComm',
+                    		data:{
+                    			id:rowKey,
+                    			commName:rowComm,
+                    			title:rowTitle,
+                    		},
+                    		success:function(response){  
+                    			alert(response) ; 
+            		        }  
+                    		
+                    	});
+                    	//alert(rowComm + rowTitle);
+                    }
                 },
                 'del': function (t) {
                     alert("Delete Row Command Selected");
@@ -364,7 +379,7 @@ jQuery(function($) {
 	
 	
 	
-	jQuery("#nomatch").on('click',function no_match_id(){
+	jQuery("#nomatch").on('click',function (){
 		$("#saleslist_hidden").val('nomatch');
 		jQuery(grid_selector).jqGrid('setGridParam', {
 			postData: {
@@ -372,6 +387,16 @@ jQuery(function($) {
 				}, 
 		}).trigger('reloadGrid');
 	});
+	
+	jQuery("#mulmatch").on('click',function (){
+		$("#saleslist_hidden").val('mulmatch');
+		jQuery(grid_selector).jqGrid('setGridParam', {
+			postData: {
+				'action': $("#saleslist_hidden").val(),
+				}, 
+		}).trigger('reloadGrid');
+	});
+	
 	
 	jQuery("#getval").on('click',function (){
 		alert($("#saleslist_hidden").val());
@@ -385,7 +410,25 @@ jQuery(function($) {
 				}, 
 		}).trigger('reloadGrid');
 	} );
+	
+	jQuery("#match").on('click',function (){
+		$.ajax({
+			url:'match',
+			type:'json',
+			success:function(response){  
+    			alert(response) ; 
+	        }  
+		});
+	} );
 		
+	jQuery("#len").on('click',function (){
+		$.ajax({
+			url:'text_len',
+			success:function(response){  
+    			alert(response) ; 
+	        }  
+		});
+	} );
      
 })
 	

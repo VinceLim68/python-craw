@@ -27,23 +27,33 @@ class Comm extends Model {
 	 * return $pri_level[$value];
 	 * }
 	 */
-	public static function _getCommsArr() {
+	public static function getCommsArr() {
 		/**
-		 * 这个要删除了，把小区名按关键字拆分后形成一个数组
+		 * 把小区名按关键字拆分后，按级别形成小区和道路两个数组
 		 */
-		$comms = self::field ( "comm_id,comm_name,pri_level,keywords" )->select ();
-		$comms_arr = array ();
+		$comms = self::field ( "comm_id,pri_level,keywords" )->select ()->toArray();
+		$comms_arr = array();
+		$roads_arr = array();
 		foreach ( $comms as $comm ) {
 			$kws = explode ( ",", $comm ['keywords'] );
 			foreach ( $kws as $kw ) {
 				$temp = array ();
-				$temp [] = $comm ['comm_id'];
-				$temp [] = $kw;
-				$comms_arr [] = $temp;
+				$temp ['id'] = $comm ['comm_id'];
+				$temp ['keyword'] = $kw;
+				if ($comm['pri_level'] == '小区级') {
+					$comms_arr [] = $temp;
+				}else{
+					$roads_arr [] = $temp;
+				}
 			}
 		}
-		return $comms_arr;
-	}
+		$block_arr = array();
+		$block_arr['comms'] = $comms_arr;
+		$block_arr['roads'] = $roads_arr;
+		return $block_arr;
+		/* $comms = self::field ( "comm_id,pri_level,keywords" )->where('pri_level','1')->select ()->toArray();
+		return $comms; */
+	} 
 	public static function getAll() {
 		$comms = self::field ( "comm_id,comm_name,pri_level,keywords" )->select ();
 		return $comms;

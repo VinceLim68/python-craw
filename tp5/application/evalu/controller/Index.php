@@ -3,16 +3,16 @@
 namespace app\evalu\controller;
 
 use think\Controller;
-use app\evalu\model\Sales;
 use app\evalu\model\Comm;
 use think\Loader;
 use app\evalu\logic\CommL;
+use app\evalu\model\SalesModel;
 
 class Index extends Controller {
 	protected $db;
 	protected function _initialize() {
 		parent::_initialize ();
-		$this->db = new Sales ();
+		$this->db = new SalesModel();
 	}
 	public function index() {
 		if (request ()->isPost ()) {

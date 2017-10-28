@@ -5,12 +5,15 @@ namespace app\evalu\controller;
 use think\Controller;
 use think\Db;
 use app\evalu\model\SalesModel;
+use app\evalu\logic\MatchLogic;
 
 class Sales extends Controller {
 	protected $db;
+	protected $mch;
 	protected function _initialize() {
 		parent::_initialize ();
 		$this->db = new SalesModel ();
+		$this->mch = MatchLogic::getInstance();
 	}
 	
 	/*
@@ -59,6 +62,10 @@ class Sales extends Controller {
 			$list = $this->db->field ( 'details_url', true )->limit ( $limit )->page ( $page )
 				->where ( $where )->where ( 'community_id', NULL )->whereor ( 'community_id', 0 )
 				->order ( [ 'id' => $sord ] )->select ()->toArray ();
+		}elseif ($action == 'mulmatch'){
+			$list = $this->db->field ( 'details_url', true )->limit ( $limit )->page ( $page )
+				->where ( $where )->where ( 'community_id', '>' ,0)->where ( 'community_id', '<' ,100)
+				->order ( [ 'id' => $sord ] )->select ()->toArray ();
 		}
 	
 		/*
@@ -76,6 +83,9 @@ class Sales extends Controller {
 			}elseif ($action == 'nomatch'){
 				$outputs ['records'] = $this->db->where ( $where )->where ( 'community_id', NULL )
 					->whereor ( 'community_id', 0 )->count();
+			}elseif ($action == 'mulmatch'){
+				$outputs ['records'] = $this->db->where ( $where )->where ( 'community_id', '>' ,0)
+				->where ( 'community_id', '<' ,100)->count();
 			}
 		}
 		// $total = ceil ( $records / $limit );
@@ -87,9 +97,38 @@ class Sales extends Controller {
 	}
 	
 	public function getUrlById(){
+		/*
+		 * 通过传入的id查询相应的details_url
+		 */
 		$byId = input('ID');
 		$url = $this->db->field('details_url')->where('id',$byId)->find();
 		//echo $url;
 		return $url['details_url'];
+	}
+	
+	public function match(){
+		//$arr = MatchLogic::getCommsArr();
+		$arr = MatchLogic::$comms;
+		//dump($arr);
+		return $arr;
+	}
+	
+	public function text_len(){
+		$arr = MatchLogic::$comms;
+		$len = count($arr['comms']);
+		//dump($arr);
+		return $len;
+	}
+	
+	public function matchComm(){
+		/*
+		 * 通过传入的id来匹配小区id
+		 */
+		$byId = input('id');
+		$commName = input('commName');
+		$title = input('title');
+		$idArr = MatchLogic::getId($commName,$title );
+		return ($idArr);
+		
 	}
 }
