@@ -1,0 +1,57 @@
+
+*******2017-10-16 08:27:10.555234*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=滨海商住中心. 
+
+*******2017-10-16 16:22:11.004785*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=角美万达广场学区房出售. 
+
+*******2017-10-16 16:27:14.834432*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=图强路学区房. 
+
+*******2017-10-16 17:01:06.571772*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=莲花国际(商住楼). 
+
+*******2017-10-16 21:03:31.258179*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=屿后北里，松柏学区房. 
+
+*******2017-10-16 21:35:28.205146*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=祥发楼二小学区房. 
+
+*******2017-10-16 21:36:11.760423*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=学区房南山小区. 
+
+*******2017-10-16 22:22:00.059818*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=学区房 同安瑞祥小区. 
+
+*******2017-10-16 22:56:26.314647*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=就读湖里中心小学学区房. 
+
+*******2017-10-16 23:30:07.830580*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=惠安美丽园大厦商住楼. 
+
+               *******out_mysql*******,error record by @mylog on 2017-10-17 08:09:11.788051*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 11, in _deco
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 68, in out_mysql
+  File "G:\Python36\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "G:\Python36\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 987, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1033, in _read_bytes
+    CR.CR_SERVER_LOST, "Lost connection to MySQL server during query")
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+
+               *******newFunc*******,error record by @mylog on 2017-10-17 08:09:11.835053*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 11, in _deco
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 26, in newFunc
+  File "E:\python-craw\craw\py3\base\MassController.py", line 95, in craw_a_page
+TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'
