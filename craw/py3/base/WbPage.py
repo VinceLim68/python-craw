@@ -2,10 +2,9 @@ import PageParser,ToolsBox,Downloader
 
 class WbPage(PageParser.PageParser):
 
-    def _ischeck(self,soup,type=1):
+    def is_check(self,soup,type=1):
         # 判断是否是验证界面
         ischeck = soup.select("title")
-        # if type == 2 else soup.xpath('//title')
 
         if len(ischeck) > 0:            #如果找不到title,就认为不是验证界面
             title = ischeck[0].get_text().strip() if type == 2 else ischeck[0].text
@@ -14,8 +13,7 @@ class WbPage(PageParser.PageParser):
             iscode = False
         if iscode :
             print('调试：页面标题是---->{0}'.format(title))
-            # print('debug: title is %s' %title.decode("utf-8").encode("gb2312"))
-        
+
         return iscode
 
     def parse_urls(self, soup):

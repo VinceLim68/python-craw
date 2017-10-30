@@ -2,6 +2,7 @@
 import traceback
 import datetime
 import time
+import re
 
 def mylog(func):
     def _deco(*a, **b):
@@ -75,17 +76,26 @@ def confir(str):
 
 def printDic(data):
     if isinstance(data,dict):
-        # for key,value in data.items():
-        #     print('%20s : %s' %(key,value))
         for key in data:
             print('%20s : %s'%(key,data[key]))
     else:
-        print('Not a dict!')
+        print(data)
 
 def strToInt(string1):
     if isinstance(string1, str):
         try:
-            string1 = int(round(float(string1)))
+            # string1 = int(round(float(string1)))
+            string1 = int(round(float(re.sub("\D", "",string1))))
         except ValueError as e:
             string1 = 0
     return string1
+
+def priList(list_name,level=0):
+    for yuansu in list_name:
+        if isinstance(yuansu,list):   #判断当前元素是不是列表
+            priList(yuansu,level+1) #如是,则递归调用,并且标记当前元素是列表
+        else:
+            for tab in range(level):#固定次数
+                print ("\t",end='')
+            printDic(yuansu)
+            # print('**********************')

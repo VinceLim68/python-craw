@@ -1,6 +1,3 @@
-# import sys
-# import xlsxwriter
-# import myStat
 import bloomfilter
 import ToolsBox
 import pymysql
@@ -22,7 +19,8 @@ class Outputer(object):
         self.key_infos = bloomfilter.BloomFilter(0.001,1000000)     #学习使用bloomfilter
 
         try:
-            self.conn=pymysql.connect(host = "192.168.1.207",user = "root",passwd = "root",db = "property_info",charset = "utf8")
+            # self.conn=pymysql.connect(host = "192.168.1.207",user = "root",passwd = "root",db = "property_info",charset = "utf8")
+            self.conn=pymysql.connect(host = "office.xmcdhpg.cn",user = "root",passwd = "root",db = "property_info",charset = "utf8",port = 3306)
         except:
             print( "Connect failed")
         self.cur = self.conn.cursor(cursor=pymysql.cursors.DictCursor)            # 用字典

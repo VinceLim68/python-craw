@@ -1,4 +1,3 @@
-#coding:utf-8
 from bs4 import BeautifulSoup
 import re
 import datetime
@@ -30,14 +29,18 @@ class PageParser(object):
 
     def page_parse(self,html_cont,parser_build = 'lxml'):
         # 解析网页的主模块
-        soup = self.get_soup(html_cont,parser_build)
-
-        #在这里加上辨识是否有验证码的代码
-        if self._ischeck(soup):
-            new_urls = new_datas = 'checkcode'
+        if html_cont == 404:
+            print('出现请求错误，返加4XX错误，可能被服务器禁止访问')
+            new_urls = new_datas = html_cont
         else:
-            new_urls = self.parse_urls(soup)
-            new_datas = self.parse_datas(soup)
+            soup = self.get_soup(html_cont,parser_build)
+
+            #在这里加上辨识是否有验证码的代码
+            if self.is_check(soup):
+                new_urls = new_datas = 'checkcode'
+            else:
+                new_urls = self.parse_urls(soup)
+                new_datas = self.parse_datas(soup)
         return new_urls,new_datas
     
     def parse_floor(self,item):
@@ -126,7 +129,7 @@ class PageParser(object):
         else:                           #re.search('[南北东西]', string, flags=0):
             parse_dict['advantage'] = string.strip()
         
-        return parse_dict;
+        return parse_dict
 
     def pipe(self,datadic):
         # 有效性检验

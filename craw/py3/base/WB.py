@@ -1,5 +1,4 @@
 import MassController,WbPage
-import urllib3
 
 class WB(MassController.MassController):
     def __init__(self, parseClass):
@@ -19,10 +18,6 @@ class WB(MassController.MassController):
             self.comm_count += 1
 
         self.total = self.total + self.outputer.out_mysql()
-
-
-
-
 
 if __name__=="__main__":
     url = ['http://xm.58.com/ershoufang/pn2/']
