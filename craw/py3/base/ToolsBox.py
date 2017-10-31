@@ -77,8 +77,11 @@ def confir(str):
 def printDic(data):
     if isinstance(data,dict):
         for key in data:
+            # key = to_str(key)
+            # data[key] = to_str(data[key])
             print('%20s : %s'%(key,data[key]))
     else:
+        # data = to_str(data)
         print(data)
 
 def strToInt(string1):
@@ -91,6 +94,7 @@ def strToInt(string1):
     return string1
 
 def priList(list_name,level=0):
+    i = 1
     for yuansu in list_name:
         if isinstance(yuansu,list):   #判断当前元素是不是列表
             priList(yuansu,level+1) #如是,则递归调用,并且标记当前元素是列表
@@ -98,4 +102,12 @@ def priList(list_name,level=0):
             for tab in range(level):#固定次数
                 print ("\t",end='')
             printDic(yuansu)
-            # print('**********************')
+            print('************************  {0}  *************************'.format(i))
+            i += 1
+
+def to_str(bytes_or_str):
+    if isinstance(bytes_or_str, bytes):
+        value = bytes_or_str.decode('utf-8')
+    else:
+        value = bytes_or_str
+    return value # Instance of str

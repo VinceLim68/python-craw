@@ -72,6 +72,7 @@ if __name__ == "__main__":
     parser = WbPage()
     url = 'http://xm.58.com/ershoufang/pn2/'
     html_cont = downloader.download(url)
+    # print(type(html_cont))
     urls,datas = parser.page_parse(html_cont)
     # soup = parser.get_soup(html_cont)
     # datas = parser.parse_datas(soup)
