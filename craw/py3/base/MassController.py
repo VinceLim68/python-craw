@@ -45,12 +45,6 @@ class MassController(object):
             url = self.urls.get_new_url()
             self.craw_a_page(url)
         
-    # def print_record(self):
-    #     #专门在日志里记录已经获取记录数的模块
-    #     with open('logtest.txt','a+') as fout:
-    #         fout.write('\n*******' + str(datetime.datetime.now()) + '*************')
-    #         fout.write( '\n %9.0f records has been stored in MySQL ' %self.total)
-
     @ToolsBox.mylog
     @ToolsBox.exeTime
     def craw_a_page(self,new_url,retries = 3):
@@ -111,12 +105,13 @@ class MassController(object):
                 self.urls.add_new_urls(new_urls)
                 # 把小区名称放入小区管理器
                 for data in new_datas:
-                    if len(data['community_name']) > 11 :
-                        print('{0}---->名字过长的小区名将被忽略。'.format(data['community_name']))
-                    else:
-                        comm = self.comms.add_new_url(data['community_name'])
-                        if comm:
-                            print('>>>>>>>>>>>>>>>>{0}'.format(comm))
+                    self.add_comm(data)
+                    # if len(data['community_name']) > 11 :
+                    #     print('{0}---->名字过长的小区名将被忽略。'.format(data['community_name']))
+                    # else:
+                    #     comm = self.comms.add_new_url(data['community_name'])
+                    #     if comm:
+                    #         print('>>>>>>>>>>>>>>>>{0}'.format(comm))
                 # 把挂牌信息传入outputer，清除无效数据后，放在outputer.raw_datas记录集中
                 self.outputer.collect_data(new_datas)
                 data_num = self.outputer.get_datas_quantity()
@@ -140,7 +135,15 @@ class MassController(object):
         if self.delay > 0 :
             time.sleep(sleepSeconds)             #2017.5。15把下载延时功能放在这里，这个模块相当于控制器
 
-
+    def add_comm(self,data):
+        #把添加小区列表提出来，因为会有不一样的需求，有的需要小区名称，有的需要小区链接
+        comm_add = data['community_name']
+        if len(comm_add) > 11:
+            print('{0}---->名字过长的小区名将被忽略。'.format(comm_add))
+        else:
+            comm = self.comms.add_new_url(comm_add)
+            if comm:
+                print('>>>>>>>>>>>>>>>>{0}'.format(comm))
 
 if __name__=="__main__":
     url = ['http://xm.58.com/ershoufang/pn2/']
