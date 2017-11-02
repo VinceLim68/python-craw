@@ -44,6 +44,9 @@ class MassController(object):
         while self.urls.has_new_url() :
             url = self.urls.get_new_url()
             self.craw_a_page(url)
+
+        # 3、循环结束后，把余下的数据保存起来
+        # self.total = self.total + self.outputer.out_mysql()
         
     @ToolsBox.mylog
     @ToolsBox.exeTime

@@ -20,7 +20,6 @@ class SfPage(PageParser.PageParser):
 
         titles = soup.select("p.title > a")
         houses = soup.select("dd.info > p.mt12")
-        # comm_urls = soup.select("p.mt10 > a ")
         comms = soup.select("p.mt10 > a > span")
         areas = soup.select("div.area.alignR ")
         prices = soup.select("span.price")
@@ -40,7 +39,6 @@ class SfPage(PageParser.PageParser):
             each_data['community_name'] = comm.get_text().strip()
             each_data['comm_url'] = comm.parent.get('href')
             each_data['area'] = ToolsBox.strToInt(list(area.stripped_strings)[0])
-            # each_data['area'] = int(filter(str.isdigit, list(area.stripped_strings)[0].encode("utf-8")))
             each_data['total_price'] = int(float(price.get_text()))
             each_data['from'] = "Soufan"
 

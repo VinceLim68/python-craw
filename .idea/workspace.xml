@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e59bca99-4d22-4301-b661-7f373f3568fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/SF.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/SfPage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/XM.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/GanjiPage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/LJ.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/LejvPage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/LjPage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/MaitianPage.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/craw/py3/base/LjParser.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/py3/base/AjkPage.py" afterPath="$PROJECT_DIR$/craw/py3/base/AjkPage.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/py3/base/MassController.py" afterPath="$PROJECT_DIR$/craw/py3/base/MassController.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/py3/base/SfPage.py" afterPath="$PROJECT_DIR$/craw/py3/base/SfPage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/py3/base/XM.py" afterPath="$PROJECT_DIR$/craw/py3/base/XM.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,16 +27,22 @@
     <SUITE FILE_PATH="coverage/python_craw$SfPage.coverage" NAME="SfPage Coverage Results" MODIFIED="1509522600997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$AJK.coverage" NAME="AJK Coverage Results" MODIFIED="1509343684037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$bloomfilter.coverage" NAME="bloomfilter Coverage Results" MODIFIED="1506667259786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3" />
+    <SUITE FILE_PATH="coverage/python_craw$LjPage.coverage" NAME="LjPage Coverage Results" MODIFIED="1509594647628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
+    <SUITE FILE_PATH="coverage/python_craw$XM.coverage" NAME="XM Coverage Results" MODIFIED="1509613769503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$XMHouse.coverage" NAME="XMHouse Coverage Results" MODIFIED="1509442093880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
+    <SUITE FILE_PATH="coverage/python_craw$GanjiPage.coverage" NAME="GanjiPage Coverage Results" MODIFIED="1509608726671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
+    <SUITE FILE_PATH="coverage/python_craw$LJ.coverage" NAME="LJ Coverage Results" MODIFIED="1509594894323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$AjkPage.coverage" NAME="AjkPage Coverage Results" MODIFIED="1509092240910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$ReqBuilder.coverage" NAME="ReqBuilder Coverage Results" MODIFIED="1506670556572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$SF.coverage" NAME="SF Coverage Results" MODIFIED="1509523981628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$MassController.coverage" NAME="MassController Coverage Results" MODIFIED="1507597785084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$test_mysql.coverage" NAME="test_mysql Coverage Results" MODIFIED="1508317712801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3" />
     <SUITE FILE_PATH="coverage/python_craw$WB.coverage" NAME="WB Coverage Results" MODIFIED="1507598807733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3" />
+    <SUITE FILE_PATH="coverage/python_craw$MaitianPage.coverage" NAME="MaitianPage Coverage Results" MODIFIED="1509613223097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$WbPage.coverage" NAME="WbPage Coverage Results" MODIFIED="1509418142668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$WB__1_.coverage" NAME="WB (1) Coverage Results" MODIFIED="1509323390424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$XmhousePage.coverage" NAME="XmhousePage Coverage Results" MODIFIED="1509438109105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
+    <SUITE FILE_PATH="coverage/python_craw$LejvPage.coverage" NAME="LejvPage Coverage Results" MODIFIED="1509528484264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$Downloader.coverage" NAME="Downloader Coverage Results" MODIFIED="1509422551708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
   </component>
   <component name="FileEditorManager">
@@ -38,19 +50,31 @@
       <file leaf-file-name="MassController.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/craw/py3/base/MassController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="145" column="57" lean-forward="true" selection-start-line="137" selection-start-column="4" selection-end-line="145" selection-end-column="57" />
+            <state relative-caret-position="84">
+              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UrlManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craw/py3/base/UrlManager.py">
+      <file leaf-file-name="GanjiPage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craw/py3/base/GanjiPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="196">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaitianPage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craw/py3/base/MaitianPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="89" column="24" lean-forward="false" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,38 +82,18 @@
       <file leaf-file-name="ToolsBox.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/craw/py3/base/ToolsBox.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+            <state relative-caret-position="239">
+              <caret line="86" column="12" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SfPage.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/craw/py3/base/SfPage.py">
+      <file leaf-file-name="XM.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/craw/py3/base/XM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220">
-              <caret line="27" column="87" lean-forward="false" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SF.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craw/py3/base/SF.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logtest.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craw/py3/base/logtest.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="616">
+              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -125,6 +129,8 @@
       <find>area</find>
       <find>header</find>
       <find>self.comm</find>
+      <find>enco</find>
+      <find>house</find>
     </findStrings>
     <replaceStrings>
       <replace>datadic</replace>
@@ -157,20 +163,26 @@
         <option value="$PROJECT_DIR$/craw/py3/base/WB.py" />
         <option value="$PROJECT_DIR$/craw/py3/AJK/AjkPage.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/__init__.py" />
-        <option value="$PROJECT_DIR$/craw/spider/html_downloader.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/AJK.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/PageParser.py" />
-        <option value="$PROJECT_DIR$/craw/py3/base/AjkPage.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/UrlManager.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/WbPage.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/Downloader.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/XmhousePage.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/ToolsBox.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/XMHouse.py" />
-        <option value="$PROJECT_DIR$/craw/py3/base/MassController.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/SF.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/logtest.txt" />
+        <option value="$PROJECT_DIR$/craw/spider/html_downloader.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/LejvPage.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/AjkPage.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/SfPage.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/LJ.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/LjPage.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/MassController.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/GanjiPage.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/MaitianPage.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/XM.py" />
       </list>
     </option>
   </component>
@@ -226,6 +238,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,6 +273,12 @@
             </path>
             <path>
               <item name="python-craw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-craw" type="462c0819:PsiDirectoryNode" />
+              <item name="craw" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-craw" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -271,23 +290,22 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/git-code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/craw/spider/html_downloader.py" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\python-craw\craw\py3\base" />
-      <recent name="E:\python-craw\craw\py3\fordel" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\python-craw\craw\py3\base" />
       <recent name="E:\python-craw\craw\py3" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\python-craw\craw\py3\base" />
+      <recent name="E:\python-craw\craw\py3\fordel" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -302,8 +320,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.SF">
-    <configuration name="Downloader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.XM">
+    <configuration name="GanjiPage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -316,12 +334,12 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python-craw" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/Downloader.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/GanjiPage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="SF" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="LJ" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -334,12 +352,12 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python-craw" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/SF.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/LJ.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="SfPage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="LjPage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -352,12 +370,12 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python-craw" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/SfPage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/LjPage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="XMHouse" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="MaitianPage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -370,12 +388,12 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python-craw" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\python-craw\craw\py3\base\XM.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/MaitianPage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="XmhousePage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="XM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -388,25 +406,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python-craw" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/XmhousePage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/XM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.XmhousePage" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Downloader" />
-      <item index="2" class="java.lang.String" itemvalue="Python.XMHouse" />
-      <item index="3" class="java.lang.String" itemvalue="Python.SfPage" />
-      <item index="4" class="java.lang.String" itemvalue="Python.SF" />
+      <item index="0" class="java.lang.String" itemvalue="Python.XM" />
+      <item index="1" class="java.lang.String" itemvalue="Python.LjPage" />
+      <item index="2" class="java.lang.String" itemvalue="Python.LJ" />
+      <item index="3" class="java.lang.String" itemvalue="Python.GanjiPage" />
+      <item index="4" class="java.lang.String" itemvalue="Python.MaitianPage" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.SF" />
-        <item index="1" class="java.lang.String" itemvalue="Python.SfPage" />
-        <item index="2" class="java.lang.String" itemvalue="Python.XMHouse" />
-        <item index="3" class="java.lang.String" itemvalue="Python.XmhousePage" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Downloader" />
+        <item index="0" class="java.lang.String" itemvalue="Python.XM" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MaitianPage" />
+        <item index="2" class="java.lang.String" itemvalue="Python.GanjiPage" />
+        <item index="3" class="java.lang.String" itemvalue="Python.LJ" />
+        <item index="4" class="java.lang.String" itemvalue="Python.LjPage" />
       </list>
     </recent_temporary>
   </component>
@@ -473,23 +491,29 @@
       <option name="project" value="LOCAL" />
       <updated>1509440534028</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="完成soufan抓取，把小区名称单列成一个独立方法，以便不同的情况下修改适用">
+      <created>1509525086128</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1509525086128</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2015625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33757225" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43645084" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297362" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44844124" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -498,6 +522,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297362" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -534,7 +559,8 @@
     <MESSAGE value="五八同城可按小区循环抓取" />
     <MESSAGE value="安居客可按小区循环抓取" />
     <MESSAGE value="xmhouse解析成功，修改了download里requests解码的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="xmhouse解析成功，修改了download里requests解码的问题" />
+    <MESSAGE value="完成soufan抓取，把小区名称单列成一个独立方法，以便不同的情况下修改适用" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成soufan抓取，把小区名称单列成一个独立方法，以便不同的情况下修改适用" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -549,22 +575,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/MassController.py" />
-    <entry file="file://$PROJECT_DIR$/craw/house4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4340">
-          <caret line="155" column="40" lean-forward="false" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/Outputer.py" />
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/bloomfilter.py" />
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/MassController.py" />
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/ReqBuilder.py" />
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/Outputer.py" />
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/PageParser.py" />
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/WbPage.py" />
-    <entry file="file://$PROJECT_DIR$/craw/py3/bloompy3.py" />
     <entry file="file://$PROJECT_DIR$/craw/py3/text.py" />
     <entry file="file://$PROJECT_DIR$/craw/py3/base/bloomfilter.py" />
     <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-746951052/builtins.py">
@@ -675,25 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2240">
           <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/AjkPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#37#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/spider/html_outputer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="28" column="59" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,78 +720,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/WB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/XmhousePage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1509437853868" expanded="true" signature="2136:2267" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/PageParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-402">
-          <caret line="85" column="32" lean-forward="true" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/craw/spider/SF_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="70" column="48" lean-forward="false" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/ToolsBox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/AJK.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/XM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/spider/html_downloader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="119" column="17" lean-forward="true" selection-start-line="115" selection-start-column="26" selection-end-line="119" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/house4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2408">
-          <caret line="209" column="46" lean-forward="true" selection-start-line="209" selection-start-column="46" selection-end-line="209" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,23 +735,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/MassController.py">
+    <entry file="file://$PROJECT_DIR$/craw/spider/html_downloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="145" column="57" lean-forward="true" selection-start-line="137" selection-start-column="4" selection-end-line="145" selection-end-column="57" />
+        <state relative-caret-position="-3276">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/spider/html_outputer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/spider/LEJU_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="65" column="13" lean-forward="false" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/SF.py">
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/PageParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="-84">
+          <caret line="138" column="22" lean-forward="false" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/logtest.txt">
+    <entry file="file://$PROJECT_DIR$/craw/house4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4611">
+          <caret line="211" column="50" lean-forward="false" selection-start-line="211" selection-start-column="50" selection-end-line="211" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/WB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/LjParser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -837,18 +789,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craw/CrawAll.py">
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/SF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="32" />
+        <state relative-caret-position="270">
+          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/XmhousePage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-728">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <marker date="1509437853868" expanded="true" signature="2136:2267" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/craw/py3/base/SfPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="27" column="87" lean-forward="false" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
+        <state relative-caret-position="-150">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/spider/LJ_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="50" column="45" lean-forward="true" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/AJK.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/LejvPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/spider/GJ_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="49" column="25" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="49" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/logtest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89880">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/LJ.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/MassController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/AjkPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/ToolsBox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="86" column="12" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/spider/MT_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1556">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/LjPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2054">
+          <caret line="77" column="46" lean-forward="false" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/CrawAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="98" column="56" lean-forward="false" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="56" />
+          <folding>
+            <element signature="e#41#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/GanjiPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/MaitianPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="89" column="24" lean-forward="false" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/XM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding />
         </state>
       </provider>

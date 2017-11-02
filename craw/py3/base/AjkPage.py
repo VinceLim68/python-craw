@@ -4,7 +4,7 @@ import traceback
 
 class AjkPage(PageParser.PageParser):
 
-    def is_check(self,soup,type=1):
+    def is_check(self,soup):
         # 判断是否是验证界面
         ischeck = soup.select("title")
 
