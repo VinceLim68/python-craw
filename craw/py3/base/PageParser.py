@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import re
 import datetime
 import traceback
+import MatchID
 # import sys
 # reload(sys)
 # sys.setdefaultencoding('utf8')
@@ -9,7 +10,8 @@ import traceback
 
 class PageParser(object):
 
-    # def __init__(self):
+    def __init__(self):
+        self.MI = MatchID.MatchID()
     #     self.r1 = re.compile(r"(\d+\.?\d*)(.*)")             #正则：数字+单位
     #     self.r2 = re.compile(r"(\d+).*")                     #正则：取字符串中的数字
 
@@ -133,8 +135,8 @@ class PageParser(object):
 
     def pipe(self,datadic):
         # 有效性检验
+        datadic['community_id'] = self.MI.matchid(datadic)
         if ('total_floor' in datadic.keys()) and ('total_price' in datadic.keys()) and ('area' in datadic.keys()) and ('community_name' in datadic.keys())  :
-
             if datadic['total_price'] is None or datadic['area'] is None or datadic['area'] == 0:
                 return False
             else:
@@ -144,16 +146,16 @@ class PageParser(object):
             if datadic['total_floor'] > 60: datadic['total_floor'] = 35         #把过高楼层的设为35层
             datadic['community_name'] = datadic['community_name'].strip()
             if datadic['total_price'] == 0 : return False                       #2016.9.13 价格为0的过滤掉
-            
+
             if 'builded_year' in datadic.keys():
                 if datadic['builded_year'] < 1900: datadic['builded_year'] = 0
-            
+
             if datadic['area'] > 20000: return False        #面积过大，有时是填写错误，而且面积大于20000的价格参考意义也不大，舍弃
             if 'price' not in datadic.keys(): return False       #2016.8.1 有时解析过程中出错，跳过了price字段解析，造成没有price,舍弃
-            
+
             #2017.4.14 detail_url字段太长，处理一下
             if len(datadic['details_url']) > 250:datadic['details_url'] = datadic['details_url'][:249]
-            
+
             if len(datadic['advantage']) > 20:datadic['advantage'] = datadic['advantage'][:20]
             return datadic
         else:

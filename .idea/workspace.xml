@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e59bca99-4d22-4301-b661-7f373f3568fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/GanjiPage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/LJ.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/LejvPage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/LjPage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/MaitianPage.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/craw/py3/base/LjParser.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craw/py3/base/MatchID.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/py3/base/AjkPage.py" afterPath="$PROJECT_DIR$/craw/py3/base/AjkPage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/py3/base/MassController.py" afterPath="$PROJECT_DIR$/craw/py3/base/MassController.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/py3/base/SfPage.py" afterPath="$PROJECT_DIR$/craw/py3/base/SfPage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/MatchIDByMysql.py" afterPath="$PROJECT_DIR$/craw/MatchIDByMysql.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/py3/base/Outputer.py" afterPath="$PROJECT_DIR$/craw/py3/base/Outputer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/py3/base/PageParser.py" afterPath="$PROJECT_DIR$/craw/py3/base/PageParser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craw/py3/base/XM.py" afterPath="$PROJECT_DIR$/craw/py3/base/XM.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +22,7 @@
     <SUITE FILE_PATH="coverage/python_craw$AJK.coverage" NAME="AJK Coverage Results" MODIFIED="1509343684037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$bloomfilter.coverage" NAME="bloomfilter Coverage Results" MODIFIED="1506667259786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3" />
     <SUITE FILE_PATH="coverage/python_craw$LjPage.coverage" NAME="LjPage Coverage Results" MODIFIED="1509594647628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
-    <SUITE FILE_PATH="coverage/python_craw$XM.coverage" NAME="XM Coverage Results" MODIFIED="1509613769503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
+    <SUITE FILE_PATH="coverage/python_craw$XM.coverage" NAME="XM Coverage Results" MODIFIED="1509933303353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$XMHouse.coverage" NAME="XMHouse Coverage Results" MODIFIED="1509442093880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$GanjiPage.coverage" NAME="GanjiPage Coverage Results" MODIFIED="1509608726671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$LJ.coverage" NAME="LJ Coverage Results" MODIFIED="1509594894323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
@@ -36,6 +30,7 @@
     <SUITE FILE_PATH="coverage/python_craw$ReqBuilder.coverage" NAME="ReqBuilder Coverage Results" MODIFIED="1506670556572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$SF.coverage" NAME="SF Coverage Results" MODIFIED="1509523981628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$MassController.coverage" NAME="MassController Coverage Results" MODIFIED="1507597785084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
+    <SUITE FILE_PATH="coverage/python_craw$MatchID.coverage" NAME="MatchID Coverage Results" MODIFIED="1509701762233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
     <SUITE FILE_PATH="coverage/python_craw$test_mysql.coverage" NAME="test_mysql Coverage Results" MODIFIED="1508317712801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3" />
     <SUITE FILE_PATH="coverage/python_craw$WB.coverage" NAME="WB Coverage Results" MODIFIED="1507598807733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3" />
     <SUITE FILE_PATH="coverage/python_craw$MaitianPage.coverage" NAME="MaitianPage Coverage Results" MODIFIED="1509613223097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/craw/py3/base" />
@@ -47,43 +42,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="MassController.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craw/py3/base/MassController.py">
+      <file leaf-file-name="ToolsBox.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craw/py3/base/ToolsBox.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="28">
+              <caret line="76" column="12" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GanjiPage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craw/py3/base/GanjiPage.py">
+      <file leaf-file-name="Outputer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craw/py3/base/Outputer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MaitianPage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craw/py3/base/MaitianPage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="89" column="24" lean-forward="false" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="24" />
+            <state relative-caret-position="346">
+              <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolsBox.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craw/py3/base/ToolsBox.py">
+      <file leaf-file-name="PageParser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craw/py3/base/PageParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="86" column="12" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="12" />
+            <state relative-caret-position="196">
+              <caret line="137" column="29" lean-forward="false" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LejvPage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craw/py3/base/LejvPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1232">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,9 +89,25 @@
       <file leaf-file-name="XM.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/craw/py3/base/XM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="364">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatchID.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craw/py3/base/MatchID.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1159">
+              <caret line="179" column="23" lean-forward="true" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1509702079758" expanded="true" signature="947:1001" ph="SELECT comm_... comm" />
+                <marker date="1509702079758" expanded="true" signature="3085:3219" ph="SELECT id,ti... for_sale_property" />
+                <marker date="1509702079758" expanded="true" signature="3416:3476" ph="UPDATE for_s... " />
+                <marker date="1509702079758" expanded="true" signature="3919:3979" ph="UPDATE for_s... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,6 +144,9 @@
       <find>self.comm</find>
       <find>enco</find>
       <find>house</find>
+      <find>encode</find>
+      <find>insert_mul_for_check</find>
+      <find>community_id</find>
     </findStrings>
     <replaceStrings>
       <replace>datadic</replace>
@@ -157,14 +173,11 @@
         <option value="$PROJECT_DIR$/craw/CrawAll.py" />
         <option value="$PROJECT_DIR$/craw/spider/html_parser.py" />
         <option value="$PROJECT_DIR$/craw/py3/WB.py" />
-        <option value="$PROJECT_DIR$/craw/MatchIDByMysql.py" />
         <option value="$PROJECT_DIR$/craw/py3/test_mysql.py" />
-        <option value="$PROJECT_DIR$/craw/py3/base/Outputer.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/WB.py" />
         <option value="$PROJECT_DIR$/craw/py3/AJK/AjkPage.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/__init__.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/AJK.py" />
-        <option value="$PROJECT_DIR$/craw/py3/base/PageParser.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/UrlManager.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/WbPage.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/Downloader.py" />
@@ -182,6 +195,10 @@
         <option value="$PROJECT_DIR$/craw/py3/base/MassController.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/GanjiPage.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/MaitianPage.py" />
+        <option value="$PROJECT_DIR$/craw/MatchIDByMysql.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/MatchID.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/PageParser.py" />
+        <option value="$PROJECT_DIR$/craw/py3/base/Outputer.py" />
         <option value="$PROJECT_DIR$/craw/py3/base/XM.py" />
       </list>
     </option>
@@ -238,7 +255,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,7 +307,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,13 +316,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\python-craw\craw\py3\base" />
-      <recent name="E:\python-craw\craw\py3" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\python-craw\craw\py3\base" />
       <recent name="E:\python-craw\craw\py3\fordel" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\python-craw\craw\py3\base" />
+      <recent name="E:\python-craw\craw\py3" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -357,24 +374,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="LjPage" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/craw/py3/base" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python-craw" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/LjPage.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="MaitianPage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -389,6 +388,24 @@
       <module name="python-craw" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/MaitianPage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="MatchID" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/craw/py3/base" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python-craw" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/craw/py3/base/MatchID.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -413,18 +430,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.XM" />
-      <item index="1" class="java.lang.String" itemvalue="Python.LjPage" />
-      <item index="2" class="java.lang.String" itemvalue="Python.LJ" />
-      <item index="3" class="java.lang.String" itemvalue="Python.GanjiPage" />
-      <item index="4" class="java.lang.String" itemvalue="Python.MaitianPage" />
+      <item index="1" class="java.lang.String" itemvalue="Python.LJ" />
+      <item index="2" class="java.lang.String" itemvalue="Python.GanjiPage" />
+      <item index="3" class="java.lang.String" itemvalue="Python.MaitianPage" />
+      <item index="4" class="java.lang.String" itemvalue="Python.MatchID" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.XM" />
-        <item index="1" class="java.lang.String" itemvalue="Python.MaitianPage" />
-        <item index="2" class="java.lang.String" itemvalue="Python.GanjiPage" />
-        <item index="3" class="java.lang.String" itemvalue="Python.LJ" />
-        <item index="4" class="java.lang.String" itemvalue="Python.LjPage" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MatchID" />
+        <item index="2" class="java.lang.String" itemvalue="Python.MaitianPage" />
+        <item index="3" class="java.lang.String" itemvalue="Python.GanjiPage" />
+        <item index="4" class="java.lang.String" itemvalue="Python.LJ" />
       </list>
     </recent_temporary>
   </component>
@@ -498,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509525086128</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="完成赶集、迈田、乐居、链家的抓取，修正了一些bug">
+      <created>1509614950848</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1509614950848</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -511,7 +535,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44844124" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34772182" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -560,7 +584,8 @@
     <MESSAGE value="安居客可按小区循环抓取" />
     <MESSAGE value="xmhouse解析成功，修改了download里requests解码的问题" />
     <MESSAGE value="完成soufan抓取，把小区名称单列成一个独立方法，以便不同的情况下修改适用" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成soufan抓取，把小区名称单列成一个独立方法，以便不同的情况下修改适用" />
+    <MESSAGE value="完成赶集、迈田、乐居、链家的抓取，修正了一些bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成赶集、迈田、乐居、链家的抓取，修正了一些bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -575,15 +600,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/craw/py3/text.py" />
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/bloomfilter.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-746951052/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="778" column="8" lean-forward="false" selection-start-line="778" selection-start-column="8" selection-end-line="778" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/craw/py3/fordel/WbParser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
@@ -595,13 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="553">
           <caret line="854" column="0" lean-forward="false" selection-start-line="854" selection-start-column="0" selection-end-line="854" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/MatchIDByMysql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -671,16 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/Outputer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="22" column="63" lean-forward="false" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/craw/spider/XM_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2240">
@@ -706,9 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,7 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="78" column="25" lean-forward="true" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,15 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
           <caret line="65" column="13" lean-forward="false" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/PageParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="138" column="22" lean-forward="false" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -769,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4611">
           <caret line="211" column="50" lean-forward="false" selection-start-line="211" selection-start-column="50" selection-end-line="211" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,23 +761,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/LjParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/LjParser.py" />
     <entry file="file://$PROJECT_DIR$/craw/py3/base/SF.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,10 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-728">
           <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1509437853868" expanded="true" signature="2136:2267" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150">
           <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-680">
           <caret line="50" column="45" lean-forward="true" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,15 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/LejvPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="44" column="0" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="44" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,31 +804,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="49" column="25" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="49" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/logtest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89880">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/logtest.txt" />
     <entry file="file://$PROJECT_DIR$/craw/py3/base/LJ.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/MassController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,15 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craw/py3/base/ToolsBox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="86" column="12" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1556">
           <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,9 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2054">
           <caret line="77" column="46" lean-forward="false" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,34 +840,105 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="98" column="56" lean-forward="false" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="56" />
-          <folding>
-            <element signature="e#41#192#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/MassController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/craw/py3/base/GanjiPage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/craw/py3/base/MaitianPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="476">
           <caret line="89" column="24" lean-forward="false" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/MatchIDByMysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-224">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/match_id.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/ToolsBox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="76" column="12" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/match_id_by_mysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/LejvPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/MatchID.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1159">
+          <caret line="179" column="23" lean-forward="true" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1509702079758" expanded="true" signature="947:1001" ph="SELECT comm_... comm" />
+            <marker date="1509702079758" expanded="true" signature="3085:3219" ph="SELECT id,ti... for_sale_property" />
+            <marker date="1509702079758" expanded="true" signature="3416:3476" ph="UPDATE for_s... " />
+            <marker date="1509702079758" expanded="true" signature="3919:3979" ph="UPDATE for_s... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/PageParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="137" column="29" lean-forward="false" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craw/py3/base/Outputer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/craw/py3/base/XM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="364">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>

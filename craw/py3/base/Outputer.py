@@ -9,9 +9,6 @@ class Outputer(object):
     __instance = None
 
     def __init__(self):
-        # reload(sys)
-        # sys.setdefaultencoding("utf-8")
-        # self.datas = []                       #数据集：挑选出的数据（根据小区名称挑选），但如果只是抓取数据不需要
         self.raw_datas = []                     #数据集：原始数据
         self.dupli_count = 0                    #计数：重复的数据
         self.now = datetime.date.today()        #字段：插入记录的日期
@@ -57,13 +54,13 @@ class Outputer(object):
         sql = """
             INSERT for_sale_property (title,area,spatial_arrangement,price,floor_index,
             total_floor,builded_year,advantage,total_price,details_url,community_name,
-            first_acquisition_time,from_) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+            first_acquisition_time,from_,community_id) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
         """
         for data in self.raw_datas:
             try:
                 self.cur.execute(sql,(data['title'],data['area'],data['spatial_arrangement'],data['price'],
                     data['floor_index'],data['total_floor'],data['builded_year'],data['advantage'],data['total_price'],
-                    data['details_url'],data['community_name'],self.now,data['from']))
+                    data['details_url'],data['community_name'],self.now,data['from'],data['community_id']))
                 success = success + 1
                 self.conn.commit()
             except pymysql.err.IntegrityError as e:
