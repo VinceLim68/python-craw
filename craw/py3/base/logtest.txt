@@ -1,0 +1,672 @@
+
+               *******newFunc*******,error record by @mylog on 2017-11-06 08:46:21.366923*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 27, in newFunc
+    back = func(*args, **args2)
+  File "E:\python-craw\craw\py3\base\MassController.py", line 84, in craw_a_page
+    new_urls,new_datas = self.parser.page_parse(html_cont)      #∑µªÿΩ‚Œˆƒ⁄»›
+  File "E:\python-craw\craw\py3\base\PageParser.py", line 44, in page_parse
+    new_datas = self.parse_datas(soup)
+  File "E:\python-craw\craw\py3\base\MaitianPage.py", line 79, in parse_datas
+    each_data = self.pipe(each_data)
+  File "E:\python-craw\craw\py3\base\PageParser.py", line 137, in pipe
+    datadic['community_id'] = MatchID.MatchID.matchid(datadic)
+TypeError: matchid() missing 1 required positional argument: 'data'
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:51:56.033270*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:51:56.657272*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:51:57.234473*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:51:57.813674*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:51:58.484475*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:51:59.155276*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:51:59.687677*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:00.202478*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:00.721279*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:01.282880*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:01.971281*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:02.517282*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:03.032083*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:03.673685*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:04.235286*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:04.720886*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:05.251287*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:06.864091*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:08.584094*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:09.192495*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:10.241697*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:11.054898*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:11.663300*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:12.240501*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:12.899702*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:13.882504*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:14.793306*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:15.902908*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:16.636109*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:17.618911*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:18.124112*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:19.202514*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:21.704519*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:22.297320*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:23.155321*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:24.247323*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:25.778126*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:26.513327*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:27.125729*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:28.094930*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:28.890532*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:29.514533*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:30.234134*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:31.234536*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:31.798137*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:32.344138*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:33.248940*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:34.108941*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:35.220544*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:36.378946*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:37.254547*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:38.147749*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:38.802950*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:39.551752*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:40.684954*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:41.371356*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:42.151357*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:42.982159*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:43.777760*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:44.292561*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:44.949762*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:45.778564*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:46.558565*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:47.182566*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:47.746167*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:48.323368*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:48.886969*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:49.731371*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:50.246172*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:50.778573*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:51.246574*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:51.825775*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:52.402976*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:52.935377*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:53.590578*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:54.323779*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:54.996581*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:55.511382*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:56.291383*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:57.276185*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:57.777386*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+               *******out_mysql*******,error record by @mylog on 2017-11-06 09:52:58.432587*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
