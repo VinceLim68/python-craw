@@ -37,10 +37,18 @@ class GanjiPage(PageParser.PageParser):
             # 赶集网的小区名称有点混乱，有些嵌套<a>，有些没嵌套
             try:
                 c = comm.select('a')
-                each_data['community_name'] = c[0].get_text()
+                each_data['community_name'] = c[0].get_text().strip()
+                if len(c) >=2:
+                    each_data['region'] = c[1].get_text().strip()
+                if len(c) >=3:
+                    each_data['community_address'] = c[2].get_text().strip()
             except Exception as e:
-                c = comm.get_text().split(' - ')[0].strip()
-                each_data['community_name'] = c
+                c = comm.get_text().split(' - ')
+                each_data['community_name'] = c[0].strip()
+                if len(c) >=2:
+                    each_data['region'] = c[1].strip()
+                if len(c) >=3:
+                    each_data['community_address'] = c[2].strip()
             each_data['total_price'] = int(round(float(price.get_text()), 0))
             each_data['from'] = "ganji"
             each_data = self.pipe(each_data)
@@ -58,4 +66,4 @@ if __name__ == "__main__":
     url = 'http://xm.ganji.com/fang5/o2/'
     html_cont = downloader.download(url)
     urls,datas = parser.page_parse(html_cont)
-    ToolsBox.priList(urls)
+    ToolsBox.priList(datas)

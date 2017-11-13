@@ -135,6 +135,13 @@ class PageParser(object):
 
     def pipe(self,datadic):
         # 有效性检验
+        # 把小区的区块、板块及小区地址写到title里去
+        if 'region' in datadic.keys():
+            datadic['title'] += ',region:' + datadic['region']
+        if 'block' in datadic.keys():
+            datadic['title'] += ',block:' + datadic['block']
+        if 'community_address' in datadic.keys():
+            datadic['title'] += ',add:' + datadic['community_address']
         datadic['community_id'] = self.MI.matchid(datadic)
         if ('total_floor' in datadic.keys()) and ('total_price' in datadic.keys()) and ('area' in datadic.keys()) and ('community_name' in datadic.keys())  :
             if datadic['total_price'] is None or datadic['area'] is None or datadic['area'] == 0:

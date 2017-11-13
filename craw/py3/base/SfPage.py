@@ -23,8 +23,9 @@ class SfPage(PageParser.PageParser):
         comms = soup.select("p.mt10 > a > span")
         areas = soup.select("div.area.alignR ")
         prices = soup.select("span.price")
+        addresses = soup.select(".iconAdress")
 
-        for title, house, comm, area, price in zip(titles, houses, comms, areas, prices):
+        for title, house, comm, area, price,add in zip(titles, houses, comms, areas, prices,addresses):
             each_data = {}
 
             each_data['title'] = title.get_text()
@@ -37,6 +38,7 @@ class SfPage(PageParser.PageParser):
                 each_data = dict(each_data, **d1)
 
             each_data['community_name'] = comm.get_text().strip()
+            each_data['community_address'] = add.get_text().strip()
             each_data['comm_url'] = comm.parent.get('href')
             each_data['area'] = ToolsBox.strToInt(list(area.stripped_strings)[0])
             each_data['total_price'] = int(float(price.get_text()))

@@ -670,3 +670,377 @@ Traceback (most recent call last):
   File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
     data['details_url'],data['community_name'],self.now,data['from']),data['community_id'])
 TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+
+*******2017-11-13 08:03:17.229598*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212933952/i32/. 
+
+               *******newFunc*******,error record by @mylog on 2017-11-13 08:04:30.508790*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 27, in newFunc
+    back = func(*args, **args2)
+  File "E:\python-craw\craw\py3\base\MassController.py", line 106, in craw_a_page
+    print('本页面      datas:{0}，urls:{1}'.format(len(new_datas),len(new_urls)))
+OSError: [Errno 22] Invalid argument
+
+               *******newFunc*******,error record by @mylog on 2017-11-13 08:04:30.479788*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 27, in newFunc
+    back = func(*args, **args2)
+  File "E:\python-craw\craw\py3\base\MassController.py", line 87, in craw_a_page
+    self.delay = input("遇到验证码，输入延时秒数后，保留已解析的数据......")
+EOFError: EOF when reading a line
+
+               *******newFunc*******,error record by @mylog on 2017-11-13 08:04:31.274834*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 27, in newFunc
+    back = func(*args, **args2)
+  File "E:\python-craw\craw\py3\base\MassController.py", line 106, in craw_a_page
+    print('本页面      datas:{0}，urls:{1}'.format(len(new_datas),len(new_urls)))
+OSError: [Errno 22] Invalid argument
+
+               *******newFunc*******,error record by @mylog on 2017-11-13 08:04:34.048992*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 28, in newFunc
+    print( "@ %.3fs taken for {%s}\n" % (time.time() - t0, func.__name__)  )
+OSError: [Errno 22] Invalid argument
+
+*******2017-11-13 08:11:43.802573*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213005254/i38/. 
+
+*******2017-11-13 08:12:26.164996*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212836380/i328/. 
+
+*******2017-11-13 08:13:45.834553*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212869400/i33/. 
+
+*******2017-11-13 08:14:59.627773*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212307022/i33/. 
+
+*******2017-11-13 08:15:24.588201*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212937110/i32/. 
+
+*******2017-11-13 08:17:29.099323*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212155468/i35/. 
+
+*******2017-11-13 08:17:51.820622*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212875272/i34/. 
+
+*******2017-11-13 08:18:52.540095*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212105446/i32/. 
+
+*******2017-11-13 08:20:00.767998*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212322914/i312/. 
+
+*******2017-11-13 08:20:27.364519*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212933952/i32/. 
+
+*******2017-11-13 08:21:37.497530*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212907242/i32/. 
+
+*******2017-11-13 08:22:20.678000*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212176750/i323/. 
+
+*******2017-11-13 08:24:40.393991*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212688020/i316/. 
+
+*******2017-11-13 08:25:16.959083*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213201284/i310/. 
+
+*******2017-11-13 08:27:07.711417*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213067782/i32/. 
+
+*******2017-11-13 08:27:41.742364*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212869098/i32/. 
+
+*******2017-11-13 08:28:07.381830*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212925616/i32/. 
+
+*******2017-11-13 08:30:21.033475*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212125598/i33/. 
+
+*******2017-11-13 08:31:24.246090*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213079082/i38/. 
+
+*******2017-11-13 08:32:58.270468*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213078270/i315/. 
+
+*******2017-11-13 08:33:34.682551*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212860694/i32/. 
+
+*******2017-11-13 08:34:24.585405*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213064828/i32/. 
+
+*******2017-11-13 08:35:52.991462*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213281256/i39/. 
+
+*******2017-11-13 08:36:22.040123*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212857994/i34/. 
+
+*******2017-11-13 08:37:10.352886*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212871124/i32/. 
+
+*******2017-11-13 08:37:24.596701*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2217089572/i33/. 
+
+*******2017-11-13 08:39:13.306919*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212929768/i33/. 
+
+*******2017-11-13 08:42:10.655063*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212863668/i39/. 
+
+*******2017-11-13 08:44:55.068467*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212158822/i36/. 
+
+*******2017-11-13 08:47:39.890894*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212900808/i36/. 
+
+*******2017-11-13 08:48:30.595794*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212838860/i33/. 
+
+               *******out_mysql*******,error record by @mylog on 2017-11-13 08:51:27.581917*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from'],data['community_id']))
+  File "G:\Python36\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "G:\Python36\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "G:\Python36\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+               *******out_mysql*******,error record by @mylog on 2017-11-13 08:52:30.068491*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from'],data['community_id']))
+  File "G:\Python36\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "G:\Python36\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "G:\Python36\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+               *******out_mysql*******,error record by @mylog on 2017-11-13 08:53:32.396056*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from'],data['community_id']))
+  File "G:\Python36\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "G:\Python36\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "G:\Python36\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+               *******out_mysql*******,error record by @mylog on 2017-11-13 08:54:34.927633*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\Outputer.py", line 63, in out_mysql
+    data['details_url'],data['community_name'],self.now,data['from'],data['community_id']))
+  File "G:\Python36\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "G:\Python36\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "G:\Python36\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "G:\Python36\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+*******2017-11-13 08:56:41.216856*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212157222/i36/. 
+
+*******2017-11-13 08:57:15.736831*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212916300/i33/. 
+
+*******2017-11-13 08:57:42.251347*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212991490/i32/. 
+
+               *******newFunc*******,error record by @mylog on 2017-11-13 08:58:28.012964*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 27, in newFunc
+    back = func(*args, **args2)
+  File "E:\python-craw\craw\py3\base\MassController.py", line 84, in craw_a_page
+    new_urls,new_datas = self.parser.page_parse(html_cont)      #返回解析内容
+  File "E:\python-craw\craw\py3\base\PageParser.py", line 44, in page_parse
+    new_urls = self.parse_urls(soup)
+  File "E:\python-craw\craw\py3\base\LjPage.py", line 25, in parse_urls
+    t_page = eval(links[0].get('page-data'))['totalPage']
+IndexError: list index out of range
+
+*******2017-11-13 08:58:37.608513*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213152662/i336/. 
+
+*******2017-11-13 08:59:56.498026*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213064942/i36/. 
+
+*******2017-11-13 09:00:30.649979*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213091352/i32/. 
+
+*******2017-11-13 09:02:13.648870*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2217059686/i34/. 
+
+*******2017-11-13 09:03:17.355514*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212917440/i33/. 
+
+*******2017-11-13 09:05:08.641879*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212223624/i33/. 
+
+*******2017-11-13 09:06:11.136454*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212215944/i35/. 
+
+*******2017-11-13 09:07:04.270493*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212010566/i33/. 
+
+*******2017-11-13 09:07:18.702318*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212011568/i33/. 
+
+*******2017-11-13 09:08:09.714236*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212876188/i312/. 
+
+*******2017-11-13 09:09:08.327588*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213091408/i38/. 
+
+*******2017-11-13 09:09:54.593235*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213281460/i34/. 
+
+*******2017-11-13 09:10:40.070836*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213076640/i33/. 
+
+*******2017-11-13 09:11:27.830567*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2216945158/i38/. 
+
+*******2017-11-13 09:12:12.989150*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213095992/i33/. 
+
+*******2017-11-13 09:14:31.208056*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213071352/i318/. 
+
+*******2017-11-13 09:15:35.841753*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212934404/i315/. 
+
+*******2017-11-13 09:15:36.396785*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212934404/i37/. 
+
+*******2017-11-13 09:16:37.139259*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212011080/i32/. 
+
+*******2017-11-13 09:19:29.582122*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212157304/i33/. 
+
+*******2017-11-13 09:21:04.102528*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213061588/i33/. 
+
+*******2017-11-13 09:23:23.400496*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213101820/i33/. 
+
+*******2017-11-13 09:25:04.667288*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212203782/i329/. 
+
+*******2017-11-13 09:27:10.069460*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212215702/i32/. 
+
+*******2017-11-13 09:27:28.666524*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212937486/i32/. 
+
+*******2017-11-13 09:28:05.019603*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212206142/i37/. 
+
+*******2017-11-13 09:29:39.287995*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212869094/i32/. 
+
+*******2017-11-13 09:30:04.183419*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2213091418/i36/. 
+
+*******2017-11-13 09:30:39.442436*************
+ 本页面无数据:http://esf.xm.fang.com/house-xm2212125566/i34/. 
+
+               *******newFunc*******,error record by @mylog on 2017-11-13 10:14:22.856487*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 27, in newFunc
+    back = func(*args, **args2)
+  File "E:\python-craw\craw\py3\base\MassController.py", line 84, in craw_a_page
+    new_urls,new_datas = self.parser.page_parse(html_cont)      #返回解析内容
+  File "E:\python-craw\craw\py3\base\PageParser.py", line 44, in page_parse
+    new_urls = self.parse_urls(soup)
+  File "E:\python-craw\craw\py3\base\LjPage.py", line 25, in parse_urls
+    t_page = eval(links[0].get('page-data'))['totalPage']
+IndexError: list index out of range
+
+               *******newFunc*******,error record by @mylog on 2017-11-13 11:27:30.367438*************
+Traceback (most recent call last):
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 12, in _deco
+    return func(*a,**b)
+  File "E:\python-craw\craw\py3\base\ToolsBox.py", line 27, in newFunc
+    back = func(*args, **args2)
+  File "E:\python-craw\craw\py3\base\MassController.py", line 84, in craw_a_page
+    new_urls,new_datas = self.parser.page_parse(html_cont)      #返回解析内容
+  File "E:\python-craw\craw\py3\base\PageParser.py", line 44, in page_parse
+    new_urls = self.parse_urls(soup)
+  File "E:\python-craw\craw\py3\base\LjPage.py", line 25, in parse_urls
+    t_page = eval(links[0].get('page-data'))['totalPage']
+IndexError: list index out of range
+
+*******2017-11-13 14:40:14.346486*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=惠安美丽园大厦商住楼. 
+
+*******2017-11-13 14:52:48.742488*************
+ 本页面无数据:http://xm.58.com/ershoufang/?key=图强路学区房. 

@@ -21,8 +21,9 @@ class LejvPage(PageParser.PageParser):
         positions = soup.select("div.house-position")
         prices = soup.select("span.georgia")
         titles = soup.select("h3 > a")
+        regions = soup.select(".region")
 
-        for title,comm,detail,position,price in zip(titles,comms,details,positions,prices):
+        for title,comm,detail,position,price,region in zip(titles,comms,details,positions,prices,regions):
 
             each_data = dict(builded_year=0, spatial_arrangement='', floor_index=0, total_floor=0,
                              title=title.get('title'), details_url='http://xm.esf.leju.com' + title.get('href'))
@@ -42,7 +43,7 @@ class LejvPage(PageParser.PageParser):
                         each_data['advantage'] = each_data['advantage'] + ',' + d1['advantage']
                     else:
                         each_data = dict(each_data, **d1)
-
+            each_data['community_address'] = region.get_text().strip()
             each_data['community_name'] = comm.get_text()
             each_data['total_price'] = int(round(float(price.get_text()),0))
             # each_data['price'] = round(float(each_data['total_price']*10000/each_data['area']),2)

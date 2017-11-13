@@ -43,7 +43,7 @@ class WbPage(PageParser.PageParser):
             spans = details[0].select('span')
             for span in spans:
                 string = ToolsBox.clearStr(span.get_text()).encode('utf8')
-                d1 = {}
+                # d1 = {}
                 d1 = self.parse_item(string)
                 each_data = dict(each_data, **d1)
             comms = details[1].select('a')
@@ -55,6 +55,18 @@ class WbPage(PageParser.PageParser):
                 each_data['comm_url'] = 'http://xm.58.com' + comms[0].get('href')
             # each_data['price'] = round(float(each_data['total_price'] * 10000 / each_data['area']), 2)
             each_data['from'] = "58"
+
+            try:
+                each_data['region'] = comms[1].get_text()
+            except Exception as e:
+                print('-------这个记录没有拿到小区的区域------------')
+                ToolsBox.printDic(each_data)
+
+            try:
+                each_data['community_address'] = comms[2].get_text()
+            except Exception as e:
+                print('-------这个记录没有拿到小区地址------------')
+                ToolsBox.printDic(each_data)
 
             each_data = self.pipe(each_data)
 

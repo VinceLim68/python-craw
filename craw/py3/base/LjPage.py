@@ -84,5 +84,5 @@ if __name__ == "__main__":
     # urls = parser.parse_urls(soup)
     # ToolsBox.printDic(urls)
     # print(datas)
-    ToolsBox.priList(urls)
+    ToolsBox.priList(datas)
     # ToolsBox.priList(urls)
